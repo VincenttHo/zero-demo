@@ -32,12 +32,14 @@ public class Player : MonoBehaviour
     private Animator anim; public Transform grandCheck;
     public LayerMask GroundLayer;
     private BoxCollider2D myFeet;
+    private PlayerStateManager playerStateManager;
 
     void Start()
     {
         rigi = GetComponentInChildren<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         myFeet = GetComponent<BoxCollider2D>();
+        playerStateManager = GetComponent<PlayerStateManager>();
     }
 
     void Update()
@@ -49,6 +51,10 @@ public class Player : MonoBehaviour
         CheckGrounded();
         AnimationListener();
         DoMove();
+        if(rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
+        {
+            playerStateManager.Stand();
+        }
     }
 
     void Flip()
@@ -77,12 +83,13 @@ public class Player : MonoBehaviour
     // 冲刺方法
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.U))
+        if(Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack)
         {
             if(isGrounded)
             {
                 rigi.velocity = new Vector2(rigi.velocity.x, jumpSpeed);
                 canDoubleJump = true;
+                playerStateManager.Jump();
                 //this.rigi.AddForce(new Vector2(0, jumpSpeed));
             }
             else
@@ -91,6 +98,7 @@ public class Player : MonoBehaviour
                 {
                     rigi.velocity = new Vector2(rigi.velocity.x, doubleJumpSpeed);
                     canDoubleJump = false;
+                    playerStateManager.Jump();
                 }
             }
         }
@@ -107,7 +115,19 @@ public class Player : MonoBehaviour
     // 根据速度移动
     void DoMove()
     {
-        rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
+        if (!playerStateManager.isAttack)
+        {
+            rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
+            // 修改运动状态标识
+            if (Math.Abs(horizontalSpeed) > runSpeed)
+            {
+                playerStateManager.Dash();
+            }
+            else if (Math.Abs(horizontalSpeed) > 0)
+            {
+                playerStateManager.Run();
+            }
+        }
     }
 
     void CheckGrounded()

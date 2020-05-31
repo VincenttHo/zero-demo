@@ -9,21 +9,37 @@ public class Enemy : MonoBehaviour
 
     public int damage = 1;
 
+    private SpriteRenderer spriteRenderer;
+
+    public float flashTime = 0.2f;
+
+    private Color originColor;
+
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originColor = spriteRenderer.color;
     }
 
     public void GetDamage(int damage)
     {
         healthyPoint -= damage;
-        if(healthyPoint <= 0)
+        FlashColor();
+        if (healthyPoint <= 0)
         {
             Destroy(gameObject);
         }
     }
+
+    private void FlashColor()
+    {
+        spriteRenderer.color = Color.red;
+        Invoke("ResetColor", flashTime);
+    }
+
+    private void ResetColor()
+    {
+        spriteRenderer.color = originColor;
+    }
+
 }

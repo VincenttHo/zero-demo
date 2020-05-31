@@ -4,43 +4,104 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-
+    // 属性
     public int damage = 1;
+    public float endAttackSecond = 0.08f;
+    public float startAttackSecond = 0.08f;
+    public int HitCount = 0;
 
-    private PolygonCollider2D collider;
-
+    // 组件
     private Animator anim;
+    private PolygonCollider2D[] attackPolygonColliders;
+    private AnimatorStateInfo animatorStateInfo;
+    private PlayerStateManager playerStateManager;
+    private Rigidbody2D rigi;
 
-    public float endAttackSecond = 0.15f;
+    // 动画状态
+    private const string StandState = "zero_stand";
+    private const string SwordAttack1State = "zero_sword_attack1";
+    private const string SwordAttack2State = "zero_sword_attack2";
+    private const string JumpSwordAttackState = "zero_jump_sword_attack";
+    private const string RunState = "zero_run";
 
     void Start()
     {
-        collider = GetComponent<PolygonCollider2D>();
-        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        //collider = GetComponent<PolygonCollider2D>();
+        anim = GetComponentInChildren<Animator>();
+        attackPolygonColliders = GetComponentsInChildren<PolygonCollider2D>();
+        playerStateManager = GetComponent<PlayerStateManager>();
+        rigi = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y))
+        animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if(animatorStateInfo.normalizedTime >= 0.9f && !animatorStateInfo.IsName(StandState))
         {
-            anim.SetTrigger("SwordAttack");
-            collider.enabled = true;
-            StartCoroutine(endAttack());
+            HitCount = 0;
+            playerStateManager.Stand();
         }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Attack();
+        }
+        // 处理跳砍动作，如果落地，则将攻击动作复原
+        if (animatorStateInfo.IsName(JumpSwordAttackState) && rigi.velocity.y == 0)
+        {
+            HitCount = 0;
+            playerStateManager.Stand();
+        }
+        anim.SetInteger("attack", HitCount);
     }
 
-    IEnumerator endAttack()
+    void Attack()
+    {
+        
+
+        if((animatorStateInfo.IsName(StandState) || animatorStateInfo.IsName(RunState) || rigi.velocity.y != 0) && HitCount == 0)
+        {
+            HitCount = 1;
+        }
+        if (animatorStateInfo.IsName(SwordAttack1State) && HitCount == 1 && animatorStateInfo.normalizedTime < 0.8f)
+        {
+            HitCount = 2;
+        }
+        if (animatorStateInfo.IsName(SwordAttack2State) && HitCount == 2 && animatorStateInfo.normalizedTime < 0.8f)
+        {
+            HitCount = 3;
+        }
+
+        if(HitCount > 0)
+        {
+            playerStateManager.Attack();
+            /*if (HitCount == 3)
+            {
+                StartCoroutine(startAttack(2));
+            }
+            else
+            {
+                attackPolygonColliders[HitCount - 1].enabled = true;
+                StartCoroutine(endAttack(HitCount - 1));
+            }*/
+        }
+        
+
+    }
+
+    /*IEnumerator endAttack(int index)
     {
         yield return new WaitForSeconds(endAttackSecond);
-        collider.enabled = false;
+        attackPolygonColliders[index].enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    IEnumerator startAttack(int index)
     {
-        if(other.tag == "Enemy")
+        yield return new WaitForSeconds(startAttackSecond);
+        if(HitCount > 0)
         {
-            other.GetComponent<Enemy>().GetDamage(damage);
+            attackPolygonColliders[HitCount - 1].enabled = true;
+            StartCoroutine(endAttack(index));
         }
-    }
+    }*/
 
 }
