@@ -63,16 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Attack.cs" />
-    <Compile Include="Assets\Scripts\AttackColliderManager.cs" />
-    <Compile Include="Assets\Scripts\BloodEffect.cs" />
-    <Compile Include="Assets\Scripts\Camera.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyHunk.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\PlayerStateManager.cs" />
-    <Compile Include="Assets\Scripts\SetNormalizedTime.cs" />
+    <Compile Include="Assets\Scripts\Camera\Camera.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShakeController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BloodEffect.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHunk.cs" />
+    <Compile Include="Assets\Scripts\Player\Attack.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackColliderManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStateManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/study/game/workspaces/unity/demo4/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
