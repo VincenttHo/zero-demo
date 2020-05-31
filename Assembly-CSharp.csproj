@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\AttackColliderManager.cs" />
+    <Compile Include="Assets\Scripts\BloodEffect.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyHunk.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerStateManager.cs" />
