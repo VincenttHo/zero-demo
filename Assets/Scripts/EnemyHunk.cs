@@ -21,8 +21,6 @@ public class EnemyHunk : Enemy
         base.Start();
         anim = GetComponent<Animator>();
         movePos.position = GetRandomPos();
-        print(transform.position.x);
-        print(movePos.position.x);
     }
 
     void Update()
