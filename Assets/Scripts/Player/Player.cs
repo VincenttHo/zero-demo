@@ -51,7 +51,8 @@ public class Player : MonoBehaviour
         CheckGrounded();
         AnimationListener();
         DoMove();
-        if(rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
+        Shoot();
+        if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
         {
             playerStateManager.Stand();
         }
@@ -140,6 +141,14 @@ public class Player : MonoBehaviour
         this.anim.SetFloat("HorizontalSpeed", Math.Abs(horizontalSpeed));
         this.anim.SetFloat("VerticalSpeed", rigi.velocity.y);
         this.anim.SetBool("isGrounded", isGrounded);
+    }
+
+    void Shoot()
+    {
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            this.anim.SetTrigger("shoot");
+        }
     }
 
 }
