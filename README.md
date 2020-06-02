@@ -1,1 +1,1 @@
-# zero-demo
+# rockman zero game demo
