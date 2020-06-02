@@ -14,7 +14,7 @@ public class AttackColliderManager : MonoBehaviour
     void Start()
     {
         colliders = GetComponentsInChildren<PolygonCollider2D>();
-        playerStateManager = GetComponentInParent<PlayerStateManager>();
+        playerStateManager = GetComponent<PlayerStateManager>();
     }
 
     private void Update()
@@ -46,7 +46,7 @@ public class AttackColliderManager : MonoBehaviour
     void InitBullet()
     {
         bullet.transform.position = bulletPos.position;
-        float rotationY = transform.parent.localScale.x == -1 ? 0 : 180;
+        float rotationY = transform.localScale.x < 0 ? 0 : 180;
         bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
         Instantiate(bullet);
     }

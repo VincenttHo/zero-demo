@@ -14,6 +14,8 @@ public class PlayerStateManager : MonoBehaviour
     public bool isJump = false;
     // 是否站立状态
     public bool isAttack = false;
+    // 是否受伤状态
+    public bool isHurt = false;
 
     public void Run()
     {

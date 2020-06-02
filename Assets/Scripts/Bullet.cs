@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     private float boundsX;
     private Vector3 targetPos;
     public string target;
-    public float damage = 1f;
+    public int damage = 1;
 
     private void Start()
     {
@@ -36,7 +36,16 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == target)
         {
-            print("打中"+ target + "了！");
+            if (collision.gameObject.tag == "Player")
+            {
+                Zero zero = collision.gameObject.GetComponent<Zero>();
+                zero.GetDamage(damage);
+            }
+            if (collision.gameObject.tag == "Enemy")
+            {
+                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                enemy.GetDamage(damage);
+            }
             Destroy(gameObject);
         }
     }

@@ -35,7 +35,7 @@ public class EnemyHunk : Enemy
         base.Start();
         anim = GetComponent<Animator>();
         movePos.position = GetRandomPos();
-        playerPos = GameObject.Find("Player").transform;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         animatorState = anim.GetCurrentAnimatorStateInfo(0);
     }
 
@@ -99,30 +99,34 @@ public class EnemyHunk : Enemy
 
     void Attack()
     {
-        distance = Math.Abs(transform.position.x - playerPos.position.x);
-        //if(Input.GetKey(KeyCode.J))
-        if(distance <= attackDistance)
+        if(playerPos != null)
         {
-            anim.SetBool("IsAttack", true);
-            // 如果正在移动，则停止移动
-            if (isMove)
+            distance = Math.Abs(transform.position.x - playerPos.position.x);
+            //if(Input.GetKey(KeyCode.J))
+            if (distance <= attackDistance)
             {
-                movePos.position = transform.position;
-            }
+                anim.SetBool("IsAttack", true);
+                // 如果正在移动，则停止移动
+                if (isMove)
+                {
+                    movePos.position = transform.position;
+                }
 
-            if (transform.position.x < playerPos.position.x)
-            {
-                LookRight();
+                if (transform.position.x < playerPos.position.x)
+                {
+                    LookRight();
+                }
+                else
+                {
+                    LookLeft();
+                }
+
+                isAttack = true;
             }
             else
             {
-                LookLeft();
+                anim.SetBool("IsAttack", false);
             }
-            
-            isAttack = true;
-        } else
-        {
-            anim.SetBool("IsAttack", false);
         }
     }
 

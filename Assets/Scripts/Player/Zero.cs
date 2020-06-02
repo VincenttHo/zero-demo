@@ -3,12 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// zero移动脚本
-/// </summary>
-public class Player : MonoBehaviour 
+public class Zero : Player
 {
-
     /** 运动参数 **/
     // 跑步速度
     public float runSpeed = 5;
@@ -16,48 +12,51 @@ public class Player : MonoBehaviour
     public float dashSpeed = 8;
     // 实际角色左右运动速度
     private float horizontalSpeed = 0;
-    // 角色运动方向
+    // 角色运动方向 
     private float dir = 0;
     // 跳跃速度
     public float jumpSpeed = 13;
     // 二段跳速度
     public float doubleJumpSpeed = 13;
     // 着地判断
-    private bool isGrounded;
+    public bool isGrounded;
     // 二段跳判断
     public bool canDoubleJump;
 
     // 组件
-    private Rigidbody2D rigi;
-    private Animator anim; public Transform grandCheck;
-    public LayerMask GroundLayer;
     private BoxCollider2D myFeet;
     private PlayerStateManager playerStateManager;
 
     void Start()
     {
-        rigi = GetComponentInChildren<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        base.Start();
         myFeet = GetComponent<BoxCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
-    }
+    } 
 
-    void Update()
+    void Update() 
     {
-        Run();
-        Dash();
-        Jump();
-        Flip();
-        CheckGrounded();
-        AnimationListener();
-        DoMove();
-        Shoot();
-        if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
+        
+        //base.Update();
+        if (!playerStateManager.isHurt)
         {
-            playerStateManager.Stand();
+            Run();
+            Dash();
+            Jump();
+            Flip();
+            CheckGrounded();
+            AnimationListener();
+            DoMove();
+            Shoot();
+            if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
+            {
+                playerStateManager.Stand();
+            }
         }
+        
     }
 
+    // 转身
     void Flip()
     {
         dir = 0;
@@ -69,9 +68,9 @@ public class Player : MonoBehaviour
         {
             dir = 1;
         }
-        if(dir != 0)
+        if (dir != 0)
         {
-            transform.localScale = new Vector3(dir, 1, 1);
+            transform.localScale = new Vector3(dir * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 
@@ -84,9 +83,9 @@ public class Player : MonoBehaviour
     // 冲刺方法
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack)
+        if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack)
         {
-            if(isGrounded)
+            if (isGrounded)
             {
                 rigi.velocity = new Vector2(rigi.velocity.x, jumpSpeed);
                 canDoubleJump = true;
@@ -95,7 +94,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                if(canDoubleJump)
+                if (canDoubleJump)
                 {
                     rigi.velocity = new Vector2(rigi.velocity.x, doubleJumpSpeed);
                     canDoubleJump = false;
@@ -109,7 +108,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I) && isGrounded)
         {
-            horizontalSpeed = this.transform.localScale.x * dashSpeed;
+            horizontalSpeed = this.transform.localScale.x / Math.Abs(this.transform.localScale.x) * dashSpeed;
         }
     }
 
@@ -134,6 +133,7 @@ public class Player : MonoBehaviour
     void CheckGrounded()
     {
         isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        
     }
 
     void AnimationListener()
@@ -145,10 +145,22 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
-        if(Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             this.anim.SetTrigger("shoot");
         }
     }
 
+    public void GetDamage(float damage)
+    {
+        base.GetDamage(damage);
+        anim.SetTrigger("hurt");
+        playerStateManager.isHurt = true;
+    }
+
+    public void endHurt()
+    {
+        playerStateManager.isHurt = false;
+    }
+    
 }
