@@ -4,3 +4,10 @@
 /Assets/Behavior Designer.meta
 /Assets/Gizmos.meta
 /Library
+/.vs
+/Build
+/Logs
+/obj
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+demo4.sln
