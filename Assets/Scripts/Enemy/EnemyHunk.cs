@@ -41,11 +41,11 @@ public class EnemyHunk : Enemy
 
     void Update()
     {
-        Run();
-        Attack();
+        //Run();
+        //Attack();
     }
 
-    private void Run()
+    public void Run()
     {
         if(!isAttack)
         {

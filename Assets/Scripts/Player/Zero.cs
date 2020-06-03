@@ -36,7 +36,6 @@ public class Zero : Player
 
     void Update() 
     {
-        
         //base.Update();
         if (!playerStateManager.isHurt)
         {

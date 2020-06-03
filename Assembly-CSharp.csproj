@@ -594,7 +594,14 @@
     <Compile Include="Assets\Scripts\Camera\CameraShakeController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BloodEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHunk.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Hunk\Hunk.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Hunk\HunkAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Hunk\HunkDeadState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Hunk\HunkMoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Hunk\HunkStateMachine.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\AttackColliderManager.cs" />
