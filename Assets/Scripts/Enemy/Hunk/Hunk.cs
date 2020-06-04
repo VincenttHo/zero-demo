@@ -22,6 +22,7 @@ public class Hunk : Enemy
     public float attackRange = 8f;
     public float attackWaitTime = 2f;
     public float attackDelay = 1f;
+    public float touchDamage = 2f;
     public GameObject bullet;
     public Transform bulletPos;
 
@@ -59,6 +60,15 @@ public class Hunk : Enemy
     public void LookRight()
     {
         transform.localRotation = Quaternion.Euler(new Vector3(transform.rotation.x, 180, transform.rotation.z));
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Zero>().GetDamage(touchDamage);
+        }
     }
 
 }

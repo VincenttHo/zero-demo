@@ -10,12 +10,21 @@ public class Bullet : MonoBehaviour
     private float dir;
     public Renderer background;
     private float boundsX;
+    private float cameraSize;
     private Vector3 targetPos;
     public string target;
     public int damage = 1;
+    private GameObject mainCamera;
+    public float destoryDistance = 2;
 
     private void Start()
     {
+
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        BoxCollider2D cameraCollider = mainCamera.GetComponent<BoxCollider2D>();
+
+        cameraSize = cameraCollider.bounds.size.x / 2;
+        print(cameraSize);
         dir = transform.rotation.y == 0 ? -1 : 1;
         boundsX = background.bounds.size.x / 2;
         targetPos = new Vector3((boundsX + 10f) * dir, transform.position.y, transform.position.z);
@@ -25,10 +34,25 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        
-        if (Math.Abs(transform.position.x) > boundsX)
+
+        /*if (Math.Abs(transform.position.x) > boundsX)
         {
             Destroy(gameObject);
+        }*/
+        float cameraX = mainCamera.transform.position.x;
+        if (dir < 0)
+        {
+            if(transform.position.x < cameraX - cameraSize - destoryDistance)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (dir > 0)
+        {
+            if (transform.position.x > cameraX + cameraSize + destoryDistance)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
