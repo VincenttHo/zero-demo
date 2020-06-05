@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zero : Player
+public class ShadowZero : Player
 {
     /** 运动参数 **/
     // 跑步速度
@@ -22,32 +22,29 @@ public class Zero : Player
     public bool isGrounded;
     // 二段跳判断
     public bool canDoubleJump;
+    // 开始位置
+    private float startX;
 
     // 组件
     private BoxCollider2D myFeet;
     private PlayerStateManager playerStateManager;
-    public ShadowZero shadowZero;
-    public int shadowMaxNum = 1;
-    private int shadowCount = 0;
-    public float initShadowDistance = 0.5f;
-    private Transform dashStartPos;
-    private GameObject[] shadowZeros;
-    public bool isShadow = false;
 
     void Start()
     {
         base.Start();
-        shadowZeros = GameObject.FindGameObjectsWithTag("ShadowZero");
-        foreach (GameObject shadow in shadowZeros)
-        {
-            shadow.SetActive(false);
-        }
+        startX = transform.localPosition.x;
         myFeet = GetComponent<BoxCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
-    } 
+    }
 
-    void Update() 
+    void Update()
     {
+        if(Math.Abs(transform.localPosition.x) <= 0.1)
+        {
+            this.gameObject.SetActive(false);
+            transform.localPosition = new Vector3(startX, 0, 0);
+        }
+
         //base.Update();
         if (!playerStateManager.isHurt)
         {
@@ -58,19 +55,18 @@ public class Zero : Player
             CheckGrounded();
             AnimationListener();
             DoMove();
-            Shoot();
             if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
             {
                 playerStateManager.Stand();
             }
         }
-        
+
     }
 
     // 转身
     void Flip()
     {
-        dir = 0;
+        /*dir = 0;
         if (Input.GetKey(KeyCode.A))
         {
             dir = -1;
@@ -81,14 +77,8 @@ public class Zero : Player
         }
         if (dir != 0)
         {
-            //transform.localScale = new Vector3(dir * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            transform.rotation = Quaternion.Euler(0, dir == -1 ? 180 : 0, 0);
-        }
-    }
-
-    public int GetDir()
-    {
-        return transform.rotation.y == 0 ? 1 : -1;
+            transform.localScale = new Vector3(dir * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }*/
     }
 
     // 跑步方法
@@ -123,29 +113,11 @@ public class Zero : Player
 
     void Dash()
     {
-        if (Input.GetKey(KeyCode.I) && isGrounded)
-        { 
-            /*if(shadowCount < shadowMaxNum)
-            {
-                var newShadow = Instantiate(shadowZero);
-                newShadow.transform.SetParent(this.transform);
-                newShadow.transform.localPosition = new Vector3(- (initShadowDistance * dir), 0, 0);
-                shadowCount++;
-            }*/
-            if(!isShadow)
-            {
-                isShadow = true;
-                foreach(GameObject shadow in shadowZeros)
-                {
-                    shadow.SetActive(true);
-                }
-            }
-            horizontalSpeed = GetDir() * dashSpeed;
-        }
-        if (Input.GetKeyUp(KeyCode.I) && isGrounded)
-        {
-            isShadow = false;
-        }
+        //if (Input.GetKey(KeyCode.I) && isGrounded)
+        //{
+            horizontalSpeed = (transform.parent.position.x > transform.position.x ? 1 : -1) * dashSpeed;
+
+        //}
     }
 
     // 根据速度移动
@@ -169,7 +141,7 @@ public class Zero : Player
     void CheckGrounded()
     {
         isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        
+
     }
 
     void AnimationListener()
@@ -179,24 +151,4 @@ public class Zero : Player
         this.anim.SetBool("isGrounded", isGrounded);
     }
 
-    void Shoot()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            this.anim.SetTrigger("shoot");
-        }
-    }
-
-    public void GetDamage(float damage)
-    {
-        base.GetDamage(damage);
-        anim.SetTrigger("hurt");
-        playerStateManager.isHurt = true;
-    }
-
-    public void endHurt()
-    {
-        playerStateManager.isHurt = false;
-    }
-    
 }
