@@ -22,9 +22,21 @@ public class Zero : Player
     public bool isGrounded;
     // 二段跳判断
     public bool canDoubleJump;
+    // 是否可冲刺判断
+    public bool canDash = true;
+    // 碰墙判断
+    public bool isTouchingWall;
+    public bool slidingWall;
+    public float wallSlidingSpeed;
+    private bool wallJumping;
+    public float xWallJumpSpeed;
+    public float yWallJumpSpeed;
+    public Transform wallCheck;
+    public float checkRadius;
 
     // 组件
     private BoxCollider2D myFeet;
+    private CapsuleCollider2D myBody;
     private PlayerStateManager playerStateManager;
     public ShadowZero shadowZero;
     public int shadowMaxNum = 1;
@@ -43,6 +55,7 @@ public class Zero : Player
             shadow.SetActive(false);
         }
         myFeet = GetComponent<BoxCollider2D>();
+        myBody = GetComponent<CapsuleCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
     } 
 
@@ -59,6 +72,11 @@ public class Zero : Player
             AnimationListener();
             DoMove();
             Shoot();
+            CheckWall();
+            SilderWall();
+            WallJump();
+
+
             if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
             {
                 playerStateManager.Stand();
@@ -100,7 +118,7 @@ public class Zero : Player
     // 冲刺方法
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack)
+        if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack && !slidingWall)
         {
             if (isGrounded)
             {
@@ -123,7 +141,7 @@ public class Zero : Player
 
     void Dash()
     {
-        if (Input.GetKey(KeyCode.I) && isGrounded)
+        if (Input.GetKey(KeyCode.I) && isGrounded && canDash)
         { 
             /*if(shadowCount < shadowMaxNum)
             {
@@ -135,16 +153,14 @@ public class Zero : Player
             if(!isShadow)
             {
                 isShadow = true;
-                foreach(GameObject shadow in shadowZeros)
-                {
-                    shadow.SetActive(true);
-                }
+                enableShadow();
             }
             horizontalSpeed = GetDir() * dashSpeed;
         }
-        if (Input.GetKeyUp(KeyCode.I) && isGrounded)
+        if (Input.GetKeyUp(KeyCode.I))
         {
             isShadow = false;
+            canDash = true;
         }
     }
 
@@ -161,6 +177,9 @@ public class Zero : Player
             }
             else if (Math.Abs(horizontalSpeed) > 0)
             {
+                if (!Input.GetKey(KeyCode.I)) { 
+                    canDash = true;
+                }
                 playerStateManager.Run();
             }
         }
@@ -168,7 +187,7 @@ public class Zero : Player
 
     void CheckGrounded()
     {
-        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"));
         
     }
 
@@ -177,6 +196,7 @@ public class Zero : Player
         this.anim.SetFloat("HorizontalSpeed", Math.Abs(horizontalSpeed));
         this.anim.SetFloat("VerticalSpeed", rigi.velocity.y);
         this.anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isWall", slidingWall);
     }
 
     void Shoot()
@@ -189,14 +209,63 @@ public class Zero : Player
 
     public void GetDamage(float damage)
     {
-        base.GetDamage(damage);
-        anim.SetTrigger("hurt");
-        playerStateManager.isHurt = true;
+        if(canHurt)
+        {
+            base.GetDamage(damage);
+            anim.SetTrigger("hurt");
+            playerStateManager.isHurt = true;
+        }
     }
 
     public void endHurt()
     {
         playerStateManager.isHurt = false;
     }
-    
+
+    public void endDash()
+    {
+        canDash = false;
+    }
+
+    private void enableShadow()
+    {
+        foreach (GameObject shadow in shadowZeros)
+        {
+            shadow.SetActive(true);
+        }
+    }
+
+    void CheckWall()
+    {
+        //isTouchingWall = myBody.IsTouchingLayers(LayerMask.GetMask("Wall"));
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, LayerMask.GetMask("Wall"));
+    }
+
+    void SilderWall()
+    {
+        if(isTouchingWall && !isGrounded && dir != 0)
+        {
+            rigi.velocity = new Vector2(rigi.velocity.x, Mathf.Clamp(rigi.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            //rigi.velocity = new Vector2(rigi.velocity.x, -wallSlidingSpeed);
+            slidingWall = true;
+            
+        } else
+        {
+            slidingWall = false;
+        }
+        
+    }
+
+    void WallJump()
+    {
+        if(Input.GetKeyDown(KeyCode.U) && slidingWall)
+        {
+            rigi.velocity = new Vector2(xWallJumpSpeed * -dir, yWallJumpSpeed);
+        }
+        /*if(wallJumping)
+        {
+            rigi.velocity = new Vector2(xWallJumpSpeed * -dir, yWallJumpSpeed);
+        }*/
+    }
+
 }

@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private bool isBlink;
     public float hurtBackDistance = 1;
     public float destoryTime;
+    protected bool canHurt = true;
 
     protected void Start()
     {
@@ -36,24 +37,30 @@ public class Player : MonoBehaviour
 
     public void GetDamage(float damage)
     {
-        hp -= damage;
-        if (hp <= 0)
+        if(canHurt)
         {
-            Dead();
-        } else
-        {
-            capsuleCollider.enabled = false;
-            isBlink = true;
-            StartCoroutine(BlinkPlayer());
-            StartCoroutine(NoHurt());
+            hp -= damage;
+            if (hp <= 0)
+            {
+                Dead();
+            }
+            else
+            {
+                //capsuleCollider.enabled = false;
+                canHurt = false;
+                isBlink = true;
+                StartCoroutine(BlinkPlayer());
+                StartCoroutine(NoHurt());
 
+            }
         }
         
     }
 
     public void Dead()
     {
-        capsuleCollider.enabled = false;
+        //capsuleCollider.enabled = false;
+        canHurt = false;
         anim.SetTrigger("dead");
         Invoke("DestoryPlayer", destoryTime);
         
@@ -72,18 +79,22 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(blinkIntervalSeconds);
         }
         renderer.enabled = true;
-        capsuleCollider.enabled = true;
+        canHurt = true;
     }
 
     IEnumerator NoHurt()
     {
         yield return new WaitForSeconds(hurtBlinkSeconds);
         isBlink = false;
+        canHurt = true;
     }
 
     public void HurtBack()
     {
-        rigi.velocity = new Vector2(-this.transform.localScale.x / Math.Abs(this.transform.localScale.x) * hurtBackDistance, transform.position.y);
+        if(rigi != null)
+        {
+            rigi.velocity = new Vector2(-this.transform.localScale.x / Math.Abs(this.transform.localScale.x) * hurtBackDistance, transform.position.y);
+        }
     }
 
 }

@@ -48,7 +48,7 @@ public class ShadowZero : Player
         //base.Update();
         if (!playerStateManager.isHurt)
         {
-            Run();
+            //Run();
             Dash();
             Jump();
             Flip();
@@ -149,6 +149,10 @@ public class ShadowZero : Player
         this.anim.SetFloat("HorizontalSpeed", Math.Abs(horizontalSpeed));
         this.anim.SetFloat("VerticalSpeed", rigi.velocity.y);
         this.anim.SetBool("isGrounded", isGrounded);
+    }
+
+    public void endDash()
+    {
     }
 
 }
