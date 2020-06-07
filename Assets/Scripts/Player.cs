@@ -11,7 +11,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // 生命值
+    [HideInInspector]
     public float hp;
+    public float maxHp;
     // 动画组件
     protected Animator anim;
     protected AnimatorStateInfo animatorState;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
 
     protected void Start()
     {
+        hp = maxHp;
         anim = GetComponent<Animator>();
         animatorState = anim.GetCurrentAnimatorStateInfo(0);
         renderer = GetComponent<Renderer>();

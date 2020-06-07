@@ -18,11 +18,16 @@ public class Enemy : MonoBehaviour
     /**组件*/
     protected SpriteRenderer spriteRenderer;
     public GameObject bloodEffect;
+    private EnemyDropItemConfig enemyDropItemConfig;
+
+    /**掉落物*/
+    public Item[] dropItems;
 
     protected void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originColor = spriteRenderer.color;
+        enemyDropItemConfig = GetComponent<EnemyDropItemConfig>();
     }
 
     // 受伤方法
@@ -40,6 +45,15 @@ public class Enemy : MonoBehaviour
 
         if (healthyPoint <= 0)
         {
+            if(enemyDropItemConfig != null)
+            {
+                Item item = DropItemUtil.RandomItem(enemyDropItemConfig.items);
+                if (item != null)
+                {
+                    item.transform.position = new Vector3(transform.position.x, transform.position.y + 1, item.transform.position.z);
+                    Instantiate(item);
+                }
+            }
             Destroy(gameObject);
         }
     }
@@ -55,6 +69,11 @@ public class Enemy : MonoBehaviour
     protected void ResetColor()
     {
         spriteRenderer.color = originColor;
+    }
+
+    protected void DropItem()
+    {
+
     }
 
 }
