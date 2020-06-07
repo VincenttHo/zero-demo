@@ -187,7 +187,9 @@ public class Zero : Player
 
     void CheckGrounded()
     {
-        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"));
+        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) 
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"));
         
     }
 
