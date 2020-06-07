@@ -33,6 +33,8 @@ public class Zero : Player
     public float yWallJumpSpeed;
     public Transform wallCheck;
     public float checkRadius;
+    public bool isTouchingOneWayPlatform;
+    public float enableBodySpeed;
 
     // 组件
     private BoxCollider2D myFeet;
@@ -118,22 +120,25 @@ public class Zero : Player
     // 冲刺方法
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack && !slidingWall)
+        if(!OneWayPlatformJump())
         {
-            if (isGrounded)
+            if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack && !slidingWall)
             {
-                rigi.velocity = new Vector2(rigi.velocity.x, jumpSpeed);
-                canDoubleJump = true;
-                playerStateManager.Jump();
-                //this.rigi.AddForce(new Vector2(0, jumpSpeed));
-            }
-            else
-            {
-                if (canDoubleJump)
+                if (isGrounded)
                 {
-                    rigi.velocity = new Vector2(rigi.velocity.x, doubleJumpSpeed);
-                    canDoubleJump = false;
+                    rigi.velocity = new Vector2(rigi.velocity.x, jumpSpeed);
+                    canDoubleJump = true;
                     playerStateManager.Jump();
+                    //this.rigi.AddForce(new Vector2(0, jumpSpeed));
+                }
+                else
+                {
+                    if (canDoubleJump)
+                    {
+                        rigi.velocity = new Vector2(rigi.velocity.x, doubleJumpSpeed);
+                        canDoubleJump = false;
+                        playerStateManager.Jump();
+                    }
                 }
             }
         }
@@ -189,8 +194,11 @@ public class Zero : Player
     {
         isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) 
             || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
-            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"));
-        
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
+        isTouchingOneWayPlatform = myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
+
+
     }
 
     void AnimationListener()
@@ -268,6 +276,31 @@ public class Zero : Player
         {
             rigi.velocity = new Vector2(xWallJumpSpeed * -dir, yWallJumpSpeed);
         }*/
+    }
+
+    bool OneWayPlatformJump()
+    {
+        if(isTouchingOneWayPlatform)
+        {
+            if(Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.U))
+            {
+                myBody.enabled = false;
+                Invoke("enableBody", enableBodySpeed);
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void enableBody()
+    {
+        myBody.enabled = true;
     }
 
 }
