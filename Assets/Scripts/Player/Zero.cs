@@ -13,7 +13,8 @@ public class Zero : Player
     // 实际角色左右运动速度
     private float horizontalSpeed = 0;
     // 角色运动方向 
-    private float dir = 0;
+    [HideInInspector]
+    public float dir = 0;
     // 跳跃速度
     public float jumpSpeed = 13;
     // 二段跳速度
@@ -73,10 +74,10 @@ public class Zero : Player
         //base.Update();
         if (!playerStateManager.isHurt)
         {
+            Flip();
             Run();
             Dash();
             Jump();
-            Flip();
             CheckGrounded();
             DoMove();
             Shoot();
@@ -100,7 +101,7 @@ public class Zero : Player
     void Flip()
     {
         if (isClimbingLadder) return;
-
+        if (playerStateManager.isAttack) return;
         dir = 0;
         if (Input.GetKey(KeyCode.A))
         {
@@ -126,6 +127,7 @@ public class Zero : Player
     void Run()
     {
         if (isClimbingLadder) return;
+
         horizontalSpeed = dir * runSpeed;
     }
 
@@ -187,22 +189,22 @@ public class Zero : Player
     void DoMove()
     {
         if (isClimbingLadder) return;
-        if (!playerStateManager.isAttack)
+
+        rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
+        // 修改运动状态标识
+        if (Math.Abs(horizontalSpeed) > runSpeed)
         {
-            rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
-            // 修改运动状态标识
-            if (Math.Abs(horizontalSpeed) > runSpeed)
-            {
-                playerStateManager.Dash();
-            }
-            else if (Math.Abs(horizontalSpeed) > 0)
-            {
-                if (!Input.GetKey(KeyCode.I)) { 
-                    canDash = true;
-                }
-                playerStateManager.Run();
-            }
+            playerStateManager.Dash();
         }
+        else if (Math.Abs(horizontalSpeed) > 0)
+        {
+            if (!Input.GetKey(KeyCode.I))
+            {
+                canDash = true;
+            }
+            playerStateManager.Run();
+        }
+        
     }
 
     void CheckGrounded()
@@ -265,7 +267,7 @@ public class Zero : Player
     void CheckWall()
     {
         //isTouchingWall = myBody.IsTouchingLayers(LayerMask.GetMask("Wall"));
-        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, LayerMask.GetMask("Wall"));
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, LayerMask.GetMask("Ground"));
     }
 
     void SilderWall()

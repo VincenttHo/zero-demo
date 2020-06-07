@@ -24,7 +24,6 @@ public class Bullet : MonoBehaviour
         BoxCollider2D cameraCollider = mainCamera.GetComponent<BoxCollider2D>();
 
         cameraSize = cameraCollider.bounds.size.x / 2;
-        print(cameraSize);
         dir = transform.rotation.y == 0 ? -1 : 1;
         boundsX = background.bounds.size.x / 2;
         targetPos = new Vector3((boundsX + 10f) * dir, transform.position.y, transform.position.z);

@@ -16,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     private AnimatorStateInfo animatorStateInfo;
     private PlayerStateManager playerStateManager;
     private Rigidbody2D rigi;
+    private Zero zero;
 
     // 动画状态
     private const string StandState = "zero_stand";
@@ -31,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
         attackPolygonColliders = GetComponentsInChildren<PolygonCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
         rigi = GetComponent<Rigidbody2D>();
+        zero = GetComponent<Zero>();
     }
 
     void Update()
@@ -56,9 +58,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        
 
-        if((animatorStateInfo.IsName(StandState) || animatorStateInfo.IsName(RunState) || rigi.velocity.y != 0) && HitCount == 0)
+        if ((animatorStateInfo.IsName(StandState) || animatorStateInfo.IsName(RunState) || rigi.velocity.y != 0) && HitCount == 0)
         {
             HitCount = 1;
         }
@@ -73,6 +74,7 @@ public class PlayerAttack : MonoBehaviour
 
         if(HitCount > 0)
         {
+            zero.dir = 0;
             playerStateManager.Attack();
             /*if (HitCount == 3)
             {

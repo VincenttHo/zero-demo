@@ -43,7 +43,7 @@ public class Hunk : Enemy
     public void InitBullet()
     {
         bullet.transform.position = bulletPos.position;
-        bullet.transform.rotation = transform.rotation;
+        bullet.transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y == 0 ? 180 : 0, transform.rotation.z);
         Instantiate(bullet);
     }
 
@@ -62,12 +62,11 @@ public class Hunk : Enemy
         transform.localRotation = Quaternion.Euler(new Vector3(transform.rotation.x, 180, transform.rotation.z));
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CircleCollider2D")
         {
-            collision.gameObject.GetComponent<Zero>().GetDamage(touchDamage);
+            other.gameObject.GetComponent<Zero>().GetDamage(touchDamage);
         }
     }
 

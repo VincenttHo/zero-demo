@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     /**属性*/
     // 生命点
-    public int healthyPoint = 3;
+    public float healthyPoint = 3;
     // 攻击伤害值
     public int damage = 1;
     // 伤害闪烁时间
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     }
 
     // 受伤方法
-    public void GetDamage(int damage)
+    public void GetDamage(float damage)
     {
         
         healthyPoint -= damage;

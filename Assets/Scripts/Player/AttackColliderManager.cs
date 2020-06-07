@@ -9,12 +9,14 @@ public class AttackColliderManager : MonoBehaviour
     private PlayerStateManager playerStateManager;
     public GameObject bullet;
     public Transform bulletPos;
+    private Zero zero;
 
     // Start is called before the first frame update
     void Start()
     {
         colliders = GetComponentsInChildren<PolygonCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
+        zero = GetComponent<Zero>();
     }
 
     private void Update()
@@ -45,10 +47,12 @@ public class AttackColliderManager : MonoBehaviour
 
     void InitBullet()
     {
-        bullet.transform.position = bulletPos.position;
-        float rotationY = transform.localScale.x < 0 ? 0 : 180;
-        bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
-        Instantiate(bullet);
+        //bullet.transform.position = bulletPos.position;
+        //float rotationY = transform.localScale.x < 0 ? 0 : 180;
+        //bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
+        GameObject newBullet = Instantiate(bullet);
+        newBullet.transform.position = bulletPos.position;
+        newBullet.transform.rotation = zero.transform.rotation;
     }
 
 }

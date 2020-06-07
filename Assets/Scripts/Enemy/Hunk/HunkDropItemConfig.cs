@@ -11,8 +11,8 @@ public class HunkDropItemConfig : EnemyDropItemConfig
     public void Start()
     {
 
-        healthItemS.dropRate = 0.6f;
-        healthItemL.dropRate = 0.3f;
+        healthItemS.dropRate = 0.2f;
+        healthItemL.dropRate = 0.1f;
         items = new Item[] { healthItemS, healthItemL };
 
     }

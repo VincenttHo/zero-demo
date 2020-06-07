@@ -11,7 +11,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // 生命值
-    [HideInInspector]
+    //[HideInInspector]
     public float hp;
     public float maxHp;
     // 动画组件
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     protected AnimatorStateInfo animatorState;
     // 精灵组件
     private Renderer renderer;
-    private CapsuleCollider2D capsuleCollider;
+    private CircleCollider2D circleCollider;
     protected Rigidbody2D rigi;
 
     public float hurtBlinkSeconds = 1f;
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         animatorState = anim.GetCurrentAnimatorStateInfo(0);
         renderer = GetComponent<Renderer>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
         rigi = GetComponent<Rigidbody2D>();
     }
 
@@ -51,8 +51,8 @@ public class Player : MonoBehaviour
             }
             else
             {
-                //capsuleCollider.enabled = false;
-                canHurt = false;
+                circleCollider.enabled = false;
+                //canHurt = false;
                 isBlink = true;
                 StartCoroutine(BlinkPlayer());
                 StartCoroutine(NoHurt());
@@ -64,8 +64,8 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
-        //capsuleCollider.enabled = false;
-        canHurt = false;
+        //canHurt = false;
+        circleCollider.enabled = false;
         anim.SetTrigger("dead");
         Invoke("DestoryPlayer", destoryTime);
         
@@ -84,21 +84,23 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(blinkIntervalSeconds);
         }
         renderer.enabled = true;
-        canHurt = true;
+        //canHurt = true;
+        circleCollider.enabled = true;
     }
 
     IEnumerator NoHurt()
     {
         yield return new WaitForSeconds(hurtBlinkSeconds);
         isBlink = false;
-        canHurt = true;
+        //canHurt = true;
+        circleCollider.enabled = true;
     }
 
     public void HurtBack()
     {
         if(rigi != null)
         {
-            rigi.velocity = new Vector2(-this.transform.localScale.x / Math.Abs(this.transform.localScale.x) * hurtBackDistance, transform.position.y);
+            rigi.velocity = new Vector2(-transform.right.x * hurtBackDistance, transform.position.y);
         }
     }
 
