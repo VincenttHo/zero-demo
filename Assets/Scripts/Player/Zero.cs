@@ -35,6 +35,11 @@ public class Zero : Player
     public float checkRadius;
     public bool isTouchingOneWayPlatform;
     public float enableBodySpeed;
+    public bool isTouchingLadder;
+    public bool isClimbingLadder;
+    public float climbLadderSpeed;
+    private float climbLadderDir;
+    private float defaultGravityScale;
 
     // 组件
     private BoxCollider2D myFeet;
@@ -51,6 +56,7 @@ public class Zero : Player
     void Start()
     {
         base.Start();
+        
         shadowZeros = GameObject.FindGameObjectsWithTag("ShadowZero");
         foreach (GameObject shadow in shadowZeros)
         {
@@ -59,6 +65,7 @@ public class Zero : Player
         myFeet = GetComponent<BoxCollider2D>();
         myBody = GetComponent<CapsuleCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
+        defaultGravityScale = rigi.gravityScale;
     } 
 
     void Update() 
@@ -71,12 +78,14 @@ public class Zero : Player
             Jump();
             Flip();
             CheckGrounded();
-            AnimationListener();
             DoMove();
             Shoot();
             CheckWall();
             SilderWall();
             WallJump();
+            CheckLadder();
+            ClimbLadder();
+            AnimationListener();
 
 
             if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
@@ -90,6 +99,8 @@ public class Zero : Player
     // 转身
     void Flip()
     {
+        if (isClimbingLadder) return;
+
         dir = 0;
         if (Input.GetKey(KeyCode.A))
         {
@@ -114,18 +125,20 @@ public class Zero : Player
     // 跑步方法
     void Run()
     {
+        if (isClimbingLadder) return;
         horizontalSpeed = dir * runSpeed;
     }
 
     // 冲刺方法
     void Jump()
     {
-        if(!OneWayPlatformJump())
+        if (!OneWayPlatformJump())
         {
             if (Input.GetKeyDown(KeyCode.U) && !playerStateManager.isAttack && !slidingWall)
             {
-                if (isGrounded)
+                if (isGrounded || isClimbingLadder)
                 {
+                    EndClimbLadder();
                     rigi.velocity = new Vector2(rigi.velocity.x, jumpSpeed);
                     canDoubleJump = true;
                     playerStateManager.Jump();
@@ -146,6 +159,7 @@ public class Zero : Player
 
     void Dash()
     {
+        if (isClimbingLadder) return;
         if (Input.GetKey(KeyCode.I) && isGrounded && canDash)
         { 
             /*if(shadowCount < shadowMaxNum)
@@ -172,6 +186,7 @@ public class Zero : Player
     // 根据速度移动
     void DoMove()
     {
+        if (isClimbingLadder) return;
         if (!playerStateManager.isAttack)
         {
             rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
@@ -207,10 +222,12 @@ public class Zero : Player
         this.anim.SetFloat("VerticalSpeed", rigi.velocity.y);
         this.anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("isWall", slidingWall);
+        anim.SetBool("isClimbingLadder", isClimbingLadder);
     }
 
     void Shoot()
     {
+        if (isClimbingLadder) return;
         if (Input.GetKeyDown(KeyCode.H))
         {
             this.anim.SetTrigger("shoot");
@@ -285,7 +302,7 @@ public class Zero : Player
             if(Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.U))
             {
                 myBody.enabled = false;
-                Invoke("enableBody", enableBodySpeed);
+                Invoke("EnableBody", enableBodySpeed);
                 return true;
             } else
             {
@@ -298,9 +315,67 @@ public class Zero : Player
         }
     }
 
-    void enableBody()
+    void EnableBody()
     {
         myBody.enabled = true;
+    }
+
+    void CheckLadder()
+    {
+        isTouchingLadder = myFeet.IsTouchingLayers(LayerMask.GetMask("Ladder"));
+    }
+
+    void ClimbLadder()
+    {
+        if(isTouchingLadder)
+        {
+            if(Input.GetKeyDown(KeyCode.W))
+            {
+                isClimbingLadder = true;
+                rigi.gravityScale = 0;
+                rigi.velocity = new Vector2(0, 0);
+            }
+        }
+        if(isClimbingLadder)
+        {
+            if(!isTouchingLadder)
+            {
+                EndClimbLadder();
+            }
+            else
+            {
+                climbLadderDir = 0;
+                if (Input.GetKey(KeyCode.W))
+                {
+                    anim.speed = 1;
+                    climbLadderDir = 1;
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    if (!isGrounded)
+                    {
+                        anim.speed = 1;
+                        climbLadderDir = -1;
+                    }
+                    else
+                    {
+                        EndClimbLadder();
+                    }
+                }
+                else
+                {
+                    anim.speed = 0;
+                }
+                rigi.velocity = new Vector2(rigi.velocity.x, climbLadderSpeed * climbLadderDir);
+            }
+        }
+    }
+
+    void EndClimbLadder()
+    {
+        isClimbingLadder = false;
+        rigi.gravityScale = defaultGravityScale;
+        anim.speed = 1;
     }
 
 }

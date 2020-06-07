@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float hp;
     // 动画组件
     protected Animator anim;
+    protected AnimatorStateInfo animatorState;
     // 精灵组件
     private Renderer renderer;
     private CapsuleCollider2D capsuleCollider;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     protected void Start()
     {
         anim = GetComponent<Animator>();
+        animatorState = anim.GetCurrentAnimatorStateInfo(0);
         renderer = GetComponent<Renderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rigi = GetComponent<Rigidbody2D>();
