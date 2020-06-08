@@ -12,16 +12,19 @@ public class PlayerMoveState : BaseState
     public PlayerMoveState(PlayerZero playerZero)
     {
         this.playerZero = playerZero;
+        stateName = "move";
     }
 
     public override void execute()
     {
-        playerZero.anim.SetFloat("HorizontalSpeed", Math.Abs(playerZero.currentHorizontalSpeed));
+        playerZero.rigi.velocity = new Vector2(playerZero.currentHorizontalSpeed, playerZero.rigi.velocity.y);
+        playerZero.anim.SetBool("isRun", true);
     }
 
     public override bool onEndState()
     {
-        playerZero.anim.SetFloat("HorizontalSpeed", 0);
+        playerZero.rigi.velocity = new Vector2(0, playerZero.rigi.velocity.y);
+        playerZero.anim.SetBool("isRun", false);
         return true;
     }
 }

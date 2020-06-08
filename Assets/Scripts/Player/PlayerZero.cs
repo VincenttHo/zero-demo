@@ -13,23 +13,43 @@ public class PlayerZero : Player
     public float dashSpeed = 8f;
     // 跳跃速度
     public float jumpSpeed = 13f;
+    // 冲刺开关
+    [HideInInspector]
+    public bool canDash = true;
     // 当前水平速度
     //[HideInInspector]
     public float currentHorizontalSpeed;
     // 运动方向
+   // [HideInInspector]
+    public int input;
+    // 跳跃次数
+    public int jumpCount;
+    // 最大跳跃次数
+    public int maxJumpTime = 2;
+    // 纵向输入
+    public int yInput;
+    // 滑墙速度
+    public float wallSlidingSpeed;
     //[HideInInspector]
-    public int moveDir;
+    public bool canJump = true;
 
+    /**判断参数*/
     //[HideInInspector]
     public bool isGrounded = true;
-    [HideInInspector]
-    public Rigidbody2D rigi;
-    [HideInInspector]
-    public Animator anim;
+    public bool isAttack = false;
+    public bool isTouchingWall = false;
+
+    public string currentState;
 
     private BoxCollider2D myFeet;
 
-    private PlayerStateMachine stateMachine;
+    public Transform wallCheck;
+    public float checkRadius;
+    [HideInInspector]
+    public PlayerStateMachine stateMachine;
+    [HideInInspector]
+    public GameObject[] shadowZeros;
+
 
     private void Start()
     {
@@ -38,15 +58,23 @@ public class PlayerZero : Player
         rigi = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         myFeet = GetComponent<BoxCollider2D>();
+        shadowZeros = GameObject.FindGameObjectsWithTag("ShadowZero");
+        foreach (GameObject shadow in shadowZeros)
+        {
+            shadow.SetActive(false);
+        }
     }
 
     void Update()
     {
+        currentState = stateMachine.currentState.stateName;
+        CheckWall();
         CheckGrounded();
-        Flip();
+        DoInput();
         DoRun();
         DoDash();
-        DoMove();
+        DoJump();
+        Shoot();
         stateMachine.CheckChangeState();
         stateMachine.currentState.execute();
     }
@@ -56,50 +84,88 @@ public class PlayerZero : Player
         return transform.rotation.y == 0 ? 1 : -1;
     }
 
-    public bool DoJump()
+    public void DoJump()
     {
-        return Input.GetKeyDown(KeyCode.U);
+        if(Input.GetKey(KeyCode.U))
+        {
+             yInput = 1;
+        }
+        else if(Input.GetKeyUp(KeyCode.U))
+        {
+            canJump = true;
+            yInput = 0;
+        }
     }
 
-    private void Flip()
+    private void DoInput()
     {
-        moveDir = 0;
+        if (isAttack) return;
+        input = 0;
         if (Input.GetKey(KeyCode.A))
         {
-            moveDir = -1;
+            input = -1;
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            moveDir = 1;
+            input = 1;
         }
-        if(moveDir != 0)
+        if(input != 0)
         {
-            transform.rotation = Quaternion.Euler(0, moveDir == 1 ? 0 : 180, 0);
+            transform.rotation = Quaternion.Euler(0, input == 1 ? 0 : 180, 0);
         }
     }
 
     private void DoRun()
     {
-        currentHorizontalSpeed = runSpeed * moveDir;
+        currentHorizontalSpeed = runSpeed * input;
     }
 
     private void DoDash()
     {
-        if(Input.GetKey(KeyCode.I))
+        if(Input.GetKey(KeyCode.I) && canDash)
         {
             currentHorizontalSpeed = dashSpeed * GetDir();
         }
-    }
-
-    private void DoMove()
-    {
-        rigi.velocity = new Vector2(currentHorizontalSpeed, rigi.velocity.y);
+        if(Input.GetKeyUp(KeyCode.I))
+        {
+            canDash = true;
+        }
     }
 
     private void CheckGrounded()
     {
-        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
+        anim.SetBool("isGrounded", isGrounded);
+    }
 
+    public void EndDash()
+    {
+        canDash = false;
+    }
+
+    public void EndJump()
+    {
+        if(yInput == 1)
+        {
+            canJump = false;
+        }
+    }
+
+    void Shoot()
+    {
+        //if (isClimbingLadder) return;
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            this.anim.SetTrigger("shoot");
+        }
+    }
+
+    void CheckWall()
+    {
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, LayerMask.GetMask("Ground"));
     }
 
 }

@@ -27,6 +27,8 @@ public class Zero : Player
     public bool canDash = true;
     // 碰墙判断
     public bool isTouchingWall;
+    // 冲刺跳判断
+    public bool isDashJump;
     public bool slidingWall;
     public float wallSlidingSpeed;
     private bool wallJumping;
@@ -88,7 +90,6 @@ public class Zero : Player
             ClimbLadder();
             AnimationListener();
 
-
             if (rigi.velocity.x == 0 && rigi.velocity.y == 0 && !playerStateManager.isAttack)
             {
                 playerStateManager.Stand();
@@ -131,7 +132,7 @@ public class Zero : Player
         horizontalSpeed = dir * runSpeed;
     }
 
-    // 冲刺方法
+    // 跳跃方法
     void Jump()
     {
         if (!OneWayPlatformJump())
@@ -155,6 +156,7 @@ public class Zero : Player
                         playerStateManager.Jump();
                     }
                 }
+
             }
         }
     }
@@ -177,6 +179,7 @@ public class Zero : Player
                 enableShadow();
             }
             horizontalSpeed = GetDir() * dashSpeed;
+            isDashJump = true;
         }
         if (Input.GetKeyUp(KeyCode.I))
         {
@@ -189,6 +192,8 @@ public class Zero : Player
     void DoMove()
     {
         if (isClimbingLadder) return;
+
+        if (playerStateManager.isJump) return;
 
         rigi.velocity = new Vector2(horizontalSpeed, rigi.velocity.y);
         // 修改运动状态标识
@@ -251,7 +256,7 @@ public class Zero : Player
         playerStateManager.isHurt = false;
     }
 
-    public void endDash()
+    public void EndDash()
     {
         canDash = false;
     }

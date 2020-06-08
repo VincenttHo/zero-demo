@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BehaviorDesigner.Runtime.Tasks.Unity.UnityCharacterController;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,7 +47,7 @@ public class PlayerStateMachine : MonoBehaviour
      */
     public void CheckChangeState()
     {
-        if(playerZero.hp <= 0)
+        if (playerZero.hp <= 0)
         {
             DoChangeState(new PlayerDeathState(playerZero));
             return;
@@ -59,11 +60,11 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerMoveState(playerZero));
             }
-            else if(Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.dashSpeed)
+            else if(Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.dashSpeed && playerZero.canDash)
             {
                 DoChangeState(new PlayerDashState(playerZero));
             }
-            else if(playerZero.DoJump())
+            else if(playerZero.yInput > 0 && playerZero.canJump)
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
@@ -76,11 +77,11 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerStandState(playerZero));
             }
-            else if (Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.dashSpeed)
+            else if (Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.dashSpeed && playerZero.canDash)
             {
                 DoChangeState(new PlayerDashState(playerZero));
             }
-            else if (playerZero.DoJump())
+            else if (playerZero.yInput == 1 && playerZero.canJump)
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
@@ -89,38 +90,95 @@ public class PlayerStateMachine : MonoBehaviour
         // 三、冲刺
         if(currentState is PlayerDashState)
         {
-            if (playerZero.currentHorizontalSpeed == 0)
+            if(!playerZero.canDash)
             {
-                DoChangeState(new PlayerStandState(playerZero));
+                if(playerZero.input != 0)
+                {
+                    DoChangeState(new PlayerMoveState(playerZero));
+                } else
+                {
+                    DoChangeState(new PlayerStandState(playerZero));
+                }
             }
-            else if (Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.runSpeed)
+            else
             {
-                DoChangeState(new PlayerMoveState(playerZero));
+                if (playerZero.currentHorizontalSpeed == 0)
+                {
+                    DoChangeState(new PlayerStandState(playerZero));
+                }
+                else if (Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.runSpeed)
+                {
+                    DoChangeState(new PlayerMoveState(playerZero));
+                }
+                else if (playerZero.yInput == 1)
+                {
+                    DoChangeState(new PlayerJumpState(playerZero));
+                }
             }
-            else if (playerZero.DoJump())
-            {
-                DoChangeState(new PlayerJumpState(playerZero));
-            }
+            
         }
 
         // 四、跳跃
         if(currentState is PlayerJumpState)
         {
-            if(playerZero.isGrounded)
+            if(playerZero.rigi.velocity.y < 0)
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }
+            if(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
+            {
+                DoChangeState(new PlayerSlideWallState(playerZero));
+            }
+            /*if (playerZero.canJump && playerZero.jumpCount < playerZero.maxJumpTime)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
+            }*/
+        }
+
+        // 五、下落
+        if (currentState is PlayerFallState)
+        {
+            if (playerZero.isGrounded)
             {
                 DoChangeState(new PlayerStandState(playerZero));
+            }
+            if (playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
+            {
+                DoChangeState(new PlayerSlideWallState(playerZero));
+            }
+            /*if (playerZero.canJump && playerZero.jumpCount < playerZero.maxJumpTime)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
+            }*/
+        }
+
+        // 六、滑墙
+        if (currentState is PlayerSlideWallState)
+        {
+            if (playerZero.isGrounded)
+            {
+                DoChangeState(new PlayerStandState(playerZero));
+            }
+            else if (!(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0))
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }
+            else if (playerZero.yInput == 1)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
             }
         }
 
     }
 
-
     public void DoChangeState(BaseState newState)
     {
         bool canChange = currentState.onEndState();
+        BaseState lastState = currentState;
         if (canChange)
         {
             currentState = newState;
+            currentState.lastState = lastState;
         }
     }
 

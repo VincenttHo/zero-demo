@@ -15,12 +15,14 @@ public class Player : MonoBehaviour
     public float hp;
     public float maxHp;
     // 动画组件
-    protected Animator anim;
+    [HideInInspector]
+    public Animator anim;
     protected AnimatorStateInfo animatorState;
     // 精灵组件
     private Renderer renderer;
     private CircleCollider2D circleCollider;
-    protected Rigidbody2D rigi;
+    [HideInInspector]
+    public Rigidbody2D rigi;
 
     public float hurtBlinkSeconds = 1f;
 

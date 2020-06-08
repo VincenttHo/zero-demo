@@ -11,6 +11,7 @@ public class PlayerDeathState : BaseState
     public PlayerDeathState(PlayerZero playerZero)
     {
         this.playerZero = playerZero;
+        stateName = "death";
     }
 
     public override void execute()

@@ -6,22 +6,20 @@ public class AttackColliderManager : MonoBehaviour
 {
 
     private PolygonCollider2D[] colliders;
-    private PlayerStateManager playerStateManager;
     public GameObject bullet;
     public Transform bulletPos;
-    private Zero zero;
+    private PlayerZero zero;
 
     // Start is called before the first frame update
     void Start()
     {
         colliders = GetComponentsInChildren<PolygonCollider2D>();
-        playerStateManager = GetComponent<PlayerStateManager>();
-        zero = GetComponent<Zero>();
+        zero = GetComponent<PlayerZero>();
     }
 
     private void Update()
     {
-        if(!playerStateManager.isAttack)
+        if(!zero.isAttack)
         {
             clearAllCollider();
         }

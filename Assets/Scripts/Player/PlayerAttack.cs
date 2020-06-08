@@ -14,9 +14,8 @@ public class PlayerAttack : MonoBehaviour
     private Animator anim;
     private PolygonCollider2D[] attackPolygonColliders;
     private AnimatorStateInfo animatorStateInfo;
-    private PlayerStateManager playerStateManager;
     private Rigidbody2D rigi;
-    private Zero zero;
+    private PlayerZero zero;
 
     // 动画状态
     private const string StandState = "zero_stand";
@@ -30,9 +29,8 @@ public class PlayerAttack : MonoBehaviour
         //collider = GetComponent<PolygonCollider2D>();
         anim = GetComponentInChildren<Animator>();
         attackPolygonColliders = GetComponentsInChildren<PolygonCollider2D>();
-        playerStateManager = GetComponent<PlayerStateManager>();
         rigi = GetComponent<Rigidbody2D>();
-        zero = GetComponent<Zero>();
+        zero = GetComponent<PlayerZero>();
     }
 
     void Update()
@@ -41,7 +39,6 @@ public class PlayerAttack : MonoBehaviour
         if(animatorStateInfo.normalizedTime >= 0.9f && !animatorStateInfo.IsName(StandState))
         {
             HitCount = 0;
-            playerStateManager.Stand();
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
@@ -51,9 +48,12 @@ public class PlayerAttack : MonoBehaviour
         if (animatorStateInfo.IsName(JumpSwordAttackState) && rigi.velocity.y == 0)
         {
             HitCount = 0;
-            playerStateManager.Stand();
         }
         anim.SetInteger("attack", HitCount);
+        if(HitCount == 0)
+        {
+            zero.isAttack = false;
+        }
     }
 
     void Attack()
@@ -72,10 +72,10 @@ public class PlayerAttack : MonoBehaviour
             HitCount = 3;
         }
 
-        if(HitCount > 0)
+        if(HitCount > 0 && !(zero.stateMachine.currentState is PlayerJumpState))
         {
-            zero.dir = 0;
-            playerStateManager.Attack();
+            zero.isAttack = true;
+            zero.input = 0;
             /*if (HitCount == 3)
             {
                 StartCoroutine(startAttack(2));

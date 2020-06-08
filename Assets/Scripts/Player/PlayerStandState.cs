@@ -11,6 +11,11 @@ public class PlayerStandState : BaseState
     public PlayerStandState(PlayerZero playerZero)
     {
         this.playerZero = playerZero;
+        stateName = "stand";
+        playerZero.rigi.velocity = new Vector2(0, 0);
+        playerZero.anim.SetFloat("verticalSpeed", 0);
+
+
     }
 
     public override void execute()

@@ -8,19 +8,24 @@ public class HealthBar : MonoBehaviour
 
     private float healthMax;
     private Image healthBar;
-    private Zero zero;
+    private Player zero;
 
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        zero = player.GetComponent<Zero>();
-        healthMax = zero.hp;
-        zero.hp = zero.hp - 2;
+        zero = player.GetComponent<Player>();
+        if(zero != null)
+        {
+            healthMax = zero.hp;
+        }
         healthBar = GetComponent<Image>();
     }
 
     void Update()
     {
-        healthBar.fillAmount = zero.hp / healthMax;
+        if(zero != null)
+        {
+            healthBar.fillAmount = zero.hp / healthMax;
+        }
     }
 }

@@ -6,11 +6,11 @@ public class HealthItem : Item
 {
 
     public float healthHp;
-    private Zero zero;
+    private PlayerZero zero;
 
     void Start()
     {
-        zero = GameObject.FindGameObjectWithTag("Player").GetComponent<Zero>();
+        zero = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerZero>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

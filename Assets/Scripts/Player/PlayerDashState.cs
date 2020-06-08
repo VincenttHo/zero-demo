@@ -11,15 +11,28 @@ public class PlayerDashState : BaseState
     public PlayerDashState(PlayerZero playerZero)
     {
         this.playerZero = playerZero;
+        stateName = "dash";
+        enableShadow();
     }
 
     public override void execute()
     {
-        throw new NotImplementedException();
+        playerZero.rigi.velocity = new Vector2(playerZero.currentHorizontalSpeed, playerZero.rigi.velocity.y);
+        playerZero.anim.SetBool("isDash", true);
     }
 
     public override bool onEndState()
     {
-        throw new NotImplementedException();
+        playerZero.rigi.velocity = new Vector2(0, playerZero.rigi.velocity.y);
+        playerZero.anim.SetBool("isDash", false);
+        return true;
+    }
+
+    private void enableShadow()
+    {
+        foreach (GameObject shadow in playerZero.shadowZeros)
+        {
+            shadow.SetActive(true);
+        }
     }
 }

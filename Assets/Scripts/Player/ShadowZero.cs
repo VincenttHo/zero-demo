@@ -28,6 +28,7 @@ public class ShadowZero : Player
     // 组件
     private BoxCollider2D myFeet;
     private PlayerStateManager playerStateManager;
+    private PlayerZero zero;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class ShadowZero : Player
         startX = transform.localPosition.x;
         myFeet = GetComponent<BoxCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
+        zero = GetComponentInParent<PlayerZero>();
     }
 
     void Update()
@@ -48,9 +50,12 @@ public class ShadowZero : Player
         //base.Update();
         if (!playerStateManager.isHurt)
         {
+            print(zero.rigi.velocity.y);
+
+            rigi.velocity = new Vector3(rigi.velocity.x, zero.rigi.velocity.y);
             //Run();
             Dash();
-            Jump();
+            //Jump();
             Flip();
             CheckGrounded();
             AnimationListener();
@@ -151,7 +156,7 @@ public class ShadowZero : Player
         this.anim.SetBool("isGrounded", isGrounded);
     }
 
-    public void endDash()
+    public void EndDash()
     {
     }
 
