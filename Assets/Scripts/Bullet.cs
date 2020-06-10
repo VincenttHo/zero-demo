@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                Zero zero = collision.gameObject.GetComponent<Zero>();
+                PlayerZero zero = collision.gameObject.GetComponent<PlayerZero>();
                 zero.GetDamage(damage);
             }
             if (collision.gameObject.tag == "Enemy")

@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
             Attack();
         }
         // 处理跳砍动作，如果落地，则将攻击动作复原
-        if (animatorStateInfo.IsName(JumpSwordAttackState) && rigi.velocity.y == 0)
+        if (animatorStateInfo.IsName(JumpSwordAttackState) && zero.isGrounded)
         {
             HitCount = 0;
         }
@@ -59,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
 
-        if ((animatorStateInfo.IsName(StandState) || animatorStateInfo.IsName(RunState) || rigi.velocity.y != 0) && HitCount == 0)
+        if (/*(animatorStateInfo.IsName(StandState) || rigi.velocity.y != 0) &&*/ HitCount == 0)
         {
             HitCount = 1;
         }
@@ -72,7 +72,7 @@ public class PlayerAttack : MonoBehaviour
             HitCount = 3;
         }
 
-        if(HitCount > 0 && !(zero.stateMachine.currentState is PlayerJumpState))
+        if(HitCount > 0 && !(zero.stateMachine.currentState is PlayerJumpState) && !(zero.stateMachine.currentState is PlayerFallState))
         {
             zero.isAttack = true;
             zero.input = 0;

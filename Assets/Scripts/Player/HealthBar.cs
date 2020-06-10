@@ -8,15 +8,15 @@ public class HealthBar : MonoBehaviour
 
     private float healthMax;
     private Image healthBar;
-    private Player zero;
+    private PlayerZero zero;
 
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        zero = player.GetComponent<Player>();
+        zero = player.GetComponent<PlayerZero>();
         if(zero != null)
         {
-            healthMax = zero.hp;
+            healthMax = zero.maxHp;
         }
         healthBar = GetComponent<Image>();
     }

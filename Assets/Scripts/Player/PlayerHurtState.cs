@@ -3,17 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStandState : BaseState
+public class PlayerHurtState : BaseState
 {
 
     private PlayerZero playerZero;
 
-    public PlayerStandState(PlayerZero playerZero)
+    public PlayerHurtState(PlayerZero playerZero)
     {
-        this.playerZero = playerZero;
-        stateName = "stand";
-        playerZero.rigi.velocity = new Vector2(0, 0);
-        playerZero.anim.SetFloat("verticalSpeed", 0);
+        stateName = "hurt";
     }
 
     public override void execute()

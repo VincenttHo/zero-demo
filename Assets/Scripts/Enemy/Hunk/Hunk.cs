@@ -37,7 +37,7 @@ public class Hunk : Enemy
     void Update()
     {
         hunkStateMachine.CheckChangeState();
-        hunkStateMachine.currentState.execute();
+        //hunkStateMachine.currentState.execute();
     }
 
     public void InitBullet()
@@ -66,7 +66,7 @@ public class Hunk : Enemy
     {
         if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CircleCollider2D")
         {
-            other.gameObject.GetComponent<Zero>().GetDamage(touchDamage);
+            other.gameObject.GetComponent<PlayerZero>().GetDamage(touchDamage);
         }
     }
 

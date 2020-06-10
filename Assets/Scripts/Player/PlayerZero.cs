@@ -30,14 +30,22 @@ public class PlayerZero : Player
     public int yInput;
     // 滑墙速度
     public float wallSlidingSpeed;
+    // 跳墙速度
+    public float wallJumpYSpeed;
+    public float wallJumpXSpeed;
+    // 跳墙cd
+    public float wallJumpCD;
+    public float wallJumpWaitTime;
     //[HideInInspector]
     public bool canJump = true;
+    public bool isHurt = false;
 
     /**判断参数*/
     //[HideInInspector]
     public bool isGrounded = true;
     public bool isAttack = false;
     public bool isTouchingWall = false;
+    public bool isDashJump = false;
 
     public string currentState;
 
@@ -67,6 +75,7 @@ public class PlayerZero : Player
 
     void Update()
     {
+        anim.SetFloat("verticalSpeed", rigi.velocity.y);
         currentState = stateMachine.currentState.stateName;
         CheckWall();
         CheckGrounded();
@@ -86,6 +95,10 @@ public class PlayerZero : Player
 
     public void DoJump()
     {
+        if(Input.GetKey(KeyCode.U) && Input.GetKey(KeyCode.I))
+        {
+            isDashJump = true;
+        }
         if(Input.GetKey(KeyCode.U))
         {
              yInput = 1;
@@ -109,7 +122,7 @@ public class PlayerZero : Player
         {
             input = 1;
         }
-        if(input != 0)
+        if(input != 0 && !isHurt)
         {
             transform.rotation = Quaternion.Euler(0, input == 1 ? 0 : 180, 0);
         }
@@ -166,6 +179,19 @@ public class PlayerZero : Player
     void CheckWall()
     {
         isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, LayerMask.GetMask("Ground"));
+    }
+
+    public void GetDamage(float damage)
+    {
+        base.GetDamage(damage);
+        isHurt = true;
+        anim.SetTrigger("hurt");
+    }
+
+    public void EndHurt()
+    {
+        isHurt = false;
+        rigi.velocity = new Vector2(0, rigi.velocity.y);
     }
 
 }
