@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HunkAttackState : EnemyBaseState
+public class HunkAttackState : BaseState
 {
 
     private Hunk hunk;

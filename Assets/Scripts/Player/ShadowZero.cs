@@ -24,11 +24,15 @@ public class ShadowZero : Player
     public bool canDoubleJump;
     // 开始位置
     private float startX;
+    // 等待跳跃时间（用于造成残影错位跳跃的效果）
+    public float waitJumpTime;
+    public float currentWaitJumpTime;
 
     // 组件
     private BoxCollider2D myFeet;
     private PlayerStateManager playerStateManager;
     private PlayerZero zero;
+    private float verticalSpeed;
 
     void Start()
     {
@@ -37,6 +41,12 @@ public class ShadowZero : Player
         myFeet = GetComponent<BoxCollider2D>();
         playerStateManager = GetComponent<PlayerStateManager>();
         zero = GetComponentInParent<PlayerZero>();
+    }
+
+    private void OnEnable()
+    {
+        currentWaitJumpTime = waitJumpTime;
+        transform.position = new Vector3(transform.position.x, transform.parent.position.y, transform.position.z);
     }
 
     void Update()
@@ -48,11 +58,9 @@ public class ShadowZero : Player
         }
 
         //base.Update();
-        if (!playerStateManager.isHurt)
+        /*if (!playerStateManager.isHurt)
         {
-            print(zero.rigi.velocity.y);
-
-            rigi.velocity = new Vector3(rigi.velocity.x, zero.rigi.velocity.y);
+            rigi.velocity = new Vector2(rigi.velocity.x, zero.rigi.velocity.y);
             //Run();
             Dash();
             //Jump();
@@ -64,7 +72,14 @@ public class ShadowZero : Player
             {
                 playerStateManager.Stand();
             }
+        }*/
+        Dash();
+        DoMove();
+        if(!zero.isGrounded && zero.rigi.velocity.y != 0)
+        {
+            this.gameObject.SetActive(false);
         }
+        rigi.velocity = new Vector2(rigi.velocity.x, zero.rigi.velocity.y);
 
     }
 

@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HunkDeadState : BaseState
+public class BombMachineDeadState : BaseState
 {
 
-    private Hunk hunk;
+    private BombMachine bombMachine;
 
-    public HunkDeadState(Hunk hunk)
+    public BombMachineDeadState(BombMachine bombMachine)
     {
-        this.hunk = hunk;
+        this.bombMachine = bombMachine;
     }
 
     public override void execute()
     {
-        //hunk.Dead();
     }
 
     public override bool onEndState()

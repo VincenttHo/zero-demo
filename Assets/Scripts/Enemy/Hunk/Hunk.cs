@@ -37,7 +37,7 @@ public class Hunk : Enemy
     void Update()
     {
         hunkStateMachine.CheckChangeState();
-        //hunkStateMachine.currentState.execute();
+        hunkStateMachine.currentState.execute();
     }
 
     public void InitBullet()

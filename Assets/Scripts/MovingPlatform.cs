@@ -41,7 +41,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        if(other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             playerPos.parent = transform;
         }
@@ -49,7 +49,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             playerPos.parent = playerDefParent;
         }

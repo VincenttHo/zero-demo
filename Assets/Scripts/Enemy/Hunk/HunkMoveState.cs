@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HunkMoveState : EnemyBaseState
+public class HunkMoveState : BaseState
 {
 
     private Hunk hunk;

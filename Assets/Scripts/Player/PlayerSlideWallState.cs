@@ -29,7 +29,7 @@ public class PlayerSlideWallState : BaseState
     {
         if(playerZero.wallJumpWaitTime <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.U) && playerZero.isTouchingWall)
             {
                 playerZero.rigi.velocity = new Vector2(playerZero.wallJumpXSpeed * -playerZero.input, playerZero.wallJumpYSpeed);
                 playerZero.wallJumpWaitTime = playerZero.wallJumpCD;

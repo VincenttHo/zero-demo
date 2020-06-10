@@ -11,9 +11,9 @@ using UnityEngine;
 public class EnemyStateMachine : MonoBehaviour
 {
 
-    public EnemyBaseState currentState;
+    public BaseState currentState;
 
-    public void DoChangeState(EnemyBaseState newState)
+    public void DoChangeState(BaseState newState)
     {
         bool canChange = currentState.onEndState();
         if(canChange)

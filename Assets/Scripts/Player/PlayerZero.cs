@@ -49,7 +49,7 @@ public class PlayerZero : Player
 
     public string currentState;
 
-    private BoxCollider2D myFeet;
+    private CapsuleCollider2D myFeet;
 
     public Transform wallCheck;
     public float checkRadius;
@@ -65,7 +65,7 @@ public class PlayerZero : Player
         stateMachine = new PlayerStateMachine(this);
         rigi = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        myFeet = GetComponent<BoxCollider2D>();
+        myFeet = GetComponent<CapsuleCollider2D>();
         shadowZeros = GameObject.FindGameObjectsWithTag("ShadowZero");
         foreach (GameObject shadow in shadowZeros)
         {

@@ -73,6 +73,10 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
+            else if (!playerZero.isGrounded && playerZero.rigi.velocity.y < 0)
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }
         }
 
         // 二、跑步
@@ -130,6 +134,10 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }
+            /*else if(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.yInput != 0)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
+            }*/
             /*if(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
             {
                 DoChangeState(new PlayerSlideWallState(playerZero));
@@ -147,7 +155,11 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerStandState(playerZero));
             }
-            if (playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
+            /*else if(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.yInput != 0)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
+            }*/
+            else if (playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
             {
                 DoChangeState(new PlayerSlideWallState(playerZero));
             }
@@ -164,14 +176,14 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerStandState(playerZero));
             }
+            else if (playerZero.yInput == 1 && !playerZero.isTouchingWall && !playerZero.isGrounded)
+            {
+                DoChangeState(new PlayerJumpState(playerZero));
+            }
             else if (!(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0))
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }
-            /*else if (playerZero.yInput == 1 && playerZero.canJump)
-            {
-                DoChangeState(new PlayerJumpState(playerZero));
-            }*/
         }
 
         // 七、受伤
