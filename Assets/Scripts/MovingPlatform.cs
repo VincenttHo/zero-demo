@@ -17,8 +17,12 @@ public class MovingPlatform : MonoBehaviour
     {
         posIndex = 1;
         currentWaitTime = waitTime;
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        playerDefParent = playerPos.parent;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player != null)
+        {
+            playerPos = player.transform;
+            playerDefParent = playerPos.parent;
+        }
     }
 
     void Update()
@@ -43,7 +47,10 @@ public class MovingPlatform : MonoBehaviour
     {
         if(other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
-            playerPos.parent = transform;
+            if(playerPos != null)
+            {
+                playerPos.parent = transform;
+            }
         }
     }
 
@@ -51,7 +58,10 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
-            playerPos.parent = playerDefParent;
+            if (playerPos != null)
+            {
+                playerPos.parent = playerDefParent;
+            }
         }
     }
 

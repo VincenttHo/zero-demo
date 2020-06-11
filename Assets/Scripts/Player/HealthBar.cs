@@ -13,10 +13,13 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        zero = player.GetComponent<PlayerZero>();
-        if(zero != null)
+        if(player != null)
         {
-            healthMax = zero.maxHp;
+            zero = player.GetComponent<PlayerZero>();
+            if (zero != null)
+            {
+                healthMax = zero.maxHp;
+            }
         }
         healthBar = GetComponent<Image>();
     }

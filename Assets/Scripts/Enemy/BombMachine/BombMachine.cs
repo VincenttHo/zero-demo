@@ -32,13 +32,24 @@ public class BombMachine : Enemy
         base.Start();
         bombMachineStateMachine = new BombMachineStateMachine(this);
         player = GameObject.FindGameObjectWithTag("Player");
-        playerPos = player.transform;
+        if(player != null)
+        {
+            playerPos = player.transform;
+        }
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if(player != null)
+            {
+                playerPos = player.transform;
+            }
+        }
         stateName = bombMachineStateMachine.currentState.stateName;
         
         bombMachineStateMachine.CheckChangeState();

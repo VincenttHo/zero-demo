@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     /**属性*/
     // 生命点
     public float healthyPoint = 3;
-    // 攻击伤害值
-    public int damage = 1;
+    // 触碰伤害值
+    public float touchDamage = 1;
     // 伤害闪烁时间
     public float damageFlashTime = 0.1f;
     // 精灵原始颜色（用于闪烁还原）
@@ -71,9 +71,12 @@ public class Enemy : MonoBehaviour
         spriteRenderer.color = originColor;
     }
 
-    protected void DropItem()
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CircleCollider2D")
+        {
+            other.gameObject.GetComponent<PlayerZero>().GetDamage(touchDamage);
+        }
     }
 
 }

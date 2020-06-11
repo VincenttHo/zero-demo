@@ -68,6 +68,10 @@ public class HunkStateMachine : EnemyStateMachine
             {
                 return true;
             }
+        } 
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
         }
 
         return false;
