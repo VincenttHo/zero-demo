@@ -68,8 +68,8 @@ public class Player : MonoBehaviour
     {
         //canHurt = false;
         circleCollider.enabled = false;
-        anim.SetTrigger("dead");
-        Invoke("DestoryPlayer", destoryTime);
+        /*anim.SetTrigger("dead");
+        Invoke("DestoryPlayer", destoryTime);*/
         
     }
 

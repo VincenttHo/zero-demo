@@ -20,7 +20,10 @@ public class BombMachineAttackState : BaseState
 
     public override void execute()
     {
-        bombMachine.boxCollider.enabled = true;
+        if(bombMachine != null)
+        {
+            bombMachine.boxCollider.enabled = true;
+        }
     }
 
     public override bool onEndState()

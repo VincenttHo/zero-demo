@@ -5,11 +5,13 @@ using UnityEngine;
 public class GameStart : MonoBehaviour
 {
 
-    public GameObject zero;
+    public PlayerZero zero;
 
     public void StartGame()
     {
-        zero.SetActive(true);
+        SpriteRenderer spriteRenderer = zero.GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
+        //zero.canControll = true;
         Destroy(gameObject);
     }
 

@@ -58,6 +58,11 @@ public class PlayerZero : Player
     [HideInInspector]
     public GameObject[] shadowZeros;
 
+    public bool canControll;
+
+    public GameObject playerDeadEffect;
+
+    private Vector3 testDir;
 
     private void Start()
     {
@@ -71,21 +76,26 @@ public class PlayerZero : Player
         {
             shadow.SetActive(false);
         }
+        canControll = false;
+        testDir = transform.up;
     }
 
     void Update()
     {
-        anim.SetFloat("verticalSpeed", rigi.velocity.y);
-        currentState = stateMachine.currentState.stateName;
-        CheckWall();
-        CheckGrounded();
-        DoInput();
-        DoRun();
-        DoDash();
-        DoJump();
-        Shoot();
-        stateMachine.CheckChangeState();
-        stateMachine.currentState.execute();
+        if(canControll)
+        {
+            anim.SetFloat("verticalSpeed", rigi.velocity.y);
+            currentState = stateMachine.currentState.stateName;
+            CheckWall();
+            CheckGrounded();
+            DoInput();
+            DoRun();
+            DoDash();
+            DoJump();
+            Shoot();
+            stateMachine.CheckChangeState();
+            stateMachine.currentState.execute();
+        }
     }
 
     public int GetDir()
@@ -192,6 +202,11 @@ public class PlayerZero : Player
     {
         isHurt = false;
         rigi.velocity = new Vector2(0, rigi.velocity.y);
+    }
+
+    public void EnableControll()
+    {
+        canControll = true;
     }
 
 }
