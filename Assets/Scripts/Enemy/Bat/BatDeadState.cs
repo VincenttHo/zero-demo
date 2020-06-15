@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombMachineDeadState : BaseState
+public class BatDeadState : BaseState
 {
 
-    private BombMachine bombMachine;
+    private Bat bat;
 
-    public BombMachineDeadState(BombMachine bombMachine)
+    public BatDeadState(Bat bat)
     {
-        this.bombMachine = bombMachine;
+        this.bat = bat;
+        stateName = "dead";
     }
 
     public override void execute()
     {
-        Destroy(bombMachine.gameObject);
+        Destroy(bat.gameObject);
     }
 
     public override bool onEndState()

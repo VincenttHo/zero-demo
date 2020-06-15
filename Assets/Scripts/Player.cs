@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         }
         renderer.enabled = true;
         //canHurt = true;
-        circleCollider.enabled = true;
+        //circleCollider.enabled = true;
     }
 
     IEnumerator NoHurt()
@@ -95,14 +95,14 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(hurtBlinkSeconds);
         isBlink = false;
         //canHurt = true;
-        circleCollider.enabled = true;
+        //circleCollider.enabled = true;
     }
 
     public void HurtBack()
     {
         if(rigi != null)
         {
-            rigi.velocity = new Vector2(-transform.right.x * hurtBackDistance, rigi.velocity.y);
+            //rigi.velocity = new Vector2(-transform.right.x * hurtBackDistance, rigi.velocity.y);
         }
     }
 

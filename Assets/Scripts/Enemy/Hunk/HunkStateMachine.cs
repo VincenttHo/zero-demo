@@ -34,8 +34,14 @@ public class HunkStateMachine : EnemyStateMachine
      */
     public void CheckChangeState()
     {
+
+        if (hunk.healthyPoint <= 0)
+        {
+            DoChangeState(new HunkDeadState(hunk));
+        }
+
         // 漫游状态
-        if(currentState is HunkMoveState)
+        if (currentState is HunkMoveState)
         {
             if(hunk.healthyPoint <= 0)
             {

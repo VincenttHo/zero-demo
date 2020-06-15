@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
                     Instantiate(item);
                 }
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CircleCollider2D")
+        if (other.CompareTag("Player") && other is CircleCollider2D)
         {
             other.gameObject.GetComponent<PlayerZero>().GetDamage(touchDamage);
         }

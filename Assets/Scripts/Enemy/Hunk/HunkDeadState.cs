@@ -14,7 +14,7 @@ public class HunkDeadState : BaseState
 
     public override void execute()
     {
-        //hunk.Dead();
+        Destroy(hunk.gameObject);
     }
 
     public override bool onEndState()
