@@ -53,7 +53,6 @@ public class BulletController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            print("打到了吗？");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.GetDamage(damage);
             Destroy(gameObject);

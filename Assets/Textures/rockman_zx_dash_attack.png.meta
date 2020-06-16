@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: e1ebb7bbbb7ec7245b18e7efb13ccfa6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9179458056973744806
+    second: rockman_zx_dash_attack_0
+  - first:
+      213: -9153348491073636201
+    second: rockman_zx_dash_attack_1
+  - first:
+      213: -8353285749770258111
+    second: rockman_zx_dash_attack_2
+  - first:
+      213: 2871562992664448334
+    second: rockman_zx_dash_attack_3
+  - first:
+      213: 4990637030545608625
+    second: rockman_zx_dash_attack_4
+  - first:
+      213: -870050474762075732
+    second: rockman_zx_dash_attack_5
+  - first:
+      213: -8769082251545528567
+    second: rockman_zx_dash_attack_6
+  - first:
+      213: 150399773802821993
+    second: rockman_zx_dash_attack_7
+  - first:
+      213: 7077098811306680588
+    second: rockman_zx_dash_attack_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5
+        width: 32
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a3e370e0711cd4e9b7f84c5c943db2
+      internalID: 9179458056973744806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 5
+        width: 64
+        height: 42
+      alignment: 9
+      pivot: {x: 0.345, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02821e18743294542ba833ea74725e25
+      internalID: -9153348491073636201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 5
+        width: 64
+        height: 42
+      alignment: 9
+      pivot: {x: 0.345, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04ef679e5f7b214aaa63835f40b0924
+      internalID: -8353285749770258111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_3
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 5
+        width: 64
+        height: 39
+      alignment: 9
+      pivot: {x: 0.345, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3668954953710449bf824c74cfbfd4c
+      internalID: 2871562992664448334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 5
+        width: 44
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c829cf91a8e9eb4eaae84c5beb2f702
+      internalID: 4990637030545608625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_5
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 5
+        width: 52
+        height: 29
+      alignment: 9
+      pivot: {x: 0.56, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a74ef621984b74408152792623588a5
+      internalID: -870050474762075732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_6
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 5
+        width: 44
+        height: 31
+      alignment: 9
+      pivot: {x: 0.456, y: 0.031}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c00b23827bcf6841bdff8bf2eefc270
+      internalID: -8769082251545528567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 7
+        width: 42
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecbbeb62217e524eba8ff3cf52add77
+      internalID: 150399773802821993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_zx_dash_attack_8
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 5
+        width: 38
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7eb16caa98e914a82f3c44bc9f6800
+      internalID: 7077098811306680588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

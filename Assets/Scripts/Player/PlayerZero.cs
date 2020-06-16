@@ -194,7 +194,6 @@ public class PlayerZero : Player
     public void GetDamage(float damage)
     {
         base.GetDamage(damage);
-        print("??");
         isHurt = true;
         anim.SetTrigger("hurt");
     }
