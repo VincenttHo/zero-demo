@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 /**
@@ -13,54 +14,90 @@ using UnityEngine;
 public class RockmanAile : Boss
 {
 
-    private Animator anim;
-    public GameObject bullet;
-    public Transform bulletPos;
-    public float step;
+    public RockmanAileController.Model modelName;
+    public bool canAction;
+    public bool isGrounded;
+
+    [HideInInspector]
+    public CapsuleCollider2D myFeet;
+
+    [HideInInspector]
+    public Rigidbody2D rigi;
+
+    [HideInInspector]
+    public Animator anim;
+
+    protected float step;
 
     public float dashSpeed;
-    private Rigidbody2D rigi;
-
-    private GameObject player;
 
     public Transform leftMovePos;
     public Transform rightMovePos;
     private Transform movePos;
 
-    public float attackDistance;
+    public GameObject player;
 
-    private PlayerZero zero;
+    public GameObject nextModel;
 
-    private bool isDashAttacking;
-    private bool isJumpAttacking;
-
-    public float jumpForce;
-    private bool canJump;
-
-    private CapsuleCollider2D myFeet;
-
-    public bool isGrounded;
-
-    void Start()
+    protected void Start()
     {
-        myFeet = GetComponent<CapsuleCollider2D>();
-        canJump = true;
         step = 1;
         anim = GetComponent<Animator>();
+        myFeet = GetComponent<CapsuleCollider2D>();
         rigi = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            zero = player.GetComponent<PlayerZero>();
-        }
     }
 
-    void Update()
+    protected void Update()
     {
-        if (player == null) return;
-        if(Input.GetKeyDown(KeyCode.Q) && step == 1)
+        CheckGrounded();
+    }
+
+    public void EnableAction()
+    {
+        this.canAction = true;
+    }
+
+    public void LookRight()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void LookLeft()
+    {
+        transform.rotation = Quaternion.Euler(0, 180, 0);
+    }
+
+    private void CheckGrounded()
+    {
+        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
+            || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
+    }
+
+    protected void OnEnable()
+    {
+        step = 1;
+    }
+
+    public void Dash()
+    {
+        anim.SetBool("isDashing", true);
+        rigi.velocity = new Vector2(dashSpeed * transform.right.x, rigi.velocity.y);
+    }
+
+    public void EndDash()
+    {
+        anim.SetBool("isDashing", false);
+        rigi.velocity = new Vector2(0, rigi.velocity.y);
+    }
+
+    public void Step1Move()
+    {
+        if (step == 1)
         {
-            if(player.transform.position.x < 0)
+            if (player.transform.position.x < 0)
             {
                 movePos = rightMovePos;
                 if (rightMovePos.position.x > transform.position.x)
@@ -101,123 +138,19 @@ public class RockmanAile : Boss
                 LookRight();
             }
         }
-
-        if(step == 2)
-        {
-            Shoot();
-            step = 2.5f;
-        }
-
-        if(step == 3)
-        {
-            if(Math.Abs(player.transform.position.x - transform.position.x) > attackDistance)
-            {
-                Dash();
-            }
-            else
-            {
-                EndDash();
-                if(zero.isGrounded)
-                {
-                    isDashAttacking = true;
-                    step = 3.5f;
-                }
-                else
-                {
-                    isJumpAttacking = true;
-                    step = 3.5f;
-                }
-            }
-        }
-
-        DashAttack();
-        JumpAttack();
-        CheckGrounded();
-
     }
 
-    void Shoot()
+    public void DoChange(GameObject nextModel)
     {
-        anim.SetTrigger("shoot");
+        this.anim.SetTrigger("turnOut");
+        this.nextModel = nextModel;
+        nextModel.transform.position = transform.position;
     }
 
-    void Dash()
+    public void EndChange()
     {
-        anim.SetBool("isDashing", true);
-        rigi.velocity = new Vector2(dashSpeed * transform.right.x, rigi.velocity.y);
-    }
-
-    void EndDash()
-    {
-        anim.SetBool("isDashing", false);
-        rigi.velocity = new Vector2(0, rigi.velocity.y);
-    }
-
-    public void InitBullet()
-    {
-        var newBullet = GameObject.Instantiate(bullet);
-        newBullet.transform.position = bulletPos.position;
-        newBullet.transform.rotation = bulletPos.rotation;
-    }
-
-    private void LookRight()
-    {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-    }
-
-    private void LookLeft()
-    {
-        transform.rotation = Quaternion.Euler(0, 180, 0);
-    }
-
-    public void EndShoot()
-    {
-        step = 3;
-    }
-
-    void DashAttack()
-    {
-        if(isDashAttacking)
-        {
-            anim.SetBool("isDashAttacking", true);
-            rigi.velocity = new Vector2(dashSpeed * transform.right.x, rigi.velocity.y);
-        }
-    }
-
-    public void EndDashAttack()
-    {
-        isDashAttacking = false;
-        anim.SetBool("isDashAttacking", false);
-        rigi.velocity = new Vector2(0, rigi.velocity.y);
-        step = 4;
-    }
-
-    void JumpAttack()
-    {
-        if(isJumpAttacking)
-        {
-            anim.SetBool("isJumpAttacking", true);
-            if(canJump)
-            {
-                rigi.velocity = new Vector2(dashSpeed * transform.right.x, jumpForce);
-                canJump = false;
-            }
-            rigi.velocity = new Vector2(dashSpeed * transform.right.x, rigi.velocity.y);
-            if(isGrounded)
-            {
-                anim.SetBool("isJumpAttacking", false);
-                rigi.velocity = new Vector2(0, rigi.velocity.y);
-            }
-        }
-    }
-
-    private void CheckGrounded()
-    {
-        isGrounded = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))
-            || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
-            || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
-            || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
-        anim.SetBool("isGrounded", isGrounded);
+        nextModel.SetActive(true);
+        gameObject.SetActive(false);
     }
 
 }

@@ -82,7 +82,11 @@ public class PlayerZero : Player
 
     void Update()
     {
-        if(canControll)
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            print(AileHpManager.currentHp);
+        }
+        if (canControll)
         {
             anim.SetFloat("verticalSpeed", rigi.velocity.y);
             currentState = stateMachine.currentState.stateName;

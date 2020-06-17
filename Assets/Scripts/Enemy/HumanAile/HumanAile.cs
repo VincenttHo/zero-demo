@@ -101,7 +101,7 @@ public class HumanAile : Boss
             {
                 anim.SetBool("isRunning", true);
                 moveWaitDuration = moveWaitSec;
-                if(healthyPoint <= (0.5 * maxHp))
+                if(AileHpManager.currentHp <= (0.5 * AileHpManager.maxHp))
                 {
                     runSpeed = lv2RunSpeed;
                 }

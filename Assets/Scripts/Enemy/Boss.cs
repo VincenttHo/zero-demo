@@ -6,9 +6,6 @@ public class Boss : MonoBehaviour
 {
 
     /**属性*/
-    // 生命点
-    public float healthyPoint = 3;
-    public float maxHp;
     // 触碰伤害值
     public float touchDamage = 1;
     // 伤害闪烁时间
@@ -26,7 +23,6 @@ public class Boss : MonoBehaviour
 
     protected void Start()
     {
-        healthyPoint = maxHp;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originColor = spriteRenderer.color;
         enemyDropItemConfig = GetComponent<EnemyDropItemConfig>();
@@ -35,8 +31,8 @@ public class Boss : MonoBehaviour
     // 受伤方法
     public void GetDamage(float damage)
     {
-        
-        healthyPoint -= damage;
+
+        AileHpManager.currentHp -= damage;
         FlashColor();
         // 增加流血效果（试验，并不好看）
         //bloodEffect.transform.position = new Vector3(transform.position.x, transform.position.y + 1, -5);
@@ -45,7 +41,7 @@ public class Boss : MonoBehaviour
         // 攻击时摄影机抖动效果（试验，效果并不好）
         //CameraShakeController.cameraShake.shake();
 
-        if (healthyPoint <= 0)
+        if (AileHpManager.currentHp <= 0)
         {
             if(enemyDropItemConfig != null)
             {
