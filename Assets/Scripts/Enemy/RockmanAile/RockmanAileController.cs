@@ -45,15 +45,15 @@ public class RockmanAileController : MonoBehaviour
         int index = (int)aile.modelName;
         while (aile.modelName == (Model)index)
         {
-            //index = UnityEngine.Random.Range(0, 3);
-            if(index == 2)
+            index = UnityEngine.Random.Range(0, 5);
+            /*if(index == 4)
             {
                 index = 0;
             }
             else
             {
                 index++;
-            }
+            }*/
         }
         switch ((Model)index)
         {
@@ -75,12 +75,12 @@ public class RockmanAileController : MonoBehaviour
             case Model.LX:
                 aile.DoChange(lxObj);
                 currentModel = lxObj;
-                aile = currentModel.GetComponent<ZX>();
+                aile = currentModel.GetComponent<LX>();
                 break;
             case Model.HX:
                 aile.DoChange(hxObj);
                 currentModel = hxObj;
-                aile = currentModel.GetComponent<ZX>();
+                aile = currentModel.GetComponent<HX>();
                 break;
             default: break;
         }

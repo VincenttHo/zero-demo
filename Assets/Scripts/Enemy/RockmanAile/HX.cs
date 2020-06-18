@@ -4,26 +4,24 @@ using System;
 using UnityEngine;
 
 
-public class PX : RockmanAile
+public class HX : RockmanAile
 {
-    public GameObject kunai;
 
+    public GameObject cyclone;
     public float waitSec;
-
-    public Transform bulletPos;
-    private PlayerZero zero;
 
     void Start()
     {
         base.Start();
-        modelName = RockmanAileController.Model.PX;
-        zero = player.GetComponent<PlayerZero>();
+        modelName = RockmanAileController.Model.HX;
     }
 
     public void Update()
     {
         base.Update();
+        if (player == null) return;
         if (!canAction) return;
+
         Step1Move();
 
         if(step == 2)
@@ -43,20 +41,19 @@ public class PX : RockmanAile
     void Attack()
     {
         anim.SetTrigger("attack");
-        Invoke("InitKunai", 0.2f);
         Invoke("EndStep", waitSec);
     }
 
-    void EndStep()
+    public void InitCyclone()
     {
-        step = 3;
+        var newCyclone = GameObject.Instantiate(cyclone);
+        newCyclone.transform.position = transform.position;
+        newCyclone.transform.rotation = transform.rotation;
     }
 
-    public void InitKunai()
+    private void EndStep()
     {
-        var newKunai = GameObject.Instantiate(kunai);
-        newKunai.transform.position = bulletPos.position;
-        newKunai.transform.rotation = bulletPos.rotation;
+        step = 3;
     }
 
 }

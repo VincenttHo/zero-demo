@@ -46,7 +46,7 @@ public class LX : RockmanAile
     void Attack()
     {
         anim.SetTrigger("attack");
-        Invoke("EndStep", 4f);
+        Invoke("EndStep", waitSec);
     }
 
     void EndStep()
@@ -61,6 +61,7 @@ public class LX : RockmanAile
         {
             var newDrgon = Instantiate(dragon);
             newDrgon.transform.position = currentDrgonPoses[n].position;
+            newDrgon.transform.rotation = currentDrgonPoses[n].rotation;
         }
         Invoke("NextDrgon", nextDrgonSec);
     }
@@ -72,12 +73,8 @@ public class LX : RockmanAile
         {
             var newDrgon = Instantiate(dragon);
             newDrgon.transform.position = currentDrgonPoses[n].position;
+            newDrgon.transform.rotation = currentDrgonPoses[n].rotation;
         }
-    }
-
-    public void EndDashAttack()
-    {
-
     }
 
 }

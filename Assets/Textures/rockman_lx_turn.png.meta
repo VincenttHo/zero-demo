@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 60eeb3e1f646fbc47adc747b1995d12f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 918630265198557974
+    second: rockman_lx_turn_2
+  - first:
+      213: 4976729983384908311
+    second: rockman_lx_turn_3
+  - first:
+      213: -4588908673358447463
+    second: rockman_lx_turn_4
+  - first:
+      213: -475583309930193837
+    second: rockman_lx_turn_5
+  - first:
+      213: 4305303179561396001
+    second: rockman_lx_turn_6
+  - first:
+      213: 4955217064225486832
+    second: rockman_lx_turn_7
+  - first:
+      213: 8893372383541071182
+    second: rockman_lx_turn_8
+  - first:
+      213: 8615213502373831226
+    second: rockman_lx_turn_10
+  - first:
+      213: 8667601329263167122
+    second: rockman_lx_turn_12
+  - first:
+      213: -576236046778252954
+    second: rockman_lx_turn_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockman_lx_turn_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.463, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50299cb192fc3384589842271d92f2e0
+      internalID: 918630265198557974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.463, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0dab660af32e84f81724cb1490bedd
+      internalID: 4976729983384908311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 7
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.451, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f30feeb62b91a4aba676e201d6c48e
+      internalID: -4588908673358447463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 7
+        width: 49
+        height: 43
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe9b3b5b37265a41b366964f8f1ec3c
+      internalID: -475583309930193837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 7
+        width: 59
+        height: 49
+      alignment: 9
+      pivot: {x: 0.365, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c37b0bbb952b84398d725621e4ef81
+      internalID: 4305303179561396001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_7
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 7
+        width: 65
+        height: 57
+      alignment: 9
+      pivot: {x: 0.315, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cb5d4dee5dab54e8347d34cd7b9fe9
+      internalID: 4955217064225486832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 7
+        width: 73
+        height: 65
+      alignment: 9
+      pivot: {x: 0.3363, y: 0.062}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a060ec697e90d74da9ec6d66ce4d4d1
+      internalID: 8893372383541071182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_10
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 7
+        width: 69
+        height: 67
+      alignment: 9
+      pivot: {x: 0.283, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e038422be7893478668e882083c42d
+      internalID: 8615213502373831226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_12
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 7
+        width: 39
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79796ace60272174b81cd5408be34920
+      internalID: 8667601329263167122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_lx_turn_13
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 7
+        width: 37
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd15887391cf17a40a32880e06604ee9
+      internalID: -576236046778252954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
