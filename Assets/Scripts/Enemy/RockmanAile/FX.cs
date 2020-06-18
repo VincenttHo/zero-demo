@@ -8,7 +8,8 @@ public class FX : RockmanAile
 {
     private int attackStartIndex;
 
-    public Transform[] attackPoses;
+    public Transform[] attackPoses1; 
+    public Transform[] attackPoses2;
 
     public GameObject fire;
 
@@ -52,31 +53,44 @@ public class FX : RockmanAile
             step = 2.5f;
         }
 
+        if(step == 3)
+        {
+            canAction = false;
+            controller.ChangeModel();
+        }
+
     }
 
     void Attack()
     {
         anim.SetTrigger("attack");
+        Invoke("EndStep", 4f);
     }
 
-    public void initFire()
+    public void InitFire()
     {
-        for(int n = attackStartIndex; n < attackPoses.Length; n += 2)
+        Transform[] currentFirePoses = attackStartIndex == 1 ? attackPoses1 : attackPoses2;
+        for(int n = 0; n < currentFirePoses.Length; n++)
         {
             var newFire = Instantiate(fire);
-            newFire.transform.position = attackPoses[n].position;
+            newFire.transform.position = currentFirePoses[n].position;
         }
-        Invoke("nextFire", nextFireSec);
+        Invoke("NextFire", nextFireSec);
     }
 
-    public void nextFire()
+    public void NextFire()
     {
-        int nextAttackIndex = attackStartIndex == 0 ? 1 : 0;
-        for (int n = nextAttackIndex; n < attackPoses.Length; n += 2)
+        Transform[] currentFirePoses = attackStartIndex == 1 ? attackPoses2 : attackPoses1;
+        for (int n = 0; n < currentFirePoses.Length; n++)
         {
             var newFire = Instantiate(fire);
-            newFire.transform.position = attackPoses[n].position;
+            newFire.transform.position = currentFirePoses[n].position;
         }
+    }
+
+    private void EndStep()
+    {
+        step = 3;
     }
 
 }

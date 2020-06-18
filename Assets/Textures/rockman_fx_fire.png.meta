@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 4b1ee2f82fad2f442b19ff4c1caf5b6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3503852317968104340
+    second: rockman_fx_fire_0
+  - first:
+      213: -4939169311417657186
+    second: rockman_fx_fire_1
+  - first:
+      213: 6317173027763432264
+    second: rockman_fx_fire_2
+  - first:
+      213: 5030185329920276093
+    second: rockman_fx_fire_3
+  - first:
+      213: -4093981305494661119
+    second: rockman_fx_fire_6
+  - first:
+      213: 7756466775106501368
+    second: rockman_fx_fire_10
+  - first:
+      213: -4252123819902506504
+    second: rockman_fx_fire_11
+  - first:
+      213: -8158484076663980386
+    second: rockman_fx_fire_12
+  - first:
+      213: -8915844577733523586
+    second: rockman_fx_fire_13
+  - first:
+      213: -5263809177260364760
+    second: rockman_fx_fire_14
+  - first:
+      213: 5798969714250127981
+    second: rockman_fx_fire_20
+  - first:
+      213: 4767718056378301069
+    second: rockman_fx_fire_21
+  - first:
+      213: 4480799694900911898
+    second: rockman_fx_fire_22
+  - first:
+      213: -122316164917254710
+    second: rockman_fx_fire_24
+  - first:
+      213: 6532234801185637320
+    second: rockman_fx_fire_25
+  - first:
+      213: 8546534309726828992
+    second: rockman_fx_fire_27
+  - first:
+      213: 4624270270877682484
+    second: rockman_fx_fire_28
+  - first:
+      213: 7738971179841635819
+    second: rockman_fx_fire_29
+  - first:
+      213: -7254571226936692522
+    second: rockman_fx_fire_30
+  - first:
+      213: -6153474744958086289
+    second: rockman_fx_fire_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockman_fx_fire_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 246
+        width: 57
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48b8531904609e41956f2b6165c796d
+      internalID: 3503852317968104340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 247
+        width: 85
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8f9c012d792814eba0564b66cfd265
+      internalID: -4939169311417657186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 243
+        width: 93
+        height: 54
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbd62c6821ee3e4caa839cdd9f9efe6
+      internalID: 6317173027763432264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 243
+        width: 92
+        height: 93
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0e8fbcec374c84fa3d20804118cf4f
+      internalID: 5030185329920276093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_6
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 241
+        width: 103
+        height: 92
+      alignment: 9
+      pivot: {x: 0.498, y: -0.008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b442dc42512b94380689340fa74522
+      internalID: -4093981305494661119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 132
+        width: 98
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ce1ae5821f0904788b6e7d14f05e66
+      internalID: 7756466775106501368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_11
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 132
+        width: 98
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706733a1caae058478355a775737e1a9
+      internalID: -4252123819902506504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_12
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 129
+        width: 57
+        height: 101
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c55cceb29040c42bc0b2b324fb44b4
+      internalID: -8158484076663980386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_13
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 128
+        width: 53
+        height: 107
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1204343d2dfc38449ce0b524e60f631
+      internalID: -8915844577733523586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_14
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 127
+        width: 55
+        height: 106
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e8422021df1ef4e8807c0c3feecb5b
+      internalID: -5263809177260364760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_20
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4
+        width: 55
+        height: 110
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29005895dd655be43beefa92f9bbe10c
+      internalID: 5798969714250127981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_21
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 109
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b562c5f7e99dd4a98ab5ae741ef4e5
+      internalID: 4767718056378301069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 5
+        width: 57
+        height: 113
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda98b8bb072cb5408bdd5ef1e95f8d7
+      internalID: 4480799694900911898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 6
+        width: 60
+        height: 112
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf4117830ce2fa4898bf63b5f190f5d
+      internalID: 6532234801185637320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockman_fx_fire_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5
+        width: 54
+        height: 108
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f42dd3e2db7fe4a9439d4b30f6b540
+      internalID: -6153474744958086289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

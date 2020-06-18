@@ -12,6 +12,7 @@ public class BulletController : MonoBehaviour
     private Vector3 targetPos;
     public float destoryDistance;
     public float damage;
+    private Rigidbody2D rigi;
 
     private void Start()
     {
@@ -19,12 +20,14 @@ public class BulletController : MonoBehaviour
         BoxCollider2D cameraCollider = mainCamera.GetComponent<BoxCollider2D>();
         cameraSize = cameraCollider.bounds.size.x / 2;
         targetPos = new Vector3(transform.position.x + 100f * transform.right.x, transform.position.y, transform.position.z);
+        rigi = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+        //transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        rigi.velocity = transform.right * speed;
 
         float cameraX = mainCamera.transform.position.x;
         if (transform.position.x > targetPos.x)
@@ -49,14 +52,13 @@ public class BulletController : MonoBehaviour
         {
             PlayerZero zero = collision.gameObject.GetComponent<PlayerZero>();
             zero.GetDamage(damage);
-            Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Enemy")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.GetDamage(damage);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
 }

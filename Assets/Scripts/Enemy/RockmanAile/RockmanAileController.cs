@@ -32,8 +32,8 @@ public class RockmanAileController : MonoBehaviour
 
     void Start()
     {
-        currentModel = fxObj;
-        aile = currentModel.GetComponent<FX>();
+        currentModel = zxObj;
+        aile = currentModel.GetComponent<ZX>();
     }
 
     void Update()
@@ -45,24 +45,42 @@ public class RockmanAileController : MonoBehaviour
         int index = (int)aile.modelName;
         while (aile.modelName == (Model)index)
         {
-            index = UnityEngine.Random.Range(0, 2);
+            //index = UnityEngine.Random.Range(0, 3);
+            if(index == 2)
+            {
+                index = 0;
+            }
+            else
+            {
+                index++;
+            }
         }
         switch ((Model)index)
         {
             case Model.ZX:
                 aile.DoChange(zxObj);
+                currentModel = zxObj;
+                aile = currentModel.GetComponent<ZX>();
                 break;
             case Model.FX:
                 aile.DoChange(fxObj);
+                currentModel = fxObj;
+                aile = currentModel.GetComponent<FX>();
                 break;
             case Model.PX:
                 aile.DoChange(pxObj);
+                currentModel = pxObj;
+                aile = currentModel.GetComponent<PX>();
                 break;
             case Model.LX:
                 aile.DoChange(lxObj);
+                currentModel = lxObj;
+                aile = currentModel.GetComponent<ZX>();
                 break;
             case Model.HX:
                 aile.DoChange(hxObj);
+                currentModel = hxObj;
+                aile = currentModel.GetComponent<ZX>();
                 break;
             default: break;
         }

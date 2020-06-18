@@ -13,7 +13,6 @@ using UnityEngine;
 public class ZX : RockmanAile
 {
 
-    private RockmanAileController controller;
 
     public GameObject bullet;
     public Transform bulletPos;
@@ -34,7 +33,6 @@ public class ZX : RockmanAile
     {
         base.Start();
         modelName = RockmanAileController.Model.ZX;
-        controller = GetComponentInParent<RockmanAileController>();
         canJump = true;
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)

@@ -14,6 +14,7 @@ using UnityEngine;
 public class RockmanAile : Boss
 {
 
+    public RockmanAileController controller;
     public RockmanAileController.Model modelName;
     public bool canAction;
     public bool isGrounded;
@@ -42,6 +43,7 @@ public class RockmanAile : Boss
     protected void Start()
     {
         step = 1;
+        controller = GetComponentInParent<RockmanAileController>();
         anim = GetComponent<Animator>();
         myFeet = GetComponent<CapsuleCollider2D>();
         rigi = GetComponent<Rigidbody2D>();
