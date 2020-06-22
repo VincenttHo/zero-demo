@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
     {
         if(rigi != null)
         {
-            //rigi.velocity = new Vector2(-transform.right.x * hurtBackDistance, rigi.velocity.y);
+            rigi.velocity = new Vector2(-transform.right.x * hurtBackDistance, rigi.velocity.y);
         }
     }
 

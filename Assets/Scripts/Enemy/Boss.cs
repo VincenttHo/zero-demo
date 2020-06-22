@@ -18,32 +18,41 @@ public class Boss : MonoBehaviour
     public GameObject bloodEffect;
     private EnemyDropItemConfig enemyDropItemConfig;
 
+    public float gunNoHurtSec;
+    private bool canGunHurt;
+
     /**掉落物*/
     public Item[] dropItems;
 
     protected void Start()
     {
+        canGunHurt = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originColor = spriteRenderer.color;
         enemyDropItemConfig = GetComponent<EnemyDropItemConfig>();
     }
 
     // 受伤方法
-    public void GetDamage(float damage)
+    public void GetDamage(float damage, string type)
     {
-
-        AileHpManager.currentHp -= damage;
         FlashColor();
-        // 增加流血效果（试验，并不好看）
-        //bloodEffect.transform.position = new Vector3(transform.position.x, transform.position.y + 1, -5);
-        //Instantiate(bloodEffect);
-
-        // 攻击时摄影机抖动效果（试验，效果并不好）
-        //CameraShakeController.cameraShake.shake();
+        if(type == "gun")
+        {
+            if (!canGunHurt)
+            {
+                return;
+            } 
+            else
+            {
+                canGunHurt = false;
+                StartCoroutine(NoHurtCountDown());
+            }
+        }
+        AileHpManager.currentHp -= damage;
 
         if (AileHpManager.currentHp <= 0)
         {
-            if(enemyDropItemConfig != null)
+            if (enemyDropItemConfig != null)
             {
                 Item item = DropItemUtil.RandomItem(enemyDropItemConfig.items);
                 if (item != null)
@@ -52,8 +61,15 @@ public class Boss : MonoBehaviour
                     Instantiate(item);
                 }
             }
-            //Destroy(gameObject);
         }
+        
+    }
+
+    IEnumerator NoHurtCountDown()
+    {
+        yield return new WaitForSeconds(gunNoHurtSec);
+        canGunHurt = true;
+
     }
 
     // 受伤闪烁

@@ -39,9 +39,11 @@ public class RockmanAile : Boss
     public GameObject player;
 
     public GameObject nextModel;
+    public float hp;
 
     protected void Start()
     {
+        base.Start();
         step = 1;
         controller = GetComponentInParent<RockmanAileController>();
         anim = GetComponent<Animator>();
@@ -52,6 +54,7 @@ public class RockmanAile : Boss
 
     protected void Update()
     {
+        hp = AileHpManager.currentHp;
         CheckGrounded();
     }
 

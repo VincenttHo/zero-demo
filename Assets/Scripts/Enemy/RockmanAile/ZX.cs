@@ -29,9 +29,14 @@ public class ZX : RockmanAile
     public float jumpForce;
     private bool canJump;
 
+    public float slashDamage;
+    private float originTouchDamage;
+
+
     void Start()
     {
         base.Start();
+        originTouchDamage = touchDamage;
         modelName = RockmanAileController.Model.ZX;
         canJump = true;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -44,7 +49,7 @@ public class ZX : RockmanAile
 
     void Update()
     {
-        base.Update();
+        base.Update();return;
         if (player == null) return;
         if (!canAction) return;
         
@@ -68,11 +73,13 @@ public class ZX : RockmanAile
                 if(zero.isGrounded)
                 {
                     isDashAttacking = true;
+                    touchDamage = slashDamage;
                     step = 3.5f;
                 }
                 else
                 {
                     isJumpAttacking = true;
+                    touchDamage = slashDamage;
                     step = 3.5f;
                 }
             }
@@ -83,6 +90,7 @@ public class ZX : RockmanAile
             //step = 1;
             /*if (AileHpManager.currentHp <= AileHpManager.maxHp / 2)
             {*/
+                touchDamage = originTouchDamage;
                 canAction = false;
                 controller.ChangeModel();
             //}

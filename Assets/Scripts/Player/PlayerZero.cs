@@ -76,7 +76,7 @@ public class PlayerZero : Player
         {
             shadow.SetActive(false);
         }
-        canControll = false;
+        //canControll = false;
         testDir = transform.up;
     }
 

@@ -48,17 +48,29 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && collision.GetType().ToString() == "UnityEngine.CircleCollider2D")
-        {
-            PlayerZero zero = collision.gameObject.GetComponent<PlayerZero>();
-            zero.GetDamage(damage);
-        }
         if (collision.gameObject.tag == "Enemy")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.GetDamage(damage);
         }
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Boss")
+        {
+            Boss boss = collision.gameObject.GetComponent<Boss>();
+            boss.GetDamage(damage, "gun");
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            if(collision.GetType().ToString() == "UnityEngine.CircleCollider2D")
+            {
+                PlayerZero zero = collision.gameObject.GetComponent<PlayerZero>();
+                zero.GetDamage(damage);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -12,7 +12,7 @@ using UnityEngine;
  */
 public static class AileHpManager
 {
-    public static float maxHp = 10;
+    public static float maxHp = 100;
 
     public static float currentHp = maxHp;
 
