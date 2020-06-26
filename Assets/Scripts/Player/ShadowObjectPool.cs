@@ -6,13 +6,15 @@ using UnityEngine;
 public class ShadowObjectPool : MonoBehaviour
 {
 
+    public static ShadowObjectPool instance;
+
     private Queue<GameObject> shadowQueue;
     public GameObject shadow;
     public int maxCount;
-    public float activeSec;
 
     private void Start()
     {
+        instance = this;
         InitShadow();
     }
 
@@ -21,16 +23,28 @@ public class ShadowObjectPool : MonoBehaviour
         shadowQueue = new Queue<GameObject>();
         for (int n = 0; n < maxCount; n++)
         {
-            GameObject.Instantiate(shadow);
-            shadow.transform.SetParent(transform);
-            shadow.SetActive(false);
-            shadowQueue.Enqueue(shadow);
+            var newShadow = GameObject.Instantiate(shadow);
+            newShadow.transform.SetParent(transform);
+            EnPool(newShadow);
         }
+    }
+
+    public void EnPool(GameObject shadow)
+    {
+        shadow.SetActive(false);
+        shadowQueue.Enqueue(shadow);
     }
 
     public GameObject GetShadow()
     {
-        GameObject newShadow = shadowQueue.Dequeue();
+
+        if(shadowQueue.Count == 0)
+        {
+            InitShadow();
+        }
+
+        var newShadow = shadowQueue.Dequeue();
+        newShadow.SetActive(true);
         return newShadow;
     }
 

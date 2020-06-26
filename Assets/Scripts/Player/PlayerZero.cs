@@ -64,6 +64,9 @@ public class PlayerZero : Player
 
     private Vector3 testDir;
 
+    // 踏步秒数
+    public float stepSec;
+
     private void Start()
     {
         base.Start();
@@ -82,10 +85,6 @@ public class PlayerZero : Player
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            print(AileHpManager.currentHp);
-        }
         if (canControll)
         {
             anim.SetFloat("verticalSpeed", rigi.velocity.y);
@@ -109,15 +108,28 @@ public class PlayerZero : Player
 
     public void DoJump()
     {
-        if(Input.GetKey(KeyCode.U) && Input.GetKey(KeyCode.I))
+        if (isGrounded || stateMachine.currentState is PlayerSlideWallState)
         {
-            isDashJump = true;
+            isDashJump = false;
         }
-        if(Input.GetKey(KeyCode.U))
+
+        //if(Input.GetKey(KeyCode.U) && Input.GetKey(KeyCode.I))
+        if (PlayerController.jump && PlayerController.dash)
+        {
+            if (isGrounded 
+                || stateMachine.currentState is PlayerSlideWallState 
+                || stateMachine.currentState.lastState is PlayerSlideWallState)
+            {
+                isDashJump = true;
+            }
+        }
+        //if(Input.GetKey(KeyCode.U))
+        if (PlayerController.jump)
         {
              yInput = 1;
         }
-        else if(Input.GetKeyUp(KeyCode.U))
+        //else if(Input.GetKeyUp(KeyCode.U))
+        else if (!PlayerController.jump)
         {
             canJump = true;
             yInput = 0;
@@ -128,11 +140,13 @@ public class PlayerZero : Player
     {
         if (isAttack) return;
         input = 0;
-        if (Input.GetKey(KeyCode.A))
+        //if (Input.GetKey(KeyCode.A))
+        if (PlayerController.inputLeft)
         {
             input = -1;
         }
-        else if(Input.GetKey(KeyCode.D))
+        //else if(Input.GetKey(KeyCode.D))
+        else if (PlayerController.inputRight)
         {
             input = 1;
         }
@@ -149,11 +163,13 @@ public class PlayerZero : Player
 
     private void DoDash()
     {
-        if(Input.GetKey(KeyCode.I) && canDash)
+        //if(Input.GetKey(KeyCode.I) && canDash)
+        if(PlayerController.dash && canDash)
         {
             currentHorizontalSpeed = dashSpeed * GetDir();
         }
-        if(Input.GetKeyUp(KeyCode.I))
+        //if(Input.GetKeyUp(KeyCode.I))
+        if (!PlayerController.dash)
         {
             canDash = true;
         }
@@ -184,7 +200,8 @@ public class PlayerZero : Player
     void Shoot()
     {
         //if (isClimbingLadder) return;
-        if (Input.GetKeyDown(KeyCode.H))
+        //if (Input.GetKeyDown(KeyCode.H))
+        if(PlayerController.shoot)
         {
             this.anim.SetTrigger("shoot");
         }

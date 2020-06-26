@@ -180,7 +180,11 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
-            else if (!(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0))
+            /*else if (!(playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0))
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }*/
+            else if(playerZero.input == 0 || playerZero.input != 0 && !playerZero.isTouchingWall)
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }

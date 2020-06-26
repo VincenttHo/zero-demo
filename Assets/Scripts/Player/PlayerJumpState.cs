@@ -9,17 +9,22 @@ public class PlayerJumpState : BaseState
     private PlayerZero playerZero;
     public float speed;
     private bool isWallJump;
+    private bool canAudio;
 
     public PlayerJumpState(PlayerZero playerZero)
     {
         this.playerZero = playerZero;
         stateName = "jump";
-        
+        canAudio = true;
     }
 
     public override void execute()
     {
-        
+        if (playerZero.isDashJump && canAudio)
+        {
+            SoundManager.PlayAudio(SoundManager.dash);
+            canAudio = false;
+        }
 
         float horizontalSpeed = GetHorizontalSpeed();
 
@@ -59,8 +64,10 @@ public class PlayerJumpState : BaseState
 
     private float GetHorizontalSpeed()
     {
-        if(lastState is PlayerDashState)
+        //if(lastState is PlayerDashState)
+        if(playerZero.isDashJump)
         {
+            ShadowObjectPool.instance.GetShadow();
             speed = playerZero.dashSpeed;
             return playerZero.input * playerZero.dashSpeed;
         } 

@@ -40,7 +40,8 @@ public class PlayerAttack : MonoBehaviour
         {
             HitCount = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Y))
+        //if (Input.GetKeyDown(KeyCode.Y))
+        if(PlayerController.slash)
         {
             Attack();
         }
@@ -62,14 +63,17 @@ public class PlayerAttack : MonoBehaviour
         if (/*(animatorStateInfo.IsName(StandState) || rigi.velocity.y != 0) &&*/ HitCount == 0)
         {
             HitCount = 1;
+            SoundManager.PlayAudio(SoundManager.slash);
         }
         if (animatorStateInfo.IsName(SwordAttack1State) && HitCount == 1 && animatorStateInfo.normalizedTime < 0.8f)
         {
             HitCount = 2;
+            SoundManager.PlayAudio(SoundManager.slash);
         }
         if (animatorStateInfo.IsName(SwordAttack2State) && HitCount == 2 && animatorStateInfo.normalizedTime < 0.8f)
         {
             HitCount = 3;
+            SoundManager.PlayAudio(SoundManager.slash);
         }
 
         if(HitCount > 0 && !(zero.stateMachine.currentState is PlayerJumpState) && !(zero.stateMachine.currentState is PlayerFallState))

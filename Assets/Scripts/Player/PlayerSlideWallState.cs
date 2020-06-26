@@ -7,6 +7,7 @@ public class PlayerSlideWallState : BaseState
 {
 
     private PlayerZero playerZero;
+    private bool canJump;
 
     public PlayerSlideWallState(PlayerZero playerZero)
     {
@@ -27,10 +28,17 @@ public class PlayerSlideWallState : BaseState
 
     bool WallJump()
     {
-        if(playerZero.wallJumpWaitTime <= 0)
+        if (!PlayerController.jump)
         {
-            if (Input.GetKeyDown(KeyCode.U) && playerZero.isTouchingWall)
+            canJump = true;
+        }
+        if (playerZero.wallJumpWaitTime <= 0)
+        {
+            
+            //if (Input.GetKeyDown(KeyCode.U) && playerZero.isTouchingWall)
+            if(PlayerController.jump && playerZero.isTouchingWall && canJump)
             {
+                canJump = false;
                 playerZero.rigi.velocity = new Vector2(playerZero.wallJumpXSpeed * -playerZero.input, playerZero.wallJumpYSpeed);
                 playerZero.wallJumpWaitTime = playerZero.wallJumpCD;
                 return true;

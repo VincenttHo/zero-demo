@@ -48,6 +48,7 @@ public class AttackColliderManager : MonoBehaviour
         //bullet.transform.position = bulletPos.position;
         //float rotationY = transform.localScale.x < 0 ? 0 : 180;
         //bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
+        SoundManager.PlayAudio(SoundManager.shoot);
         GameObject newBullet = Instantiate(bullet);
         newBullet.transform.position = bulletPos.position;
         newBullet.transform.rotation = zero.transform.rotation;

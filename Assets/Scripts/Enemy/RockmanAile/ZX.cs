@@ -49,7 +49,7 @@ public class ZX : RockmanAile
 
     void Update()
     {
-        base.Update();return;
+        base.Update();
         if (player == null) return;
         if (!canAction) return;
         

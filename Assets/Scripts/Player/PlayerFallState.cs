@@ -26,6 +26,10 @@ public class PlayerFallState : BaseState
 
     public override void execute()
     {
+        if (playerZero.isDashJump)
+        {
+            ShadowObjectPool.instance.GetShadow();
+        }
         playerZero.rigi.velocity = new Vector2(horizontalSpeed * playerZero.input, playerZero.rigi.velocity.y);
         playerZero.anim.SetFloat("verticalSpeed", playerZero.rigi.velocity.y);
     }
