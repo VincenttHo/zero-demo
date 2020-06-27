@@ -17,6 +17,7 @@ public class PX : RockmanAile
     {
         base.Start();
         modelName = RockmanAileController.Model.PX;
+        if (player == null) return;
         zero = player.GetComponent<PlayerZero>();
     }
 

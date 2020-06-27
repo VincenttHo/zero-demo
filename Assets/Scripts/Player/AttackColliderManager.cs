@@ -7,6 +7,8 @@ public class AttackColliderManager : MonoBehaviour
 
     private PolygonCollider2D[] colliders;
     public GameObject bullet;
+    public GameObject lv1Bullet;
+    public GameObject lv2Bullet;
     public Transform bulletPos;
     private PlayerZero zero;
 
@@ -49,9 +51,19 @@ public class AttackColliderManager : MonoBehaviour
         //float rotationY = transform.localScale.x < 0 ? 0 : 180;
         //bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
         SoundManager.PlayAudio(SoundManager.shoot);
-        GameObject newBullet = Instantiate(bullet);
+        var initBullet = bullet;
+        if(zero.gunChargeLv == 1)
+        {
+            initBullet = lv1Bullet;
+        }
+        else if(zero.gunChargeLv == 2)
+        {
+            initBullet = lv2Bullet;
+        }
+        GameObject newBullet = Instantiate(initBullet);
         newBullet.transform.position = bulletPos.position;
         newBullet.transform.rotation = zero.transform.rotation;
+        zero.gunChargeLv = 0;
     }
 
 }

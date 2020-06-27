@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
                     Instantiate(item);
                 }
             }
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

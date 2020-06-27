@@ -89,7 +89,6 @@ public class RockmanAile : Boss
     public void Dash()
     {
         anim.SetBool("isDashing", true);
-        ShadowObjectPool.instance.GetShadow();
         rigi.velocity = new Vector2(dashSpeed * transform.right.x, rigi.velocity.y);
     }
 

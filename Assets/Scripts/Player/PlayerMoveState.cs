@@ -34,7 +34,6 @@ public class PlayerMoveState : BaseState
 
     public override bool onEndState()
     {
-        SoundManager.StopAudioLoop(SoundManager.run);
         playerZero.rigi.velocity = new Vector2(0, playerZero.rigi.velocity.y);
         playerZero.anim.SetBool("isRun", false);
         return true;

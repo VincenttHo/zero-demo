@@ -14,16 +14,17 @@ public class PlayerDashState : BaseState
         this.playerZero = playerZero;
         stateName = "dash";
         canAudio = true;
+        SoundManager.PlayAudio(SoundManager.dash);
         //enableShadow();
     }
 
     public override void execute()
     {
-        if(canAudio)
+        /*if(canAudio)
         {
             SoundManager.PlayAudio(SoundManager.dash);
             canAudio = false;
-        }
+        }*/
         
         playerZero.rigi.velocity = new Vector2(playerZero.currentHorizontalSpeed, playerZero.rigi.velocity.y);
         playerZero.anim.SetBool("isDash", true);

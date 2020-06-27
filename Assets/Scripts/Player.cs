@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
     {
         if(canHurt)
         {
+            SoundManager.PlayAudio(SoundManager.hurt);
             hp -= damage;
             if (hp <= 0)
             {

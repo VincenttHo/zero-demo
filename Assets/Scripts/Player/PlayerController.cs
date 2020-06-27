@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     public static bool jump;
     public static bool slash;
     public static bool shoot;
+    public static bool gunCharge;
 
     private void Update()
     {
+        if (!GameController.instance.canControll) return;
         // 左移动
         if (Input.GetKey(KeyCode.S)) inputLeft = true;
         if (Input.GetKeyUp(KeyCode.S)) inputLeft = false;
@@ -33,8 +35,15 @@ public class PlayerController : MonoBehaviour
         slash = false;
         if (Input.GetKeyDown(KeyCode.Y)) slash = true;
 
+        /*shoot = false;
+        if (Input.GetKeyDown(KeyCode.H)) shoot = true;*/
         shoot = false;
-        if (Input.GetKeyDown(KeyCode.H)) shoot = true;
+        if (Input.GetKey(KeyCode.H)) gunCharge = true;
+        if (Input.GetKeyUp(KeyCode.H))
+        {
+            shoot = true;
+            gunCharge = false;
+        }
 
     }
 

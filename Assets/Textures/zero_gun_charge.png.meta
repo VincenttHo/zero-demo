@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 0b78a18c971f7c44e86461603e0e00d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3743481511605611125
+    second: zero_gun_charge_0
+  - first:
+      213: -2912718404122864902
+    second: zero_gun_charge_1
+  - first:
+      213: 5718092501093544384
+    second: zero_gun_charge_2
+  - first:
+      213: 8409225193399738660
+    second: zero_gun_charge_3
+  - first:
+      213: -6034900785127017688
+    second: zero_gun_charge_4
+  - first:
+      213: 3163112794653355388
+    second: zero_gun_charge_5
+  - first:
+      213: -2625830475271705964
+    second: zero_gun_charge_6
+  - first:
+      213: 861486852602059112
+    second: zero_gun_charge_7
+  - first:
+      213: 1635482707538689629
+    second: zero_gun_charge_8
+  - first:
+      213: 1902348002222888423
+    second: zero_gun_charge_9
+  - first:
+      213: -7180943714108191008
+    second: zero_gun_charge_10
+  - first:
+      213: -9023120358530549910
+    second: zero_gun_charge_11
+  - first:
+      213: 3328842521317830004
+    second: zero_gun_charge_12
+  - first:
+      213: -5688488954861618046
+    second: zero_gun_charge_13
+  - first:
+      213: -3551458112092238170
+    second: zero_gun_charge_14
+  - first:
+      213: 6520821350367358744
+    second: zero_gun_charge_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zero_gun_charge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb433166d78b0d5488816ab598c67a1f
+      internalID: 3743481511605611125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 50
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec16fafc52ff32449dc9e77586d8917
+      internalID: -2912718404122864902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 50
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90af030948fa8824e8a3999d57f975c2
+      internalID: 5718092501093544384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 50
+        width: 41
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ba4bab559b10d42942e17804fa1afc
+      internalID: 8409225193399738660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 50
+        width: 35
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311e205274fc876408f4b1eb8961886d
+      internalID: -6034900785127017688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 50
+        width: 41
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02546ec95a61a4a41873d56feb8c1a48
+      internalID: 3163112794653355388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 50
+        width: 41
+        height: 49
+      alignment: 9
+      pivot: {x: 0.38, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c535aa49c2458964aafecd6422da0abb
+      internalID: -2625830475271705964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 50
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cfc02e7594e094881f58754335e49b
+      internalID: 861486852602059112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 41.375
+        height: 49.5
+      alignment: 9
+      pivot: {x: 0.49, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9fc17835f4cf6498e94d29d6466f32
+      internalID: 1635482707538689629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 41
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b82cd14ed2c6b44aa9e71c75da1c9d
+      internalID: 1902348002222888423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 41
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e982c814eae39f4284c94aa1f945b43
+      internalID: -7180943714108191008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 41
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bebcc331665f8442b6ff55c934fd551
+      internalID: -9023120358530549910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_12
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 35
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad43e67080652e44297022c3736ae3bb
+      internalID: 3328842521317830004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_13
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 41
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99edaf1c74e3e53458b63c0d040adbca
+      internalID: -5688488954861618046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_14
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 41
+        height: 50
+      alignment: 9
+      pivot: {x: 0.38, y: 0.315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11e62a07b7f8c9489a0d5b15b12e940
+      internalID: -3551458112092238170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zero_gun_charge_15
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 16
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad13e304885f6f4aa67dab8ad4a261c
+      internalID: 6520821350367358744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

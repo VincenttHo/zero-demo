@@ -18,7 +18,6 @@ public class PlayerDeathState : BaseState
 
     public override void execute()
     {
-        
     }
 
     public override bool onEndState()

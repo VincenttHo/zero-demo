@@ -67,6 +67,11 @@ public class PlayerZero : Player
     // 踏步秒数
     public float stepSec;
 
+    public float gunChargeSec;
+    private float gunChargeWaitSec;
+    public int gunChargeLv;
+    private GunChargeController gunChargeController;
+
     private void Start()
     {
         base.Start();
@@ -81,6 +86,8 @@ public class PlayerZero : Player
         }
         //canControll = false;
         testDir = transform.up;
+        gunChargeWaitSec = gunChargeSec;
+        gunChargeController = GetComponentInChildren<GunChargeController>();
     }
 
     void Update()
@@ -201,8 +208,21 @@ public class PlayerZero : Player
     {
         //if (isClimbingLadder) return;
         //if (Input.GetKeyDown(KeyCode.H))
+        if(PlayerController.gunCharge)
+        {
+            if(gunChargeWaitSec <= 0)
+            {
+                gunChargeLv = gunChargeLv < 2 ? gunChargeLv + 1 : gunChargeLv;
+                gunChargeWaitSec = gunChargeSec;
+            }
+            else
+            {
+                gunChargeWaitSec -= Time.deltaTime;
+            }
+        }
         if(PlayerController.shoot)
         {
+            gunChargeWaitSec = gunChargeSec;
             this.anim.SetTrigger("shoot");
         }
     }
@@ -228,6 +248,11 @@ public class PlayerZero : Player
     public void EnableControll()
     {
         canControll = true;
+    }
+
+    public void StartGame()
+    {
+        GameController.instance.StartGame();
     }
 
 }

@@ -7,15 +7,31 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
 
+    public static GameController instance;
+
     public PlayerZero playerZero;
     private Vector3 playerPos;
     public GameObject playerDeadEffect;
     private bool isDead;
     public GameObject gameOverUI;
     public Transform gameOverUIPos;
+    public GameObject dialog;
+
+    private bool gameRunning;
+    public bool canControll;
+
+    private void Start()
+    {
+        instance = this;
+    }
 
     private void Update()
     {
+        if(gameRunning && !dialog.activeSelf)
+        {
+            canControll = true;
+        }
+
         if(playerZero != null && playerZero.hp <= 0)
         {
             playerZero.rigi.velocity = new Vector2(0, 0);
@@ -33,6 +49,7 @@ public class GameController : MonoBehaviour
 
     private void DoDead()
     {
+        SoundManager.PlayAudio(SoundManager.dead);
         Destroy(playerZero.gameObject);
         StartCoroutine(PlayerDead());
     }
@@ -65,6 +82,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator ShowGameOver()
     {
+        SoundManager.audioSource.PlayOneShot(SoundManager.missionfail);
         gameOverUI = Instantiate(gameOverUI);
         gameOverUI.transform.position = new Vector3(gameOverUIPos.position.x, gameOverUIPos.position.y, -1);
         yield return new WaitForSeconds(3.5f);
@@ -76,6 +94,13 @@ public class GameController : MonoBehaviour
         Destroy(gameOverUI);
         SceneManager.LoadScene(0);
         yield return 0;
+    }
+
+    // 开始
+    public void StartGame()
+    {
+        dialog.SetActive(true);
+        gameRunning = true;
     }
 
 }

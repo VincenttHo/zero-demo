@@ -14,7 +14,6 @@ public class BombMachineDeadState : BaseState
 
     public override void execute()
     {
-        Destroy(bombMachine.gameObject);
     }
 
     public override bool onEndState()

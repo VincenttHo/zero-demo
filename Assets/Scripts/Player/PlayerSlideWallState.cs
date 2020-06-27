@@ -14,6 +14,7 @@ public class PlayerSlideWallState : BaseState
         this.playerZero = playerZero;
         stateName = "slideWall";
         playerZero.anim.SetBool("isWall", true);
+        SoundManager.PlayAudioLoop(SoundManager.slidingwall);
         //playerZero.rigi.velocity = new Vector2(playerZero.rigi.velocity.x, 0);
     }
 
@@ -38,6 +39,7 @@ public class PlayerSlideWallState : BaseState
             //if (Input.GetKeyDown(KeyCode.U) && playerZero.isTouchingWall)
             if(PlayerController.jump && playerZero.isTouchingWall && canJump)
             {
+                SoundManager.PlayAudio(SoundManager.walljump);
                 canJump = false;
                 playerZero.rigi.velocity = new Vector2(playerZero.wallJumpXSpeed * -playerZero.input, playerZero.wallJumpYSpeed);
                 playerZero.wallJumpWaitTime = playerZero.wallJumpCD;
@@ -58,6 +60,7 @@ public class PlayerSlideWallState : BaseState
 
     public override bool onEndState()
     {
+        SoundManager.StopAudioLoop(SoundManager.slidingwall);
         playerZero.anim.SetBool("isWall", false);
         return true;
     }

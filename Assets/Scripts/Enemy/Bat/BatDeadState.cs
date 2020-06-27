@@ -15,7 +15,6 @@ public class BatDeadState : BaseState
 
     public override void execute()
     {
-        Destroy(bat.gameObject);
     }
 
     public override bool onEndState()
