@@ -19,8 +19,6 @@ public class Bat : Enemy
 
     public Vector3 startPos;
 
-    public Animator anim;
-
     public string stateName;
 
     void Start()
@@ -29,7 +27,6 @@ public class Bat : Enemy
         batStateMachine = new BatStateMachine(this);
         player = GameObject.FindGameObjectWithTag("Player");
         startPos = transform.position;
-        anim = GetComponent<Animator>();
     }
 
     void Update()

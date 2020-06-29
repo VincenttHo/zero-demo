@@ -15,6 +15,7 @@ public class HunkAttackState : BaseState
         this.hunk = hunk;
         endWaitTime = hunk.attackDelay;
         player = GameObject.FindGameObjectWithTag("Player");
+        stateName = "attack";
     }
 
     public override void execute()

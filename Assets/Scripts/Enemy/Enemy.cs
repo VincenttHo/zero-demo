@@ -24,18 +24,26 @@ public class Enemy : MonoBehaviour
     /**掉落物*/
     public Item[] dropItems;
 
+    public bool isHurt;
+
+    [HideInInspector]
+    public Animator anim;
+
     protected void Start()
     {
         healthyPoint = maxHp;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originColor = spriteRenderer.color;
         enemyDropItemConfig = GetComponent<EnemyDropItemConfig>();
+        anim = GetComponent<Animator>();
     }
 
     // 受伤方法
     public void GetDamage(float damage)
     {
-        
+        if (healthyPoint <= 0) return;
+        isHurt = true;
+        anim.SetTrigger("hurt");
         healthyPoint -= damage;
         FlashColor();
         // 增加流血效果（试验，并不好看）
@@ -56,7 +64,8 @@ public class Enemy : MonoBehaviour
                     Instantiate(item);
                 }
             }
-            Destroy(gameObject);
+            anim.SetTrigger("dead");
+            //Destroy(gameObject);
         }
     }
 
@@ -75,10 +84,22 @@ public class Enemy : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
+        if (healthyPoint <= 0) return;
+
         if (other.CompareTag("Player") && other is CircleCollider2D)
         {
             other.gameObject.GetComponent<PlayerZero>().GetDamage(touchDamage);
         }
+    }
+
+    public void EndHurt()
+    {
+        isHurt = false;
+    }
+
+    public void DoDestory()
+    {
+        Destroy(gameObject);
     }
 
 }

@@ -5,13 +5,28 @@ using UnityEngine;
 public class GameStart : MonoBehaviour
 {
 
-    public PlayerZero zero;
+    private PlayerZero zero;
+    private AudioSource audioSource;
+
+    /*private void Start()
+    {
+        zero = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerZero>();
+        audioSource = GetComponent<AudioSource>();
+    }*/
+
+    private void OnEnable()
+    {
+        zero = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerZero>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        BgmManager.StopBgm();
+        BgmManager.PlayBgm(BgmManager.stage1Bgm);
+    }
 
     public void StartGame()
     {
-        SpriteRenderer spriteRenderer = zero.GetComponent<SpriteRenderer>();
-        spriteRenderer.enabled = true;
-        //zero.canControll = true;
+        zero.canControll = true;
+        GameController.instance.canControll = true;
         Destroy(gameObject);
     }
 

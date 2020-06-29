@@ -38,16 +38,16 @@ public class HunkStateMachine : EnemyStateMachine
         if (hunk.healthyPoint <= 0)
         {
             DoChangeState(new HunkDeadState(hunk));
+        } 
+        else if (hunk.isHurt)
+        {
+            DoChangeState(new HunkHurtState(hunk));
         }
 
         // 漫游状态
         if (currentState is HunkMoveState)
         {
-            if(hunk.healthyPoint <= 0)
-            {
-                DoChangeState(new HunkDeadState(hunk));
-            }
-            else if(PlayerInAttackRange())
+            if(PlayerInAttackRange())
             {
                 DoChangeState(new HunkAttackState(hunk));
             }
@@ -55,11 +55,15 @@ public class HunkStateMachine : EnemyStateMachine
         // 攻击状态
         else if(currentState is HunkAttackState)
         {
-            if (hunk.healthyPoint <= 0)
+            if (!PlayerInAttackRange())
             {
-                DoChangeState(new HunkDeadState(hunk));
+                DoChangeState(new HunkMoveState(hunk));
             }
-            else if (!PlayerInAttackRange())
+        }
+
+        else if (currentState is HunkHurtState)
+        {
+            if (!hunk.isHurt)
             {
                 DoChangeState(new HunkMoveState(hunk));
             }

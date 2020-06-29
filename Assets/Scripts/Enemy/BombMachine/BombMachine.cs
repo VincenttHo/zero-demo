@@ -21,9 +21,6 @@ public class BombMachine : Enemy
     public float attackCoolDownSec;
 
     public string stateName;
-
-    [HideInInspector]
-    public Animator anim;
     [HideInInspector]
     public BoxCollider2D boxCollider;
 
@@ -36,7 +33,6 @@ public class BombMachine : Enemy
         {
             playerPos = player.transform;
         }
-        anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 

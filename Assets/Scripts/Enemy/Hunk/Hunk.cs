@@ -8,8 +8,7 @@ public class Hunk : Enemy
 
     private HunkStateMachine hunkStateMachine;
 
-    [HideInInspector]
-    public Animator anim;
+    
     [HideInInspector]
     public AnimatorStateInfo animatorStateInfo;
 
@@ -25,17 +24,18 @@ public class Hunk : Enemy
     //public float touchDamage = 2f;
     public GameObject bullet;
     public Transform bulletPos;
+    public string stateName;
 
 
     void Start()
     {
         base.Start();
         hunkStateMachine = new HunkStateMachine(this);
-        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        stateName = hunkStateMachine.currentState.stateName;
         hunkStateMachine.CheckChangeState();
         hunkStateMachine.currentState.execute();
     }

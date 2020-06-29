@@ -19,17 +19,22 @@ public class GameController : MonoBehaviour
 
     private bool gameRunning;
     public bool canControll;
+    private bool canStartUI;
+
+    public GameObject gameStartUI;
 
     private void Start()
     {
         instance = this;
+        canStartUI = true;
     }
 
     private void Update()
     {
-        if(gameRunning && !dialog.activeSelf)
+        if(gameRunning && !dialog.activeSelf && canStartUI)
         {
-            canControll = true;
+            canStartUI = false;
+            gameStartUI.SetActive(true);
         }
 
         if(playerZero != null && playerZero.hp <= 0)
@@ -49,6 +54,7 @@ public class GameController : MonoBehaviour
 
     private void DoDead()
     {
+        BgmManager.StopBgm();
         SoundManager.PlayAudio(SoundManager.dead);
         Destroy(playerZero.gameObject);
         StartCoroutine(PlayerDead());

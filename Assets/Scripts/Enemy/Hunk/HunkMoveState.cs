@@ -12,6 +12,7 @@ public class HunkMoveState : BaseState
     public HunkMoveState(Hunk hunk)
     {
         this.hunk = hunk;
+        stateName = "move";
     }
 
     public override void execute()

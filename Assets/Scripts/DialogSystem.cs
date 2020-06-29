@@ -38,6 +38,7 @@ public class DialogSystem : MonoBehaviour
     private void OnEnable()
     {
         //textLabel.text = textList[index++];
+        GameController.instance.canControll = false;
         StartCoroutine(SetTextUI());
     }
 
