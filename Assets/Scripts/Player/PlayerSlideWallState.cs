@@ -42,6 +42,7 @@ public class PlayerSlideWallState : BaseState
                 SoundManager.PlayAudio(SoundManager.walljump);
                 canJump = false;
                 playerZero.rigi.velocity = new Vector2(playerZero.wallJumpXSpeed * -playerZero.input, playerZero.wallJumpYSpeed);
+                //playerZero.rigi.velocity = new Vector2(playerZero.rigi.velocity.x, playerZero.wallJumpYSpeed);
                 playerZero.wallJumpWaitTime = playerZero.wallJumpCD;
                 return true;
             }

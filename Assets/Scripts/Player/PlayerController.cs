@@ -18,12 +18,16 @@ public class PlayerController : MonoBehaviour
         
         if (!GameController.instance.canControll) return;
         // 左移动
-        if (Input.GetKey(KeyCode.S) /*|| Input.GetAxis("Horizontal") < 0*/) inputLeft = true;
-        if (Input.GetKeyUp(KeyCode.S) /*|| Input.GetAxis("Horizontal") >= 0*/) inputLeft = false;
+        /*if (Input.GetKey(KeyCode.A)) inputLeft = true;
+        if (Input.GetKeyUp(KeyCode.A)) inputLeft = false;*/
+        if (Input.GetAxis("Horizontal") < 0) inputLeft = true;
+        if (Input.GetAxis("Horizontal") >= 0) inputLeft = false;
 
         // 右移动
-        if (Input.GetKey(KeyCode.F) /*|| Input.GetAxis("Horizontal") > 0*/) inputRight = true;
-        if (Input.GetKeyUp(KeyCode.F) /*|| Input.GetAxis("Horizontal") <= 0*/) inputRight = false;
+        /*if (Input.GetKey(KeyCode.D)) inputRight = true;
+        if (Input.GetKeyUp(KeyCode.D)) inputRight = false;*/
+        if (Input.GetAxis("Horizontal") > 0) inputRight = true;
+        if (Input.GetAxis("Horizontal") <= 0) inputRight = false;
 
         // 冲刺
         if (Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.Joystick1Button0)) dash = true;

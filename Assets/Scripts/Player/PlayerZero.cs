@@ -62,6 +62,8 @@ public class PlayerZero : Player
 
     public GameObject playerDeadEffect;
 
+    private bool isShoot;
+
     private Vector3 testDir;
 
     // 踏步秒数
@@ -71,6 +73,13 @@ public class PlayerZero : Player
     private float gunChargeWaitSec;
     public int gunChargeLv;
     private GunChargeController gunChargeController;
+
+
+    public GameObject bullet;
+    public GameObject lv1Bullet;
+    public GameObject lv2Bullet;
+    public Transform bulletPos;
+    
 
     private void Start()
     {
@@ -146,6 +155,7 @@ public class PlayerZero : Player
     private void DoInput()
     {
         if (isAttack) return;
+        if (isShoot) return;
         input = 0;
         //if (Input.GetKey(KeyCode.A))
         if (PlayerController.inputLeft)
@@ -253,6 +263,27 @@ public class PlayerZero : Player
     public void StartGame()
     {
         GameController.instance.StartGame();
+    }
+
+    void InitBullet()
+    {
+        //bullet.transform.position = bulletPos.position;
+        //float rotationY = transform.localScale.x < 0 ? 0 : 180;
+        //bullet.transform.rotation = Quaternion.Euler(0, rotationY, 0);
+        SoundManager.PlayAudio(SoundManager.shoot);
+        var initBullet = bullet;
+        if (gunChargeLv == 1)
+        {
+            initBullet = lv1Bullet;
+        }
+        else if (gunChargeLv == 2)
+        {
+            initBullet = lv2Bullet;
+        }
+        GameObject newBullet = Instantiate(initBullet);
+        newBullet.transform.position = bulletPos.position;
+        newBullet.transform.rotation = transform.rotation;
+        gunChargeLv = 0;
     }
 
 }

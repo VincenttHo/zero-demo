@@ -44,7 +44,7 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if(canNextText)
             {

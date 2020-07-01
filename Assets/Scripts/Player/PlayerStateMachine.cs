@@ -94,6 +94,10 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
+            else if (playerZero.rigi.velocity.y < 0 && !playerZero.isGrounded)
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }
         }
         
         // 三、冲刺
