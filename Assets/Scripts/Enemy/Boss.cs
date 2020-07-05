@@ -24,6 +24,8 @@ public class Boss : MonoBehaviour
     /**掉落物*/
     public Item[] dropItems;
 
+    public bool canMove;
+
     protected void Start()
     {
         canGunHurt = true;

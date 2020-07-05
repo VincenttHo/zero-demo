@@ -16,24 +16,31 @@ public class CameraFollow : MonoBehaviour
     public List<PosConfig> posConfigs;
     private int index = 0;
 
+    public float bossStartXPos;
+    public Vector3 bossPos;
+
+    private bool isBossBattle;
+
     private void Update()
-    {   if (target == null) return;
-        if(!(target.position.x >= posConfigs[index].minPos.x &&
-                target.position.x <= posConfigs[index].maxPos.x &&
-                target.position.y >= posConfigs[index].minPos.y &&
-                target.position.y <= posConfigs[index].maxPos.y))
+    {   
+        if (target == null) return;
+
+        if(target.position.x >= bossStartXPos)
         {
-            for (int n = 0; n < posConfigs.Count; n++)
+            isBossBattle = true;
+            return;
+        }
+
+        for (int n = 0; n < posConfigs.Count; n++)
+        {
+            if (n == index) continue;
+            if (target.position.x >= posConfigs[n].minPos.x &&
+                target.position.x <= posConfigs[n].maxPos.x /*&&
+                target.position.y >= posConfigs[n].minPos.y &&
+                target.position.y <= posConfigs[n].maxPos.y*/)
             {
-                if (n == index) continue;
-                if (target.position.x >= posConfigs[n].minPos.x &&
-                    target.position.x <= posConfigs[n].maxPos.x &&
-                    target.position.y >= posConfigs[n].minPos.y &&
-                    target.position.y <= posConfigs[n].maxPos.y)
-                {
-                    index = n;
-                    break;
-                }
+                index = n;
+                break;
             }
         }
         
@@ -43,6 +50,12 @@ public class CameraFollow : MonoBehaviour
     {
         if(target != null)
         {
+            if(isBossBattle && transform.position != bossPos)
+            {
+                transform.position = Vector3.Lerp(transform.position, bossPos, smoothing);
+                return;
+            }
+
             if(transform.position != target.position)
             {
                 Vector3 targetPos = target.position;

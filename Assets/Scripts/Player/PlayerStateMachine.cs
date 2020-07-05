@@ -163,7 +163,7 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }*/
-            else if (playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0)
+            else if (playerZero.isTouchingWall && !playerZero.isGrounded && playerZero.input != 0 && GameController.instance.canControll)
             {
                 DoChangeState(new PlayerSlideWallState(playerZero));
             }
@@ -188,7 +188,7 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }*/
-            else if(playerZero.input == 0 || playerZero.input != 0 && !playerZero.isTouchingWall)
+            else if(!GameController.instance.canControll || playerZero.input == 0 || playerZero.input != 0 && !playerZero.isTouchingWall)
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }

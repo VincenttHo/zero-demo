@@ -156,6 +156,7 @@ public class PlayerZero : Player
     {
         if (isAttack) return;
         if (isShoot) return;
+        if (!GameController.instance.canControll) return;
         input = 0;
         //if (Input.GetKey(KeyCode.A))
         if (PlayerController.inputLeft)

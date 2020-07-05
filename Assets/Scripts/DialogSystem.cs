@@ -24,6 +24,7 @@ public class DialogSystem : MonoBehaviour
 
     public Sprite zeroAvatar;
     public Sprite soundOnlyAvatar;
+    public Sprite humanAileAvatar;
 
     List<string> textList = new List<string>();
 
@@ -35,7 +36,7 @@ public class DialogSystem : MonoBehaviour
         index = 0;
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         //textLabel.text = textList[index++];
         GameController.instance.canControll = false;
@@ -93,6 +94,10 @@ public class DialogSystem : MonoBehaviour
                 break;
             case "SoundOnly":
                 avatar.sprite = soundOnlyAvatar;
+                index++;
+                break;
+            case "HumanAile":
+                avatar.sprite = humanAileAvatar;
                 index++;
                 break;
             default: break;

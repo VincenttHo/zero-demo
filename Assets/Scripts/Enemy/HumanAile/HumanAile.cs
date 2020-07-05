@@ -28,10 +28,14 @@ public class HumanAile : Boss
     public float moveWaitSec;
     public float moveWaitDuration;
 
+    public float hp;
+    private bool isDead;
 
     void Start()
     {
         base.Start();
+        AileHpManager.maxHp = hp;
+        AileHpManager.currentHp = hp;
         movePos = rightMovePos;
         moveWaitDuration = moveWaitSec;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -46,7 +50,18 @@ public class HumanAile : Boss
 
     void Update()
     {
+        if (isDead) return;
+        //if (!canMove) return;
         if (player == null) return;
+        if (AileHpManager.currentHp <= 0)
+        {
+            isDead = true;
+            rigi.velocity = new Vector2(0, 0);
+            HumanAileAudioManager.instance.PlayAudio(HumanAileAudioManager.deadAudio);
+            BgmManager.StopBgm();
+            anim.SetTrigger("dead");
+            return;
+        }
         CheckGround();
         DoFilp();
         DoRun();

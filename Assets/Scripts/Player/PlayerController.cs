@@ -17,15 +17,16 @@ public class PlayerController : MonoBehaviour
     {
         
         if (!GameController.instance.canControll) return;
-        // 左移动
+
+        // 左右移动（键盘）
         /*if (Input.GetKey(KeyCode.A)) inputLeft = true;
-        if (Input.GetKeyUp(KeyCode.A)) inputLeft = false;*/
+        if (Input.GetKeyUp(KeyCode.A)) inputLeft = false;
+        if (Input.GetKey(KeyCode.D)) inputRight = true;
+        if (Input.GetKeyUp(KeyCode.D)) inputRight = false;*/
+
+        // 左右移动（手柄）
         if (Input.GetAxis("Horizontal") < 0) inputLeft = true;
         if (Input.GetAxis("Horizontal") >= 0) inputLeft = false;
-
-        // 右移动
-        /*if (Input.GetKey(KeyCode.D)) inputRight = true;
-        if (Input.GetKeyUp(KeyCode.D)) inputRight = false;*/
         if (Input.GetAxis("Horizontal") > 0) inputRight = true;
         if (Input.GetAxis("Horizontal") <= 0) inputRight = false;
 

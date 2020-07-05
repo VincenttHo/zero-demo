@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour
     {
         instance = this;
         canStartUI = true;
+
+
+        canControll = true;
     }
 
     private void Update()

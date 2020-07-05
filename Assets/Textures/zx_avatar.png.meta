@@ -1,0 +1,3679 @@
+fileFormatVersion: 2
+guid: 0f735f3e44e5d2240aba18c1f0d69cb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9035845514931848578
+    second: zx_avatar_0
+  - first:
+      213: -8239818376936728001
+    second: zx_avatar_1
+  - first:
+      213: -1375042129111875849
+    second: zx_avatar_2
+  - first:
+      213: 961193809589980591
+    second: zx_avatar_3
+  - first:
+      213: -4328491753868734852
+    second: zx_avatar_4
+  - first:
+      213: -628735224340618275
+    second: zx_avatar_5
+  - first:
+      213: -4596818154216859582
+    second: zx_avatar_6
+  - first:
+      213: -6505079564677957120
+    second: zx_avatar_7
+  - first:
+      213: -4077367612448024725
+    second: zx_avatar_8
+  - first:
+      213: -51856915411896116
+    second: zx_avatar_9
+  - first:
+      213: -7500886291864449762
+    second: zx_avatar_10
+  - first:
+      213: 5083280620529496846
+    second: zx_avatar_11
+  - first:
+      213: -7718514874069255310
+    second: zx_avatar_12
+  - first:
+      213: 2662609831157106473
+    second: zx_avatar_13
+  - first:
+      213: 4480170350218447340
+    second: zx_avatar_14
+  - first:
+      213: -4707988127540720779
+    second: zx_avatar_15
+  - first:
+      213: -5459199011503159855
+    second: zx_avatar_16
+  - first:
+      213: -819615153682505487
+    second: zx_avatar_17
+  - first:
+      213: -5342261140840574511
+    second: zx_avatar_18
+  - first:
+      213: 1654689739398447015
+    second: zx_avatar_19
+  - first:
+      213: -2929127512379154587
+    second: zx_avatar_20
+  - first:
+      213: -7757746343919146473
+    second: zx_avatar_21
+  - first:
+      213: -6242969979146654515
+    second: zx_avatar_22
+  - first:
+      213: 7161808965968418275
+    second: zx_avatar_23
+  - first:
+      213: -6110042649609747745
+    second: zx_avatar_24
+  - first:
+      213: -4599115727784107685
+    second: zx_avatar_25
+  - first:
+      213: 887956154238384345
+    second: zx_avatar_26
+  - first:
+      213: -7734128978177894085
+    second: zx_avatar_27
+  - first:
+      213: 3690590753632563420
+    second: zx_avatar_28
+  - first:
+      213: 8005446349122672585
+    second: zx_avatar_29
+  - first:
+      213: 3146445815740517500
+    second: zx_avatar_30
+  - first:
+      213: 4244211773264012842
+    second: zx_avatar_31
+  - first:
+      213: 6445061618364958773
+    second: zx_avatar_32
+  - first:
+      213: -2414625189787560971
+    second: zx_avatar_33
+  - first:
+      213: -7293689705583005819
+    second: zx_avatar_34
+  - first:
+      213: 7603824214695597097
+    second: zx_avatar_35
+  - first:
+      213: -7916799433087525835
+    second: zx_avatar_36
+  - first:
+      213: 7216148008868521328
+    second: zx_avatar_37
+  - first:
+      213: 4023642729413410318
+    second: zx_avatar_38
+  - first:
+      213: -8918651954484933977
+    second: zx_avatar_39
+  - first:
+      213: -3283303451212733869
+    second: zx_avatar_40
+  - first:
+      213: 4599083968114973903
+    second: zx_avatar_41
+  - first:
+      213: -1976667626762501520
+    second: zx_avatar_42
+  - first:
+      213: 3859209308960264329
+    second: zx_avatar_43
+  - first:
+      213: -7431666883519210028
+    second: zx_avatar_44
+  - first:
+      213: 8718685546868745422
+    second: zx_avatar_45
+  - first:
+      213: -4483151053539192035
+    second: zx_avatar_46
+  - first:
+      213: 7507456856081579378
+    second: zx_avatar_47
+  - first:
+      213: 4389973886473111633
+    second: zx_avatar_48
+  - first:
+      213: 5652909086176782844
+    second: zx_avatar_49
+  - first:
+      213: 2421479694997158891
+    second: zx_avatar_50
+  - first:
+      213: -1402748933059911728
+    second: zx_avatar_51
+  - first:
+      213: 2123809836343550970
+    second: zx_avatar_52
+  - first:
+      213: -3066596972217499365
+    second: zx_avatar_53
+  - first:
+      213: -3909173723392933162
+    second: zx_avatar_54
+  - first:
+      213: 3440433770807401950
+    second: zx_avatar_55
+  - first:
+      213: -9218059358178614169
+    second: zx_avatar_56
+  - first:
+      213: -6596949015812873451
+    second: zx_avatar_57
+  - first:
+      213: -3618013057930462471
+    second: zx_avatar_58
+  - first:
+      213: 7296948186439400085
+    second: zx_avatar_59
+  - first:
+      213: 3612989926483583253
+    second: zx_avatar_60
+  - first:
+      213: 5368486031535264341
+    second: zx_avatar_61
+  - first:
+      213: -7907124193243616733
+    second: zx_avatar_62
+  - first:
+      213: -2705165738965507606
+    second: zx_avatar_63
+  - first:
+      213: 5114507625527111644
+    second: zx_avatar_64
+  - first:
+      213: -5809993125873075975
+    second: zx_avatar_65
+  - first:
+      213: -3615416777955159473
+    second: zx_avatar_66
+  - first:
+      213: 1490757727587804107
+    second: zx_avatar_67
+  - first:
+      213: -6124308184557403747
+    second: zx_avatar_68
+  - first:
+      213: 7098585913599171077
+    second: zx_avatar_69
+  - first:
+      213: -7457663085847498289
+    second: zx_avatar_70
+  - first:
+      213: -7876534884365869287
+    second: zx_avatar_71
+  - first:
+      213: -7358987450400699683
+    second: zx_avatar_72
+  - first:
+      213: -2554264829101502507
+    second: zx_avatar_73
+  - first:
+      213: -6080215129064726311
+    second: zx_avatar_74
+  - first:
+      213: -5856837070222028259
+    second: zx_avatar_75
+  - first:
+      213: -1351451663525370457
+    second: zx_avatar_76
+  - first:
+      213: -8555585435622844873
+    second: zx_avatar_77
+  - first:
+      213: 1246543406089136611
+    second: zx_avatar_78
+  - first:
+      213: -6950596010057296114
+    second: zx_avatar_79
+  - first:
+      213: -4930154840946998790
+    second: zx_avatar_80
+  - first:
+      213: -2636907341203700043
+    second: zx_avatar_81
+  - first:
+      213: -7242251469845825267
+    second: zx_avatar_82
+  - first:
+      213: -209626373129474517
+    second: zx_avatar_83
+  - first:
+      213: 5129135990338879137
+    second: zx_avatar_84
+  - first:
+      213: -8524373817794002376
+    second: zx_avatar_85
+  - first:
+      213: 1905750321161791970
+    second: zx_avatar_86
+  - first:
+      213: 6862794530184621594
+    second: zx_avatar_87
+  - first:
+      213: -6337182751295856651
+    second: zx_avatar_88
+  - first:
+      213: 3220734667387856763
+    second: zx_avatar_89
+  - first:
+      213: 1711980874520904295
+    second: zx_avatar_90
+  - first:
+      213: -6333016931153965543
+    second: zx_avatar_91
+  - first:
+      213: -6848697083116384731
+    second: zx_avatar_92
+  - first:
+      213: -1274157145631652804
+    second: zx_avatar_93
+  - first:
+      213: -5405978912742455425
+    second: zx_avatar_94
+  - first:
+      213: 3402098160247711936
+    second: zx_avatar_95
+  - first:
+      213: -2642109440789601646
+    second: zx_avatar_96
+  - first:
+      213: 5130390566943674074
+    second: zx_avatar_97
+  - first:
+      213: 3802027843250582970
+    second: zx_avatar_98
+  - first:
+      213: -5848646134592225089
+    second: zx_avatar_99
+  - first:
+      213: -7789249251748998457
+    second: zx_avatar_100
+  - first:
+      213: 7465599780221364030
+    second: zx_avatar_101
+  - first:
+      213: -9190074502692461014
+    second: zx_avatar_102
+  - first:
+      213: 240076049699832236
+    second: zx_avatar_103
+  - first:
+      213: 4257949404110429903
+    second: zx_avatar_104
+  - first:
+      213: -7085846166973126623
+    second: zx_avatar_105
+  - first:
+      213: 7106718416917713639
+    second: zx_avatar_106
+  - first:
+      213: -6741116859085545757
+    second: zx_avatar_107
+  - first:
+      213: 3510815039021942462
+    second: zx_avatar_108
+  - first:
+      213: 4760500005817961558
+    second: zx_avatar_109
+  - first:
+      213: -7831231350435088387
+    second: zx_avatar_110
+  - first:
+      213: -8903024244120222973
+    second: zx_avatar_111
+  - first:
+      213: 4830124135745024769
+    second: zx_avatar_112
+  - first:
+      213: 7805272215060929132
+    second: zx_avatar_113
+  - first:
+      213: 3971152301375963071
+    second: zx_avatar_114
+  - first:
+      213: -6528847825481272423
+    second: zx_avatar_115
+  - first:
+      213: 8294326377916388172
+    second: zx_avatar_116
+  - first:
+      213: 7830009870193411329
+    second: zx_avatar_117
+  - first:
+      213: -2360948675443597532
+    second: zx_avatar_118
+  - first:
+      213: -8456880751616446025
+    second: zx_avatar_119
+  - first:
+      213: -2696546340837535897
+    second: zx_avatar_120
+  - first:
+      213: -1201259369092927127
+    second: zx_avatar_121
+  - first:
+      213: 5427578314610764655
+    second: zx_avatar_122
+  - first:
+      213: -3678407599436845319
+    second: zx_avatar_123
+  - first:
+      213: -4181017495603598827
+    second: zx_avatar_124
+  - first:
+      213: 6713194678885752142
+    second: zx_avatar_125
+  - first:
+      213: 3939438451443065876
+    second: zx_avatar_126
+  - first:
+      213: 7738468973112328410
+    second: zx_avatar_127
+  - first:
+      213: -7209154891732547363
+    second: zx_avatar_128
+  - first:
+      213: 2894679594810521222
+    second: zx_avatar_129
+  - first:
+      213: -8483450561578874163
+    second: zx_avatar_130
+  - first:
+      213: -2354012483098605417
+    second: zx_avatar_131
+  - first:
+      213: -1200443649241520099
+    second: zx_avatar_132
+  - first:
+      213: -326376411600691059
+    second: zx_avatar_133
+  - first:
+      213: -6509252676652597805
+    second: zx_avatar_134
+  - first:
+      213: -5358914523722130227
+    second: zx_avatar_135
+  - first:
+      213: 4169225466715330658
+    second: zx_avatar_136
+  - first:
+      213: -6294380723848888309
+    second: zx_avatar_137
+  - first:
+      213: -8415147006082001293
+    second: zx_avatar_138
+  - first:
+      213: -3852510019769218910
+    second: zx_avatar_139
+  - first:
+      213: 1400799921875509167
+    second: zx_avatar_140
+  - first:
+      213: -6803481911466647602
+    second: zx_avatar_141
+  - first:
+      213: -1187081582110066019
+    second: zx_avatar_142
+  - first:
+      213: 6936666311021915471
+    second: zx_avatar_143
+  - first:
+      213: -8487762633684163815
+    second: zx_avatar_144
+  - first:
+      213: -2516643160487252276
+    second: zx_avatar_145
+  - first:
+      213: -6017601978275603922
+    second: zx_avatar_146
+  - first:
+      213: 2491489007725632945
+    second: zx_avatar_147
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zx_avatar_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5b629a4d16fd340b8c3144a79fc074
+      internalID: -9035845514931848578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadca81c4a5db0e4aac06fdd1010afc0
+      internalID: -8239818376936728001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7aef63799c7e5e4c9e2cdace8ef0edd
+      internalID: -1375042129111875849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52436c7d421cb8749aca5b9147cb0f4c
+      internalID: 961193809589980591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c816794723fdb45ad1c7715c901cb4
+      internalID: -4328491753868734852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8680e182167f048beb5602c46e8bf7
+      internalID: -628735224340618275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_6
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900132d8430ff1940b02263853474c56
+      internalID: -4596818154216859582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1204
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e722c27002f7f4e83ffd493d8e8a3d
+      internalID: -6505079564677957120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8000348c94a9ea3439443e3c3afe23c4
+      internalID: -4077367612448024725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f264a3e99e8ebb46a381f8e0d9bd6df
+      internalID: -51856915411896116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_10
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8158d67d4293e4d9f05cdc9b783967
+      internalID: -7500886291864449762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0b24f9d6bef91409f611fd7468f353
+      internalID: 5083280620529496846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_12
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9637a10d1f0424478aec36f49823762
+      internalID: -7718514874069255310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_13
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9aef7e825275c44a1f70e5836c21bb
+      internalID: 2662609831157106473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_14
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b92be470fa131468c7d2e0b2287b5f
+      internalID: 4480170350218447340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_15
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1144
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b22510de88bcca4f87ef18f87abbd4e
+      internalID: -4707988127540720779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ba05989c5b114429c3969d21c79e59
+      internalID: -5459199011503159855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba74a096aa18f4f4c8818d3a1d85e0cb
+      internalID: -819615153682505487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c29d08ac29c2ed40b7b27f590e043cb
+      internalID: -5342261140840574511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e273ba23cd7364782bd3a5eaaa82f2
+      internalID: 1654689739398447015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683ac704b08c144189fb1602a9ead32
+      internalID: -2929127512379154587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_21
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73788abd6789e44090416b1ca86f665
+      internalID: -7757746343919146473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_22
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b16978825a63c843aef75f3ed2509c8
+      internalID: -6242969979146654515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_23
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1084
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bb7b00e5e6b9e42b525289e4713efc
+      internalID: 7161808965968418275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcd2a7e79c6d81479e393a156c341ed
+      internalID: -6110042649609747745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716916f389b06604ea257bf38271f0fa
+      internalID: -4599115727784107685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b98975c346b4b344a7bd14da857b2db
+      internalID: 887956154238384345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a254a1c004c6fa4685c8972383f07e7
+      internalID: -7734128978177894085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_28
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0bc1793f8a149429a02f4942d5e58f
+      internalID: 3690590753632563420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_29
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670034228a5c08a47a84340ce29e7856
+      internalID: 8005446349122672585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_30
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93d0f1c344c2ca44adc8dc5f9760851
+      internalID: 3146445815740517500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_31
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1024
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761b63eecce735642a47ee691bc14fe6
+      internalID: 4244211773264012842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c89c36ef8bc6c429e8a871c4a11b42
+      internalID: 6445061618364958773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_33
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d57c52c1bd4d0b43a5182fcaec7427c
+      internalID: -2414625189787560971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_34
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa2e5952c1eed347b3d56f4b936f6f7
+      internalID: -7293689705583005819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c254a4d20084ba0408cae14eea244f27
+      internalID: 7603824214695597097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_36
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9f9455e01bad240b03326a27271f49
+      internalID: -7916799433087525835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_37
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f21d482536026142a36018cd01a4d07
+      internalID: 7216148008868521328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_38
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073a01234e975f44ba2ad76a0f84c6a7
+      internalID: 4023642729413410318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_39
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 964
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cebf6e568bbb704298c57af14c93406
+      internalID: -8918651954484933977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04577c4a36b42f04f9c0ed7de061ff24
+      internalID: -3283303451212733869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_41
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2010025d541f7c49977006993e9df2c
+      internalID: 4599083968114973903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_42
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa50a3e43264d2c41a5c9c3788c6f726
+      internalID: -1976667626762501520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba848286127d2e242abd200a3a4b0a97
+      internalID: 3859209308960264329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_44
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41179241abfe8bb4f81d3037e6feae7a
+      internalID: -7431666883519210028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fb7c22caf515f428f2de57c9718518
+      internalID: 8718685546868745422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_46
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e784635cb53334a88251945eb441c9
+      internalID: -4483151053539192035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_47
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 904
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470d5e709eda44541896309e100a39e5
+      internalID: 7507456856081579378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e6cfc6f80a20345b80097cec1aa4b9
+      internalID: 4389973886473111633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_49
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e67c08b7b250854ba0fb30aa5f3ef9d
+      internalID: 5652909086176782844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_50
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88a740c1f415c14e9e44d2393c50b1d
+      internalID: 2421479694997158891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8532d379aab309489c0c1e6b358b62d
+      internalID: -1402748933059911728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_52
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efc5ce0bbf0747439b621b5cbe5b57f
+      internalID: 2123809836343550970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_53
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da8581c3055d2e4da17f65d24cd55c0
+      internalID: -3066596972217499365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_54
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bbaf1f84fff9449b0ec450d31c63a7
+      internalID: -3909173723392933162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_55
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 844
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b638b6c66c3d234d917b2b1991bd2c2
+      internalID: 3440433770807401950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_56
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ec9ba91bc686041a756409b6b4b47f
+      internalID: -9218059358178614169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_57
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13760aa3c0fcc844aca09237af4d506
+      internalID: -6596949015812873451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_58
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca85c55af9fafe46a4ef932b702e343
+      internalID: -3618013057930462471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_59
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712c76af3542b054e8016360bfbbaabe
+      internalID: 7296948186439400085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_60
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040c5df1574ecd345bb2950ba39d093d
+      internalID: 3612989926483583253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_61
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c467c2689857b145bdfafd862a832bc
+      internalID: 5368486031535264341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_62
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc903b8128a00146b35e5c6fd1e6aa9
+      internalID: -7907124193243616733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_63
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 784
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4eb5897f178ed4a8404e2ed81f6d19
+      internalID: -2705165738965507606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_64
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae38633c1394e547847c28f6362d8a1
+      internalID: 5114507625527111644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_65
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f44833523526cd45acbcd1e5026ee9a
+      internalID: -5809993125873075975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_66
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5deaee2ac77f04ab7b4d2beb442d01
+      internalID: -3615416777955159473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_67
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3780ddb420a80594985a1b87121599be
+      internalID: 1490757727587804107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_68
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f2981c2d6e9e44cb51ae1be7a97d85
+      internalID: -6124308184557403747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_69
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16adefe0b4fe52498335b19e8a0e4b9
+      internalID: 7098585913599171077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_70
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 724
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102d1e56398fbb041a70e52ffefdc073
+      internalID: -7457663085847498289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_71
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 664
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08884f926b7078b429b2815a63e2b368
+      internalID: -7876534884365869287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 664
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa022a362f3a5a498a4e86a4e2e3a87
+      internalID: -7358987450400699683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_73
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 664
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b13cbc76403f604190182c033e130b1
+      internalID: -2554264829101502507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_74
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 664
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db7638d99ed41f41bee104b86613c69
+      internalID: -6080215129064726311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_75
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5025bbc52ee14644835fed5d13af70d
+      internalID: -5856837070222028259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_76
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5fc387926808b46a8148369d770112
+      internalID: -1351451663525370457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5971452b8ef374d965f9ce528fb96a
+      internalID: -8555585435622844873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_78
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da43771d7904ba4fbeab543669faa14
+      internalID: 1246543406089136611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_79
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4fefcc564edbe40ac4c9b0601e6bbc
+      internalID: -6950596010057296114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_80
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 604
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ef27886f225f0469fa53e7267d6ff8
+      internalID: -4930154840946998790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_81
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ab955079425514fb0018741e91dc07
+      internalID: -2636907341203700043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_82
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adbb06cc2a9a2b429bd2e37eb6ababb
+      internalID: -7242251469845825267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0548a6817d42d246aa8375384d03c61
+      internalID: -209626373129474517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_84
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79396929e6df4914b9ee1507d05e7cad
+      internalID: 5129135990338879137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_85
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032d85746933abd4a91e194f11885b61
+      internalID: -8524373817794002376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_86
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 544
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8ac6c3e516dee448f2f1b74d55dc86
+      internalID: 1905750321161791970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_87
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a932fba22c03f1c4285c82a91044e1fd
+      internalID: 6862794530184621594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_88
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4114ab781ebf34ea3d90d69aa704d1
+      internalID: -6337182751295856651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_89
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d2d1743c78d694bad16d74d0e2a770
+      internalID: 3220734667387856763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_90
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3338a75d69cc14647bf88c2decbcabc5
+      internalID: 1711980874520904295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_91
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305a20476e8ae8940bbddffad7181500
+      internalID: -6333016931153965543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_92
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ceb85222351c049a95ae4a08ec8d1b
+      internalID: -6848697083116384731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_93
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b70c2ba8382db547bea1dee91b6420c
+      internalID: -1274157145631652804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_94
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 484
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00df928df283944aa766e05e1d2b96b
+      internalID: -5405978912742455425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_95
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ce927c9e54ae84187bf31eb59f1661
+      internalID: 3402098160247711936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_96
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b034733e69d055f4e848705845e000f8
+      internalID: -2642109440789601646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_97
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b6390fb4e99134eb266d9a3f586594
+      internalID: 5130390566943674074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_98
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d5c802380f9a049995f1ae41d3b7a8
+      internalID: 3802027843250582970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_99
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bc943fdfc707e448f28a1ebe9a414a
+      internalID: -5848646134592225089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_100
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2957182a29df9a4792ce7855a3edf24
+      internalID: -7789249251748998457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_101
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5c420ae197e3041a6c3969301e666b
+      internalID: 7465599780221364030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_102
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 424
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deadcf3533ed8634c8d5b61c66a9c588
+      internalID: -9190074502692461014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_103
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cdcd5588f81ee468aa0cd8f8e61f1b
+      internalID: 240076049699832236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_104
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357092cbb2070bc47834af601d034475
+      internalID: 4257949404110429903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_105
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48012f87008014c44887c58fb7fea465
+      internalID: -7085846166973126623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_106
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ced9f7fb043024c88aa061f411f23e
+      internalID: 7106718416917713639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_107
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6568cbe64f8fb48842bbdeaf39ae1a
+      internalID: -6741116859085545757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_108
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8d785540375b24793de06633189fd0
+      internalID: 3510815039021942462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_109
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 364
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156c7af4d86accc4d9d4afd5264237be
+      internalID: 4760500005817961558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_110
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e536c4c3fa8f944aa2d8c93a3e6c3d1
+      internalID: -7831231350435088387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_111
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf31efe6517ac64d9befa25417a50a4
+      internalID: -8903024244120222973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_112
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd344e9478867124f91f9a54608447c5
+      internalID: 4830124135745024769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_113
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cf8d7e5acd12c45aaccc52c3e2ffd4
+      internalID: 7805272215060929132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_114
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55acc02006ce282438398b9e12fc78ea
+      internalID: 3971152301375963071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_115
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ea3a7f5439f19459140de55203cc1d
+      internalID: -6528847825481272423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_116
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b215e9c878d4ff14eb479a13eb87eb2e
+      internalID: 8294326377916388172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_117
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 304
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1bb20e0744cdd4080cb983f3e65acf
+      internalID: 7830009870193411329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_118
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528c9041c1321744a8b4b2290d13ed60
+      internalID: -2360948675443597532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_119
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b611c17776c524083bfb87377d5b70
+      internalID: -8456880751616446025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_120
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e4264b25f6b6846b5caff454cba828
+      internalID: -2696546340837535897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_121
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64096c9126ad2f04d904fd9e2a8906db
+      internalID: -1201259369092927127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_122
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1b64f3f6a89c3488e25a8b8c3562c8
+      internalID: 5427578314610764655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_123
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e890d2860779164b922309cec898fa3
+      internalID: -3678407599436845319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_124
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13eade32fa2a9d24c9daf5b2266756ba
+      internalID: -4181017495603598827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_125
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 244
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec99584d16624ff44916faa971e0ec58
+      internalID: 6713194678885752142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_126
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910be7401cba8e040accef78ef953f8d
+      internalID: 3939438451443065876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_127
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed37e80e080920249a13ac811993ddc8
+      internalID: 7738468973112328410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_128
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf3a9ca98307b946a17d8f2808183ac
+      internalID: -7209154891732547363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_129
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec03edd873b9d34d96ee0cdf6f3a041
+      internalID: 2894679594810521222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_130
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1a21b9cd54419439788b24481b4fa2
+      internalID: -8483450561578874163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_131
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134ade03490b7704f94f7579b8ad53a9
+      internalID: -2354012483098605417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_132
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb7261d8cb57b44ea96a6a9098289a9
+      internalID: -1200443649241520099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_133
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 184
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa66c29d933bb54390b9cfd1e2c15af
+      internalID: -326376411600691059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_134
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023679e5bf2e06041b26d93fd643d9f6
+      internalID: -6509252676652597805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_135
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0977d58f2a6814194027af7462c8b6
+      internalID: -5358914523722130227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_136
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4bc4f6fa86ebe4e9be500b463474c8
+      internalID: 4169225466715330658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_137
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007a51f09b4fcbb47bfe4280740b3151
+      internalID: -6294380723848888309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_138
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6736398bb31e5384583f4b8a9ec582ee
+      internalID: -8415147006082001293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_139
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed51a0f8ea866544eb03d48ccf533f4d
+      internalID: -3852510019769218910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_140
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807a085d3582e364fbcee7a75188ef75
+      internalID: 1400799921875509167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_141
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 124
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc152d45c7eb1d74ba594bc15192a6f4
+      internalID: -6803481911466647602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_142
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806786b71ca48e94a81b9295c844ea3c
+      internalID: -1187081582110066019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_143
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 64
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f32b465ffaaf584fbbc71abaa05937a
+      internalID: 6936666311021915471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_144
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 4
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845faf864eb5b5047b2c1c5b5521e7ef
+      internalID: -8487762633684163815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_145
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 4
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f659cb7590cce0345a72c3dcff8a92fc
+      internalID: -2516643160487252276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_146
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 4
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d91c60749b01d4cb96a4735ad63429
+      internalID: -6017601978275603922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zx_avatar_147
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 4
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4214ed1e0130b2a4f929616c3f0cfad7
+      internalID: 2491489007725632945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,6 +20,7 @@ public class BatAttackState : BaseState
     public override void execute()
     {
         //bat.transform.position = Vector3.MoveTowards(bat.transform.position, player.transform.position, bat.speed * Time.deltaTime);
+        if (player == null) return;
         if(bat.speed > 0)
         {
             Vector2 dir = (player.transform.position + new Vector3(0, 1, 0) - bat.transform.position);
