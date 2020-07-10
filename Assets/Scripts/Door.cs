@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
     private PlayerZero zero;
     private bool isInsiding;
 
-    private bool canUse;
+    protected bool canUse;
 
     protected void Start()
     {

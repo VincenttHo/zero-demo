@@ -21,6 +21,15 @@ public class AileHealthBar : MonoBehaviour
 
     void Update()
     {
+        if(AileHpManager.currentHp == AileHpManager.maxHp && AileHpManager.currentHp > 0)
+        {
+            for(int n = 0; n < healthBars.Length; n++)
+            {
+                healthBars[n].fillAmount = 1;
+            }
+            healthBarIndex = 0;
+        }
+
         if(AileHpManager.currentHp >= 0)
         {
             currentHealthBarHp = AileHpManager.currentHp - (healthBars.Length - (healthBarIndex + 1)) * AileHpManager.maxHp / healthBars.Length;

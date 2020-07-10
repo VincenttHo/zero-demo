@@ -21,7 +21,15 @@ public class GameController : MonoBehaviour
     public bool canControll;
     private bool canStartUI;
 
+    public Transform playerBossBattlePos;
+    public Transform bossBossBattlePos;
+
     public GameObject gameStartUI;
+
+    public Animator ScreenChangeAnim;
+
+    public GameObject humanAile;
+    public GameObject rockmanZx;
 
     private void Start()
     {
@@ -49,21 +57,33 @@ public class GameController : MonoBehaviour
                 isDead = true;
                 playerZero.canControll = false;
                 playerPos = playerZero.transform.position;
-                Invoke("DoDead", 0.5f);
+                Invoke("PlayerDoDead", 0.5f);
             }
 
         }
     }
 
-    private void DoDead()
+    private void PlayerDoDead()
     {
         BgmManager.StopBgm();
         SoundManager.PlayAudio(SoundManager.dead);
+        StartCoroutine(Dead(playerPos, true));
         Destroy(playerZero.gameObject);
-        StartCoroutine(PlayerDead());
     }
 
-    IEnumerator PlayerDead()
+    public void RockmanAileDoDead(Vector3 pos)
+    {
+        BgmManager.StopBgm();
+        SoundManager.PlayAudio(SoundManager.dead);
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        if(boss != null)
+        {
+            StartCoroutine(Dead(pos, false));
+            Destroy(boss);
+        }
+    }
+
+    IEnumerator Dead(Vector3 pos, bool isPlayer)
     {
         Vector3 initDir = transform.up;
         Quaternion rotateQuate = Quaternion.AngleAxis(45, Vector3.forward);
@@ -72,20 +92,27 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < 8; i++)
             {
-                CreateDeadEffect(initDir);
+                CreateDeadEffect(initDir, pos);
                 initDir = rotateQuate * initDir;
             }
 
             yield return new WaitForSeconds(0.5f);
         }
 
-        StartCoroutine(ShowGameOver());
+        if(isPlayer)
+        {
+            StartCoroutine(ShowGameOver());
+        }
+        else
+        {
+            TimelineManager.instance.PlayBossDeadStory();
+        }
     }
 
-    void CreateDeadEffect(Vector3 initDir)
+    void CreateDeadEffect(Vector3 initDir, Vector3 pos)
     {
         var newEffect = GameObject.Instantiate(playerDeadEffect);
-        newEffect.transform.position = playerPos + transform.up * 0.5f;
+        newEffect.transform.position = pos + transform.up * 0.5f;
         newEffect.GetComponent<PlayerDeadEffect>().moveDir = initDir;
     }
 
@@ -110,6 +137,25 @@ public class GameController : MonoBehaviour
     {
         dialog.SetActive(true);
         gameRunning = true;
+    }
+
+    public void ResetBossBattlePos()
+    {
+        playerZero.transform.position = playerBossBattlePos.position;
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        boss.transform.position = bossBossBattlePos.position;
+    }
+
+    public void ScreenChange()
+    {
+        ScreenChangeAnim.SetTrigger("play");
+    }
+
+    public void BossChange()
+    {
+        var newObj = Instantiate(rockmanZx);
+        newObj.transform.position = humanAile.transform.position;
+        Destroy(humanAile);
     }
 
 }

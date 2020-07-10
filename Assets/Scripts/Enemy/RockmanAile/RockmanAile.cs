@@ -1,7 +1,6 @@
 ﻿
 
 using System;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 /**
@@ -25,9 +24,6 @@ public class RockmanAile : Boss
     [HideInInspector]
     public Rigidbody2D rigi;
 
-    [HideInInspector]
-    public Animator anim;
-
     protected float step;
 
     public float dashSpeed;
@@ -41,12 +37,14 @@ public class RockmanAile : Boss
     public GameObject nextModel;
     public float hp;
 
+    protected float middleX = 148.04f;
+
+
     protected void Start()
     {
         base.Start();
         step = 1;
         controller = GetComponentInParent<RockmanAileController>();
-        anim = GetComponent<Animator>();
         myFeet = GetComponent<CapsuleCollider2D>();
         rigi = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -55,6 +53,11 @@ public class RockmanAile : Boss
     protected void Update()
     {
         hp = AileHpManager.currentHp;
+        if(hp <= 0)
+        {
+            canMove = false;
+            GameController.instance.RockmanAileDoDead(transform.position);
+        }
         CheckGrounded();
     }
 
@@ -102,7 +105,7 @@ public class RockmanAile : Boss
     {
         if (step == 1)
         {
-            if (player.transform.position.x < 0)
+            if (player.transform.position.x < middleX)
             {
                 movePos = rightMovePos;
                 if (rightMovePos.position.x > transform.position.x)
@@ -115,7 +118,7 @@ public class RockmanAile : Boss
                 }
                 Dash();
             }
-            if (player.transform.position.x >= 0)
+            if (player.transform.position.x >= middleX)
             {
                 movePos = leftMovePos;
                 if (leftMovePos.position.x > transform.position.x)
@@ -134,7 +137,7 @@ public class RockmanAile : Boss
         {
             step = 2;
             EndDash();
-            if (transform.position.x > 0)
+            if (transform.position.x > middleX)
             {
                 LookLeft();
             }

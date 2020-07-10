@@ -28,7 +28,7 @@ public class DialogSystem : MonoBehaviour
 
     List<string> textList = new List<string>();
 
-    void Awake()
+    protected void Awake()
     {
         GetTextFromFile(textFile);
         canNextText = true;
@@ -67,7 +67,7 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
-    void GetTextFromFile(TextAsset textFile)
+    public void GetTextFromFile(TextAsset textFile)
     {
         textList.Clear();
         index = 0;

@@ -6,10 +6,16 @@ using UnityEngine.Playables;
 public class BossDoor : Door
 {
 
+    private void Start()
+    {
+        base.Start();
+        //canUse = false;
+    }
+
     public void OnDoorClosed()
     {
-        TimelineManager.instance.PlayBossStory();
-        BgmManager.PlayBgm(BgmManager.bossStoryBgm);
+        TimelineManager.instance.PlayBossBattleStartStory();
+        //BgmManager.PlayBgm(BgmManager.bossStoryBgm);
     }
 
 }

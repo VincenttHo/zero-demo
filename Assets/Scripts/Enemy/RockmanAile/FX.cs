@@ -27,9 +27,9 @@ public class FX : RockmanAile
         if (!canAction) return;
         if(step == 1)
         {
-            if(transform.position.x != 0)
+            if(transform.position.x != middleX)
             {
-                if (transform.position.x < 0)
+                if (transform.position.x < middleX)
                 {
                     LookRight();
                 }
@@ -41,7 +41,7 @@ public class FX : RockmanAile
             }
         }
 
-        if (step == 1 && Math.Abs(transform.position.x) <= 0.5f)
+        if (step == 1 && Math.Abs(transform.position.x - middleX) <= 0.5f)
         {
             step = 2;
             EndDash();

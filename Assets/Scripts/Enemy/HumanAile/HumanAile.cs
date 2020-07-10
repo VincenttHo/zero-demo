@@ -9,8 +9,6 @@ public class HumanAile : Boss
     private GameObject player;
     [HideInInspector]
     public Rigidbody2D rigi;
-    [HideInInspector]
-    public Animator anim;
 
     public float runSpeed;
     public float lv1RunSpeed;
@@ -51,7 +49,7 @@ public class HumanAile : Boss
     void Update()
     {
         if (isDead) return;
-        //if (!canMove) return;
+        if (!canMove) return;
         if (player == null) return;
         if (AileHpManager.currentHp <= 0)
         {
@@ -60,6 +58,8 @@ public class HumanAile : Boss
             HumanAileAudioManager.instance.PlayAudio(HumanAileAudioManager.deadAudio);
             BgmManager.StopBgm();
             anim.SetTrigger("dead");
+            TimelineManager.instance.PlayBossChangeStory();
+            //GameController.instance.ScreenChange();
             return;
         }
         CheckGround();
@@ -153,6 +153,12 @@ public class HumanAile : Boss
             || myFeet.IsTouchingLayers(LayerMask.GetMask("Wall"))
             || myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
             || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
+    }
+
+    private void OnDisable()
+    {
+        AileHpManager.maxHp = 60;
+        AileHpManager.currentHp = 60;
     }
 
 }

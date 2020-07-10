@@ -26,8 +26,11 @@ public class Boss : MonoBehaviour
 
     public bool canMove;
 
+    public Animator anim;
+
     protected void Start()
     {
+        anim = GetComponent<Animator>();
         canGunHurt = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originColor = spriteRenderer.color;
@@ -89,7 +92,7 @@ public class Boss : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other is CircleCollider2D)
+        if (other.CompareTag("Player") && other is CircleCollider2D && AileHpManager.currentHp > 0)
         {
             other.gameObject.GetComponent<PlayerZero>().GetDamage(touchDamage);
         }

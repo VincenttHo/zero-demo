@@ -83,6 +83,7 @@ public class PlayerZero : Player
 
     private void Start()
     {
+
         base.Start();
         stateMachine = new PlayerStateMachine(this);
         rigi = GetComponent<Rigidbody2D>();

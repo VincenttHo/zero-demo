@@ -49,7 +49,8 @@ public class ZX : RockmanAile
 
     void Update()
     {
-        base.Update();
+        base.Update(); 
+        if (!canMove) return;
         if (player == null) return;
         if (!canAction) return;
         
