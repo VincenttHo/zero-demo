@@ -29,7 +29,7 @@ public class PlayerSlideWallState : BaseState
 
     bool WallJump()
     {
-        if (!PlayerController.jump)
+        if (!PlayerController.instance.jump)
         {
             canJump = true;
         }
@@ -37,7 +37,7 @@ public class PlayerSlideWallState : BaseState
         {
             
             //if (Input.GetKeyDown(KeyCode.U) && playerZero.isTouchingWall)
-            if(PlayerController.jump && playerZero.isTouchingWall && canJump)
+            if(PlayerController.instance.jump && playerZero.isTouchingWall && canJump)
             {
                 SoundManager.PlayAudio(SoundManager.walljump);
                 canJump = false;

@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
     public GameObject humanAile;
     public GameObject rockmanZx;
 
+    public GameObject ctrlSetupWin;
+
     private void Start()
     {
         instance = this;
@@ -42,7 +44,8 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if(gameRunning && !dialog.activeSelf && canStartUI)
+        ShowCtrlSetupWin();
+        if (gameRunning && !dialog.activeSelf && canStartUI)
         {
             canStartUI = false;
             gameStartUI.SetActive(true);
@@ -156,6 +159,16 @@ public class GameController : MonoBehaviour
         var newObj = Instantiate(rockmanZx);
         newObj.transform.position = humanAile.transform.position;
         Destroy(humanAile);
+    }
+
+    private void ShowCtrlSetupWin()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) && !ctrlSetupWin.activeSelf)
+        {
+            Time.timeScale = 0f;
+            canControll = false;
+            ctrlSetupWin.SetActive(true);
+        }
     }
 
 }

@@ -103,9 +103,11 @@ public class RockmanAile : Boss
 
     public void Step1Move()
     {
+        if (player == null) return;
         if (step == 1)
         {
-            if (player.transform.position.x < middleX)
+            //if (player.transform.position.x < middleX)
+            if (movePos != rightMovePos)
             {
                 movePos = rightMovePos;
                 if (rightMovePos.position.x > transform.position.x)
@@ -118,7 +120,8 @@ public class RockmanAile : Boss
                 }
                 Dash();
             }
-            if (player.transform.position.x >= middleX)
+            //if (player.transform.position.x >= middleX)
+            else
             {
                 movePos = leftMovePos;
                 if (leftMovePos.position.x > transform.position.x)

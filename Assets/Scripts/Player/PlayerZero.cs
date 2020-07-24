@@ -79,12 +79,17 @@ public class PlayerZero : Player
     public GameObject lv1Bullet;
     public GameObject lv2Bullet;
     public Transform bulletPos;
+
+    private Transform playerDefPos;
+
+    public bool isPlatformJump;
     
 
     private void Start()
     {
 
         base.Start();
+        playerDefPos = transform.parent;
         stateMachine = new PlayerStateMachine(this);
         rigi = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -100,7 +105,7 @@ public class PlayerZero : Player
         gunChargeController = GetComponentInChildren<GunChargeController>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (canControll)
         {
@@ -116,6 +121,27 @@ public class PlayerZero : Player
             stateMachine.CheckChangeState();
             stateMachine.currentState.execute();
         }
+        if (rigi.velocity.y < -45)
+        {
+            rigi.velocity = new Vector2(rigi.velocity.x, -45);
+        }
+
+        /*if (isTouchingPlatform() && PlayerController.instance.inputDown && PlayerController.instance.jump)
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+            //myFeet.enabled = false;
+            transform.parent = playerDefPos;
+            StartCoroutine(ResetBoxCollider());
+            
+        }*/
+
+    }
+
+    IEnumerator ResetBoxCollider()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<BoxCollider2D>().enabled = true;
+        //myFeet.enabled = true;
     }
 
     public int GetDir()
@@ -131,7 +157,7 @@ public class PlayerZero : Player
         }
 
         //if(Input.GetKey(KeyCode.U) && Input.GetKey(KeyCode.I))
-        if (PlayerController.jump && PlayerController.dash)
+        if (PlayerController.instance.jump && PlayerController.instance.dash)
         {
             if (isGrounded 
                 || stateMachine.currentState is PlayerSlideWallState 
@@ -141,15 +167,27 @@ public class PlayerZero : Player
             }
         }
         //if(Input.GetKey(KeyCode.U))
-        if (PlayerController.jump)
+        if (PlayerController.instance.jump)
         {
-             yInput = 1;
+            if(transform.parent != playerDefPos)
+            {
+                isPlatformJump = true;
+            } 
+            else
+            {
+                isPlatformJump = false;
+            }
+            yInput = 1;
         }
         //else if(Input.GetKeyUp(KeyCode.U))
-        else if (!PlayerController.jump)
+        else if (!PlayerController.instance.jump)
         {
             canJump = true;
             yInput = 0;
+            if (transform.parent == playerDefPos)
+            {
+                isPlatformJump = false;
+            }
         }
     }
 
@@ -160,12 +198,12 @@ public class PlayerZero : Player
         if (!GameController.instance.canControll) return;
         input = 0;
         //if (Input.GetKey(KeyCode.A))
-        if (PlayerController.inputLeft)
+        if (PlayerController.instance.inputLeft)
         {
             input = -1;
         }
         //else if(Input.GetKey(KeyCode.D))
-        else if (PlayerController.inputRight)
+        else if (PlayerController.instance.inputRight)
         {
             input = 1;
         }
@@ -183,12 +221,12 @@ public class PlayerZero : Player
     private void DoDash()
     {
         //if(Input.GetKey(KeyCode.I) && canDash)
-        if(PlayerController.dash && canDash)
+        if(PlayerController.instance.dash && canDash)
         {
             currentHorizontalSpeed = dashSpeed * GetDir();
         }
         //if(Input.GetKeyUp(KeyCode.I))
-        if (!PlayerController.dash)
+        if (!PlayerController.instance.dash)
         {
             canDash = true;
         }
@@ -213,6 +251,7 @@ public class PlayerZero : Player
         if(yInput == 1)
         {
             canJump = false;
+            isPlatformJump = false;
         }
     }
 
@@ -220,7 +259,7 @@ public class PlayerZero : Player
     {
         //if (isClimbingLadder) return;
         //if (Input.GetKeyDown(KeyCode.H))
-        if(PlayerController.gunCharge)
+        if(PlayerController.instance.gunCharge)
         {
             if(gunChargeWaitSec <= 0)
             {
@@ -232,7 +271,7 @@ public class PlayerZero : Player
                 gunChargeWaitSec -= Time.deltaTime;
             }
         }
-        if(PlayerController.shoot)
+        if(PlayerController.instance.shoot)
         {
             gunChargeWaitSec = gunChargeSec;
             this.anim.SetTrigger("shoot");
@@ -286,6 +325,11 @@ public class PlayerZero : Player
         newBullet.transform.position = bulletPos.position;
         newBullet.transform.rotation = transform.rotation;
         gunChargeLv = 0;
+    }
+
+    public bool isTouchingPlatform()
+    {
+        return myFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform")) || myFeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
     }
 
 }

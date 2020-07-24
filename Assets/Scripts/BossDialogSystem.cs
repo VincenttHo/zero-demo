@@ -32,7 +32,6 @@ public class BossDialogSystem : DialogSystem
 
     private void OnDisable()
     {
-        print("进来了?");
         director.Play();
         /*if(textFile == bossChangeText)
         {

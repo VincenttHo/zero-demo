@@ -45,7 +45,7 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+        if (Input.GetKeyDown(PlayerController.instance.slashKey.GetKeyCode()) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if(canNextText)
             {

@@ -59,7 +59,7 @@ public class TimelineManager : MonoBehaviour
         if (bossObj == null) return;
         boss = bossObj.GetComponent<Boss>();
         GameController.instance.canControll = false;
-        PlayerController.ResetControl();
+        PlayerController.instance.ResetControl();
         boss.canMove = false;
     }
 

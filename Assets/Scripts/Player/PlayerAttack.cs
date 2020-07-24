@@ -41,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
             HitCount = 0;
         }
         //if (Input.GetKeyDown(KeyCode.Y))
-        if(PlayerController.slash)
+        if(PlayerController.instance.slash)
         {
             Attack();
         }

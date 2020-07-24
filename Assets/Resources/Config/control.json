@@ -1,0 +1,36 @@
+{
+    "buttons": [
+        {
+            "keyCodeName": "A",
+            "keyTypeName": "LEFT"
+        },
+        {
+            "keyCodeName": "D",
+            "keyTypeName": "RIGHT"
+        },
+        {
+            "keyCodeName": "W",
+            "keyTypeName": "UP"
+        },
+        {
+            "keyCodeName": "S",
+            "keyTypeName": "DOWN"
+        },
+        {
+            "keyCodeName": "P",
+            "keyTypeName": "SLASH"
+        },
+        {
+            "keyCodeName": "H",
+            "keyTypeName": "SHOOT"
+        },
+        {
+            "keyCodeName": "K",
+            "keyTypeName": "JUMP"
+        },
+        {
+            "keyCodeName": "L",
+            "keyTypeName": "DASH"
+        }
+    ]
+}

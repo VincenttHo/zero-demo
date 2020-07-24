@@ -36,14 +36,7 @@ public class PlayerJumpState : BaseState
 
         if (playerZero.canJump)
         {
-            /*if(isWallJump)
-            {
-                playerZero.rigi.velocity = new Vector2(-playerZero.wallJumpXSpeed, playerZero.wallJumpYSpeed * playerZero.yInput);
-            }
-            else
-            {*/
-                playerZero.rigi.velocity = new Vector2(horizontalSpeed, playerZero.jumpSpeed * playerZero.yInput);
-            //}
+            playerZero.rigi.velocity = new Vector2(horizontalSpeed, playerZero.jumpSpeed * playerZero.yInput);
         }
         /*else
         {

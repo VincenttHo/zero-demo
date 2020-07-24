@@ -61,7 +61,7 @@ public class PlayerStateMachine : MonoBehaviour
         // 一、站立
         if (currentState is PlayerStandState)
         {
-            if(Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.runSpeed && !playerZero.isHurt)
+            if (Math.Abs(playerZero.currentHorizontalSpeed) == playerZero.runSpeed && !playerZero.isHurt)
             {
                 DoChangeState(new PlayerMoveState(playerZero));
             }
@@ -69,14 +69,18 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerDashState(playerZero));
             }
-            else if(playerZero.yInput > 0 && playerZero.canJump && !playerZero.isHurt)
+            else if(playerZero.yInput > 0 && playerZero.canJump && !playerZero.isHurt && !PlayerController.instance.inputDown)
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
             else if (!playerZero.isGrounded && playerZero.rigi.velocity.y < 0)
-            {
+            {   
                 DoChangeState(new PlayerFallState(playerZero));
             }
+            /*else if (playerZero.isTouchingPlatform() && playerZero.rigi.velocity.y < 0)
+            {
+                DoChangeState(new PlayerFallState(playerZero));
+            }*/
         }
 
         // 二、跑步
@@ -90,7 +94,7 @@ public class PlayerStateMachine : MonoBehaviour
             {
                 DoChangeState(new PlayerDashState(playerZero));
             }
-            else if (playerZero.yInput == 1 && playerZero.canJump)
+            else if (playerZero.yInput == 1 && playerZero.canJump && !PlayerController.instance.inputDown)
             {
                 DoChangeState(new PlayerJumpState(playerZero));
             }
@@ -123,7 +127,7 @@ public class PlayerStateMachine : MonoBehaviour
                 {
                     DoChangeState(new PlayerMoveState(playerZero));
                 }
-                else if (playerZero.yInput == 1)
+                else if (playerZero.yInput == 1 && !PlayerController.instance.inputDown)
                 {
                     DoChangeState(new PlayerJumpState(playerZero));
                 }
@@ -134,7 +138,7 @@ public class PlayerStateMachine : MonoBehaviour
         // 四、跳跃
         if(currentState is PlayerJumpState)
         {
-            if (playerZero.rigi.velocity.y < 0)
+            if (playerZero.rigi.velocity.y < 0 && !playerZero.isPlatformJump)
             {
                 DoChangeState(new PlayerFallState(playerZero));
             }

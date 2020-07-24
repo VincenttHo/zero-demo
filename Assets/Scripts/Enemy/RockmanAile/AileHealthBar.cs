@@ -27,7 +27,9 @@ public class AileHealthBar : MonoBehaviour
             {
                 healthBars[n].fillAmount = 1;
             }
+            healthBarMaxHp = AileHpManager.maxHp / healthBars.Length;
             healthBarIndex = 0;
+            currentHealthBarHp = healthBarMaxHp;
         }
 
         if(AileHpManager.currentHp >= 0)

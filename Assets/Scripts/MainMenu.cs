@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject controlSetupWin;
+    public GameObject mainMenu;
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -14,4 +16,11 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ControlSetup()
+    {
+        controlSetupWin.SetActive(true);
+        mainMenu.SetActive(false);
+    }
+
 }
